@@ -17,6 +17,7 @@
 3. App Services
 
 - allow you build and deploy/host your app (web apps, mobile back end and RESTful APIs without managing infrastructure).
+- It offers auto-scaling and high availability, supports both Windows and Linux
 - When creating new app services --> create Web App ( Not a Web App + Database)
 
 4. SQL server
