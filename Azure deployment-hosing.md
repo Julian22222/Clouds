@@ -16,7 +16,8 @@
 - allow you build and deploy/host your app (web apps, mobile back end and RESTful APIs without managing infrastructure).
 - It offers auto-scaling and high availability, supports both Windows and Linux
 - When creating new app services --> create Web App ( Not a Web App + Database)
-[App Services](https://www.youtube.com/watch?v=4BwyqmRTrx8&t=363s)
+- Support many languages
+[App Services Video ](https://www.youtube.com/watch?v=4BwyqmRTrx8&t=363s)
 
 4. SQL server
 
