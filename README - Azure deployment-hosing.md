@@ -13,11 +13,20 @@
 - works as a bag where we put all used, needed services for our app in 1 Resource group. (App Services, SQL databases,SQL server,Key Vault, Log Analytics workspace, App Service Plan) <-- all of them must be in the same Resource group for particular applicatiopn
 
 3. App Services
+
 - allow you build and deploy/host your app (web apps, mobile back end and RESTful APIs without managing infrastructure).
 - It offers auto-scaling and high availability, supports both Windows and Linux
 - When creating new app services --> create Web App ( Not a Web App + Database)
 - Supports many languages
-[App Services Video ](https://www.youtube.com/watch?v=4BwyqmRTrx8&t=363s)
+  [App Services Video ](https://www.youtube.com/watch?v=4BwyqmRTrx8&t=363s)
+
+How to know should you host you app on --> App Services or use Virtual machines, Bullet points for App Services below, to host your application on App Services:
+
+- don't require full controll
+- don't need high performance computr workload
+- don't need microservices
+- if you migrating and don't need high performance workload
+- if you migrating and don't need containers and it is web or API application
 
 4. SQL server
 
@@ -53,4 +62,3 @@
 2. Click on App Services of the project that you want to debug
 3. Diagnose and solve problems (Left menu column)
 4. Click on --> Application Logs (bottom of the page)
-
