@@ -1,4 +1,4 @@
-# Cloud service models (pic 13)
+# Cloud service type models (pic 13)
 
 Let image we are startup company and we want to host our own application and build entire infrastructure for that reason.
 We need:
@@ -43,6 +43,8 @@ layer 8 are called Software - The application and the data itself.
 
 # Who will manage what?
 
+### On-Premises
+
 - if you manage all of these layers (all 8 layers) - that means we are talking about the ON-Premises. Clear ownership is on you, you manage all the infrastructure, platform and the software. And Cloud providers not even involved.
 
 Key Characteristics:
@@ -54,6 +56,101 @@ ownership
   - Platform --> Operatingsystem, Middleware, Runtime
   - Software --> Data and Applications
 
-# IaaS (pic 14)
+### Infrastructure-as-a-Service (IaaS) (pic 14)
 
 But if you decide to outsource the infrastructure. Purchase the infrastructure from the Cloud provider. So let Microsoft manage the Infrastructure while you manage the Platform and Software --> this is called Infrastructure as a Service (IaaS)
+
+Key Characteristics:
+Ownership
+
+- Cloud provider manages infrastructure (Microsoft)
+
+  - Infrastructure --> Networking, Hardware and Virtualization
+
+- You manage Platform and Software
+  - Platform --> Operating System, Middleware, Runtime
+  - Softwae --> Data and Applications
+
+Typical use cases here are:
+
+- Migration of the workload from the On-Premises
+- Testing and development
+- Extending your On-Premises environment of the capacity of the cloud (that you can create storage backup and disaster recovery scenarios)
+
+The list of services used in Azure to implement Infrastructure-as-a-Service solutions is quite long but typically you will see things like -->
+
+- Virtual machine
+- Virtual networks
+- Managed Disks
+- other many services
+
+But in general, the rule of thumb is if someone says that they have Infrastucture-as-a-Service solution that means they have a lot of Virtual machines and probably this is the skills they are looking for.
+
+### Platfors-as-a-Service (pic 15)
+
+Key Characteristics:
+Ownership
+
+- Cloud provider manages infrastructure and Platform (Microsoft)
+
+  - Infrastructure --> Networking, Hardware and Virtualization
+  - Platform --> Operating System, all security patches, Middleware and Runtime to host your application
+
+- You manage Software (you will only need to build and manage your own applications)
+  - Softwae --> Data and Applications
+
+If you are designing for the cloud you most likely will go one level up. You will allow Microdoft to manage Platform and Infrastucture part while you just build your own applications. in that case we are talking about Platfors-as-a-Service. In this model Cloud provider will manage the Infrastructure and the Platform
+
+Typically this model is used whenever you are:
+
+- Developing cloud applications,
+- this could be a state-of-the-art web applications
+- AI
+- Machine learning
+- business analytic solutions
+- basically it can be anything
+
+If you are building applications you are most likely using Platfors-as-a-Service solutions. In this case we can talk about:
+
+- SQL for relational databases
+- App service for web hosting
+- logic apps for enterprise integrations
+- function apps for serverless and one of the hundreds of other services allowing to take advantage of the Cloud in a Platfors-as-a-Service model
+
+### Software-as-a-Service (SaaS) (pic 16)
+
+Key Characteristics:
+Ownership
+
+- Cloud provider manages infrastructure, Platform and Software (Microsoft manages everything and you just use the applications)
+
+  - Infrastructure --> Networking, Hardware and Virtualization
+  - Platform --> Operating System, all security patches, Middleware and Runtime to host your application
+  - Softwae --> Data and Applications
+
+- You manage nothing
+
+If you decide to outsource everything to Microsoft. That means you are using Software-as-a-Service model. In that case the ownership of the cloud provider is everething and there is nothing on you
+
+Use cases:
+usually this means buying of-the-shell applications. Applications like Outlook, Skype, One drive and all the other business applications that you are probably using every day
+
+# Diffrences between these service models (pic 17)
+
+```C#
+//Infrastructure-as-a-Service (IaaS)
+
+if you let cloud provider manage the physical Datacentre buildings, Security, Servers and Storage we are talking about IaaS
+```
+
+```C#
+//Platform-as-a-Service (PaaS)
+
+if that cloud provider additionally manages the operating system and the development tools we are talking about PaaS
+```
+
+```C#
+//Software-as-a-Service (SaaS)
+
+if that cloud provider additionally manages the applications and Data we are talking about SaaS
+```
