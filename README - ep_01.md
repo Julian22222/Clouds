@@ -16,7 +16,7 @@ Once your data is in the cloud you need a computer resources
 
 Once you have your components you need to be able to connect them to each other securely
 
-3. Networking (securely connectingbetween those components).
+3. Networking (securely connecting between those components).
 
 If your entire platform is managed in the cloud, cloud also needs to deliver analytic capabilities, where you can review your performance and telemetry data for your services
 
@@ -84,7 +84,7 @@ Disaster - is a serious disruption of entire service caused by natural or human 
 - Human errors
 
 They can affect entire Azure region or entire Azure servers from working properly. in this case we need to set up Disaster recovery.
-Disaster recovery means creating 2 copies of the same application into Azure Regions and then setting up replication between them. So we have 2 identical copies of your application then in fron of those applications you need to set up a simple DNS Routing. That your users are automatically redirected to the working version of your application. If any service fails they --> DNS Routing will automayically get rederected to replicated version of your application.
+Disaster recovery means creating 2 copies of the same application into Azure Regions and then setting up replication between them. So we have 2 identical copies of your application then in front of those applications you need to set up a simple DNS Routing. That your users are automatically redirected to the working version of your application. If any service fails they --> DNS Routing will automayically get rederected to replicated version of your application.
 Disaster recovery is the system's ability to recover from an event that has taken down entire Region or service (disaster)
 
 ## High Availability (See pic 7)

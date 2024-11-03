@@ -1,14 +1,14 @@
 # Consumption-based Model (See pic 11)
 
-Before you start working with Azure. You need to understand How Azure pricing serices, therefore you need to understand Consumption-based Model.
-Typical usage, workload is changing over the time and match that usega demand you want to allocate as many resources as you need at any given time.
+Before you start working with Azure. You need to understand How Azure pricing being formed, therefore you need to understand Consumption-based Model.
+Typical usage, workload is changing over the time and match that usage demand you want to allocate as many resources as you need at any given time.
 
 Key Characteristics:
 
 - No upfront costs
 - No wasted resources
 - Multiple pricing components per service
-- Very granular usage measuremnt
+- Very granular usage measurement
 
 You will only pay for those resources during the time of the usage and only as much as the resources that you consumed. There is no upfront cost because with consumption-based model you only start paying when you start using the resources and because CLOUD is elastic you don't have to assign resources when you don't need them. It means there are no wasted resources and you don't paying for them. you only pay for the resources when you need them and you stop paying as soon as you don't need them.
 
@@ -27,8 +27,9 @@ Therefore, Consumption-based Model have multiple pricing components per each ser
 
 # To check the costs of the CLOUD resources
 
-Azure service that allow to track all the costs --> Cost Management + Billing
-Using this service --> Cost Management + Billing , i can see the cost of my subscription. On the left side menu bar click on --> Cost managemnt --> Cost analysis.
+Azure service that allows to track all the costs you have on the CLOUD --> Cost Management + Billing.
+
+Using this service --> Cost Management + Billing , you can see the cost of your's subscription. On the left side menu bar click on --> Cost managemnt --> Cost analysis.
 Here you can track your costs for any months and different resources per day
 
 To see what price you pay for each service per day (understand where are the costs coming from), choose--> Group by: Service name, Granularity: Daily , Column chart(stacked)

@@ -1,9 +1,9 @@
 # Cloud service type models (pic 13)
 
-Let image we are startup company and we want to host our own application and build entire infrastructure for that reason.
+Let imagine we are startup company and we want to host our own application and build entire infrastructure for that reason.
 We need:
 
-- First 3 bulet point are Hardware that are needed in order to run the server
+- First 3 bullet points are Hardware that are needed in order to run the server
 
 1. Servers (Memory, Motherboard, CPU)
 2. Networking (Our servers need to be able to connect to the internet)
@@ -43,7 +43,7 @@ layer 8 are called Software - The application and the data itself.
 
 # Who will manage what?
 
-### On-Premises
+### On-Premises Environment
 
 - if you manage all of these layers (all 8 layers) - that means we are talking about the ON-Premises. Clear ownership is on you, you manage all the infrastructure, platform and the software. And Cloud providers not even involved.
 
@@ -53,7 +53,7 @@ ownership
 - Cloud provider manages nothing
 - You manage everithing
   - infrastructure --> Networking, Hardware & Virtualization
-  - Platform --> Operatingsystem, Middleware, Runtime
+  - Platform --> Operating system, Middleware, Runtime
   - Software --> Data and Applications
 
 ### Infrastructure-as-a-Service (IaaS) (pic 14)
@@ -73,7 +73,7 @@ Ownership
 
 Typical use cases here are:
 
-- Migration of the workload from the On-Premises
+- Migration of the workload from the On-Premises Environment to Cloud
 - Testing and development
 - Extending your On-Premises environment of the capacity of the cloud (that you can create storage backup and disaster recovery scenarios)
 
@@ -97,9 +97,9 @@ Ownership
   - Platform --> Operating System, all security patches, Middleware and Runtime to host your application
 
 - You manage Software (you will only need to build and manage your own applications)
-  - Softwae --> Data and Applications
+  - Software --> Data and Applications
 
-If you are designing for the cloud you most likely will go one level up. You will allow Microdoft to manage Platform and Infrastucture part while you just build your own applications. in that case we are talking about Platfors-as-a-Service. In this model Cloud provider will manage the Infrastructure and the Platform
+If you are designing for the cloud you most likely will go one level up. You will allow Microsoft to manage Platform and Infrastucture part while you just build your own applications. in that case we are talking about Platfors-as-a-Service. In this model Cloud provider will manage the Infrastructure and the Platform
 
 Typically this model is used whenever you are:
 

@@ -34,11 +34,10 @@ It means buying services in the CLOUD
 Key Characteristics:
 
 - Rent infrastructure
-- No initial investment,
-  pay for what you use
+- No initial investment, pay for what you use
 - Minimal maintenance
   - Operations team
 
-If we will take the same scenario for this model and draw diagram of the cost of our infrastructure over time the diagram would look much different. Because we pay only for what we use. And our cost is based on the CLOUD services usege. And Server capasity always matches what you are using andtherefore there is no initial investment unless you are actually buying something upfront. When it comes to maintenance in Cloud , most of the maintenance is performed by the Cloud vender. You only need to maintain small operation teams to manage most important tasks around your infrastructure. Other than that Microsoft manages everything and it is included in the price when you purchasing services
+If we will take the same scenario for this model and draw diagram of the cost of our infrastructure over time the diagram would look much different. Because we pay only for what we use. And our cost is based on the CLOUD services usage. And Server capasity always matches what you are using and therefore there is no initial investment unless you are actually buying something upfront. When it comes to maintenance in Cloud , most of the maintenance is performed by the Cloud vender. You only need to maintain small operation teams to manage most important tasks around your infrastructure. Other than that Microsoft manages everything and it is included in the price when you purchasing services
 
 # Differences between CapEx vs. OpEx (See pic 10)
