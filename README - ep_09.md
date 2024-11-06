@@ -76,8 +76,71 @@ Key Characteristics:
 - Infrastructure-as-a-Service(IaaS)
 - Set of identical virtual machines
 - Built-in auto scaling features
-- Designed for manual and auto-scaled workloads like web services, batch processing atc.
+- Designed for manual and auto-scaled workloads like web services, batch processing etc.
 
-Virtual machine scale sets are still infrastructure-as-a-Service(IaaS), because you still managing the Virtual Machines you need still prepare Images but they are set of identical virtual machines created from the same Image. As such they have built-in auto scaling features allowing you to create and delete virtual machines based on demand and they are designed for manual or out of scale workloads, things like web services, batch processing etc. This is your way to scale out with virtual machines in the Cloud. In this case you still have quite a lot of maintenance but high degree of control over the virtual machine scale sets. in this case you are getting auto scaling features, so you can scale up to maximum of thousand nodes or 600 depending whenever this is custom or marketplace Image which makes scales as one of the most scalable services in Azure. If you want to decrease the maintenance required you can move away from Virtual Machines into containers.
+Virtual machine scale sets are still infrastructure-as-a-Service(IaaS), because you still managing the Virtual Machines you need still prepare Images but they are set of identical virtual machines created from the same Image. As such they have built-in auto scaling features allowing you to create and delete virtual machines based on demand and they are designed for manual or out of scale workloads, things like web services, batch processing etc. This is your way to scale out with virtual machines in the Cloud. In this case you still have quite a lot of maintenance but high degree of control over the virtual machine scale sets. In this case you are getting auto scaling features, so you can scale up to maximum of thousand nodes/servers or 600 depending whenever this is custom or marketplace Image which makes scales as one of the most scalable services in Azure. If you want to decrease the maintenance required you can move away from Virtual Machines into containers.
 
-Containers are little bit different than virtual machines.
+# Contatainers Vs. VMs (pic 44)
+
+Containers are little bit different than virtual machines. While there is still physical machine, there is still operating system underneath but instead of installing Virtualization Software, we install Container Runtime. Within Container Runtime --> you install containers. Container is a sandbox environment for each application and you can have multiple containers within a single runtime. The major differentce here is that there is no Operating System replicated across each container. As such the footprint of the container is much smaller than the one of virtual machine.
+
+Containers don't have their own operating system, they actually use host operating system but because application needs operating system to run, they emulate it. While VMs emulate the hardware, containers emulate operating system to provide the sandbox environment for your applications. Because of that they are more lightweight than VMs therefore there is less development effort required for your team, there is less maintenance because you don't need to maintain the operating system, patches, updates and other things. Ans because there is no operating system there is less compute storage requirements from those containers, therefore you can respond quicker to demand changes, so you can auto scale faster than when use VMs. But at the same time Containers are very close to VMs therefore they allow you to run almost any scenario in the cloud. That is why containers are so popular recently on the market.
+
+Key Characteristics:
+
+- Use host's operating system
+- Emulate operating system (VMs emulate hardware)
+- Lightweight (no Operating System)
+  - Development Effort
+  - Maintenance
+  - Compute & Storage requirements
+- Respond quicker to demand changes
+- Designed for almost any scenario
+
+Our First service for Containers is called --> Container Instances (pic 45). When it comes to container instances instead of bundling entire system you just grab the application, grab the configuration and other runtime, middleware, software that you need for this application to run. You ask your developers to bundle this application into a container image and host it into container repository. Container Repository is a simple storage service, where you host your own images. Similarly to VMs there are public marketplace and public repositories of other images for containers as well. You can grab any of those images and push it to Azure Container Instance which will create a container group a simple virtual machine underneath the acenes and host your containers. Some containers might be exposed to users, some might not. It depends on what container really does. If it is Web application -> it will be exposed to Users. If it is a simple batch script -> may be it won't be exposed to the Users. You can create more container groups and a host more containers depending on your needs.
+
+# Azure Container Instances
+
+Simplest and fastest way to run a container in Azure. It is a first service that is categorized as a platform as a service. Sometimes it is called serverless containers because you can actually abstract from the managing of the servers underneath completely. This service is designed for small and simple web applications, running background jobs, maybe some scheduled scripts.
+
+Key Characteristics:
+
+- Simplest and fastest way to run a container in Azure
+- Platform as a Service
+- Serverless Containers
+- Sesigned for:
+  - Small and Simple Web apps/services
+  - Background jobs
+  - Scheduled scripts
+
+# How to create Container Instance and Use it
+
+In Azure Portal --> search for Container --> Click on Container Instances --> Click Create btn.
+Filling the form when creating Container Instances:
+
+- Image source --> it is a marketplace, whre we can choose Quickstart images, which is Microsoft provided images.
+- Image --> Microsoft/aci-helloworld (Linux) , it is simple Web application
+- Size --> choosing power for host running my container
+
+This service will be created and provided for us much faster than the VM.
+
+To use just created Container Instance --> we need to go to just created Container Instance (just created resource), where we can review all the details about the service. Then we can copy IP address from there of our created container. Then we can past that public IP adress into new browser window to open the application that is currently hosted in my container.
+
+# Comparing Container Instances to VMs and VM Scale Sets (pic JOINT TABLE)
+
+We maintain some degree of control because you are virtualizing operating system. So you can install extra runtimes, extra software but it is still much less than maintaining full-fledged operational system. In container Instances there is no auto scaling but cool thing is that at minimum you don't need to run any servers, so you can have Minumum Nodes/ ammount of servers = 0 running if you don't need any. but at maximum you can have 20 container groups/ max nodes = 20. For scalability of this solution is not that great but this service is simple for simple use cases. If you need sacalability there are other services that deliver that like kuberneres services.
+
+# Azure Kubernetes Services (AKS) (pic 46)
+
+Kubernetes it is another service that allows you to work with containers using the same principle. Either hosting your own containers within container repository or using marketplace public repositories. Kubernetes servers can use those Images to spread this across nodes/servrs. Of corse nodes underneath are VMs. But they are separated and abstracted from you and kubernetes is managing the deployment of containers across those nodes. When deployment of containers is finished kubernetes exposes everything to Users or applications through a load balancer and it also gives you the same abilities like a skill set, like staic scaling or auto scaling.
+
+This is an open-source container orchestration platform. it is available in almost any cloud so it is not only Azure but also AWS and Google Cloud. Additionally this is one of the platform as a service offerings in Azure and it is highly scalable and customizable. So while container Instances were designed for a simple container deployments, kubernetes service is designed for high scale and highly customizable deployments of containers in the cloud. Because containers are so similar to VMs therefore almost any scenarion is supported.
+
+key Characteristics:
+
+- Open-source container orchestration platform
+- Platform-as-a-Service
+- Highly scalable and customizable
+- Designed for high scale container deployments (anything really!)
+
+# Comparing Kubernetes service to Container Instances VMs and VM Scale Sets (pic JOINT TABLE)

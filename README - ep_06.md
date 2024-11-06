@@ -6,7 +6,7 @@ Key Characteristics:
 
 - Everything runs on cloud provider hardware
 - No local hardware
-- Some services share hardware with other customersSS
+- Some services share hardware with other customers
 
 In order to understand the public cloud we need to make a very clear separation of where we are deploying our services. We are either deploying them to the cloud service provider or inside of our own datacenter (On-Premises Environment).
 
@@ -14,7 +14,7 @@ When it comes to the public cloud that means all our resources are hosted in the
 
 The public cloud is very simple to understand in general, you are hosting everything in public cloud, as in any deployment model there are always advantages and disadvantages.(pic 19)
 
-In this case when it comes to advantages there is no CapEx (No Capital Expenditure),that means no big initial investment on your side. With cloud being highly available and agile be default to get those all advantages by just simply going to thr cloud. Thanks to pay-as-you-go pricing and this consumtion model that we are talking about you only pay for resources that you use and because Microsoft manages all of the hardware there is no hardware maintenance required and as such no deep technical skills required from your teams.
+In this case when it comes to advantages there is no CapEx (No Capital Expenditure),that means no big initial investment on your side. With cloud being highly available and agile be default to get those all advantages by just simply going to the cloud. Thanks to pay-as-you-go pricing and this consumtion model that we are talking about, you only pay for resources that you use and because Microsoft manages all of the hardware there is no hardware maintenance required and no deep technical skills required from your teams.
 
 But there are some Disadvantages, there is one major one when it comes to security in compliance as well cloud is secure by default there may be specific security requirements or government policies, industry standards or legal requirements the public clouds can't meet. In that case the public cloud might not be the right choice for you. There is always an issue with ownership, because if you want to maintain your own hardware or make changes to the hardware then again you can't do that because Microsoft is hosting all the hardware and managing all the hardware in their own data centers and if you have some specific unique business requirements, public cloud might not be the one for you.
 

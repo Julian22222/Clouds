@@ -69,7 +69,7 @@ Ownership
 
 - You manage Platform and Software
   - Platform --> Operating System, Middleware, Runtime
-  - Softwae --> Data and Applications
+  - Software --> Data and Applications
 
 Typical use cases here are:
 
