@@ -6,7 +6,7 @@ Resources, Resource Groups & Resource Manager are building blocks for management
 
 Users go yo Azure --> they purcase services (services like SQL database, Web application hosting, virtual machine etc). It doesn't matter which service user buy, all those services are represented as a generic object which is called --> Resource. You can think of Resources like an obect that are used to represent your services in Azure.
 
-This this a service lifecycle --> so as soon as you purchase a service in Azure you create a Resource, as soon as you delete the service you delete that Resource.
+Service Lifecycle (meaning)--> so as soon as you purchase a service in Azure you create a Resource, as soon as you delete the service you delete that Resource.
 
 (Pic 36) Azure uses Resources to save all the configurations that you make for your service. Any configuration option that you have for your service is represented as a property on that Resource. All the resources in Azure can be represented as a json (JavaScript Object Notation) template. It is simple file that has properties and values. It is very common used standards on the market described almost any object.
 There are 4 common properties across all resorces:
@@ -23,7 +23,7 @@ But No Resource in Azure can be created without --> Resource Group
 # Resource Group (pic 37)
 
 It is logical container for only resources and it is requirement in order to create any Resource in Azure.
-It is a grouping of Resources, you shoul use it to logically group related resources (it is like a bag where you keep all resources for particular application in one Resource group)
+It is a grouping of Resources, you should use it to logically group related resources (it is like a bag where you keep all resources for particular application in one Resource group)
 
 One of the purpose of Resource Groups is to use --> acces control (IAM), where you can add permissions for your coleagues for this Resource Group Resouces
 
@@ -33,9 +33,9 @@ There are many strategies to do that, for instance there is a strategy that you 
 
 Also, can be organised by department name or use resorce groups to group resources for billing purposes. For instance creating a separate resource group for each cost center within your organization.
 
-You can create your Rsource Groups by location which is Azure Region, this way it is easier for you to manage Data, sovereignty and security compliance requirements for your organization.
+You can create your Resource Groups by location which is Azure Region, this way it is easier for you to manage Data, sovereignty and security compliance requirements for your organization.
 
-More Common used approach is grouping Resources by application lifecucle. Having your development resource groups spread from your production resource group, so you can apply different scripts, different policies, different security rules and different access management policies.
+More Common used approach is grouping Resources by application lifecycle. Having your development resource groups spread from your production resource group, so you can apply different scripts, different policies, different security rules and different access management policies.
 
 There is no Main Rule how to organize Resource Groups. Therefore any organization uses a mix a combination of these strategies, like combining application names with environment names to give full separation of the application development life cycle with their production life cycle, and also total separation across multiple applications. This is most commonly used strategy on the market.
 
@@ -90,7 +90,7 @@ Click Subscriptions --> resourceGroups --> choose resource group --> providers -
   - Security and access management
   - Application Lifecycle
 
-  It is up to yu to decide that what works best for your organization
+  It is up to you to decide that what works best for your organization
 
   # Resource Manager (pic 40)
 

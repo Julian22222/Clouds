@@ -17,12 +17,18 @@ Data Center is used to host a group of network servers. A Data Center has its ow
 
 So Data Centers are building blocks of global Azure infrastructure (pic 25). A group of Data Centers that are connected with each other with high throughput internet connectivity are called - Regions. Microsoft has many Regions across the globe of different sizes. Regions can be as small as single Data Center or they can contain multiple Data Centers.
 
-Regions are globally distributed (pic 26). For instance in USA you have one --> East US Region and one --> West US Region. In Ireland there is a --> North Europe region and in Singapore we have --> Southeast Asia region. There is also one in Japan --> Japan East region. There are plenty more Regions available. All the dots on the picture 26 it is a different Region in Azure. It is 50 dots on the map and you can choose any from those Regions but it must be as close to your clients as possible. It is important decision for every Azure developer and Architect because the closer your Region is to client the lower the latency between the servers and your clients.
+Regions are globally distributed (pic 26).
+
+For instance in USA you have one --> East US Region and one --> West US Region.
+In Ireland there is a --> North Europe region and
+in Singapore we have --> Southeast Asia region.
+There is also one in Japan --> Japan East region.
+There are plenty more Regions available. All the dots on the picture 26 it is a different Region in Azure. It is 50 dots on the map and you can choose any from those Regions but it must be as close to your clients as possible. It is important decision for every Azure developer and Architect because the closer your Region is to client the lower the latency between the servers and your clients.
 
 ## Region (pic 27)
 
 - Region is simply a geographical area on the planet.
-- Region consists one but usually more Data Centers and they need to be connected with low latency network. it should be under 2 milliseconds (,2 milliseconds ) latency between the Data Centers.
+- Region consists from one but usually more Data Centers and they need to be connected with low latency network. it should be under 2 milliseconds (,2 milliseconds ) latency between the Data Centers.
 - Additionally this is the location for your services
 
 Location is a word that will come up very often when you work with Azure. Whenever you purchase any Azure service a location will be always mandatory field that you need to fill. It means which phisical server on the planet, which Region on the planet shoul you deploy your service to.
@@ -31,13 +37,13 @@ Location is a word that will come up very often when you work with Azure. Whenev
 
 - Also, thre are some services that are called Global Services. They don't have any specific region and specific location assign. Things like traffic manager for DNS routing or Azure active directory.
 
-- Azure is globally available over 50 Regions available. new regions are being announced and built almast every day. In future can be more regions.
+- Azure is globally available over 50 Regions available. New regions are being announced and built almost every day. In future can be more regions.
 
 - Also, there are some special regions like government regions for government regulations and partner regions like China regions where Microsoft is providing the services but it doesn't really manage and run Data Centers themselves
 
-When you choosing Resource in Azure Cloud you choosing Location of this resource --> Choosing the Region of Azure on the globe where i will be deployying my service to.
+When you choosing Resource in Azure Cloud you choosing Location of this resource --> Choosing the Region of Azure on the globe where you will be deployying your service to.
 
-The Region that you choose must be as closer to your clients as posible, to decide which is Region is closer we can check using link below, it calculates an average latency between your current location and all available Azure Regions
+The Region that you choose must be as closer to your clients as posible, to decide which Region is closer we can check using link below, it calculates an average latency between your current location and all available Azure Regions
 
 [-->SPEED TEST<--](https://www.azurespeed.com/Azure/Latency)
 
@@ -64,24 +70,24 @@ Microsoft introduces Availability zones and also created services and features w
 1. Zonal services (you choose availability zone where to save a copy of your service)
    you can choose to which availability zones are you doing the deployment to. In case virtual machines now you have a choice, you can create two virtual machines for highly available environment and specify that the first virtual machine goes to availability zone number 1 and second virtual machine goes to availablity zone number 2 or 3. This way you ensure that if there is a data center level failure your virtual machine at least one of them will continue working. In the classical scenarion without availability zones it is possible that your virtual machine even in a big region could be deployed to the same Data Center or even to the same physical server. That is why zonal services are so good and availability zones allow you to create those highly available applications.
 
-(pic 31) When you choose the location for your service in Azure Cloud, also you can choose a specific availability zone from the drop down manu that i want to deploy to.
+(pic 31) When you choose the location for your service in Azure Cloud, also you can choose a specific availability zone from the drop down menu that i want to deploy to.
 
 2. Zone-redundant (Automatically replicate Data across multiple availability zones)
-   Those services like SQL database, storage accounts allow you to take advantage of multiple availability zones out of the box. With simple check of an option your services will automatically replicate data across multiple availability zones and will work in redundant way. So if there is a Data Center level failure you wouldn't even notice it in your application. Few things you should note here,
+   Those services like SQL database, storage accounts allow you to take advantage of multiple availability zones out of the box. With simple check of an option your services will automatically replicate data across multiple availability zones and will work in redundant way. So if there is a Data Center level failure you wouldn't even notice it in your application. Few things you should note here:
    - first of all --> not all regions support availability zones. About 7 Regions right now support it, with more coming in the future
    - second of all --> if the region supports it, there is at least 3 or more zones within that region. That means there is at least 3 Data Centers required.
 
 Lastly availablity zones is built from one or more Data Centers. It is not necessarily a single Data Center.
 Some of Azure Regions will have logical groupings over their Data Centers --> making them zone enabled regions (pic 29)
 
-(pic 30) When you choose the location for your service in Azure Cloud, also you can shoose in Replication option --> Zone-redundant (<--This service will atocatically will be replicate Data across multiple availability zones)
+(pic 30) When you choose the location for your service in Azure Cloud, also you can choose in Replication option --> Zone-redundant (<--This service will atocatically will be replicate Data across multiple availability zones)
 If you choose Region that doesn't support --> Zone-redundant, we won't see Zone-redundant option in Replication section
 
 # What happens if there is region level failure, if entire region goes down? (pic 32)
 
 It doesn't matter if you did use availablility zones.
 
-For that reason Microsoft create Region Pairs. So Each Region has Region Pair. Pair Regions are at least 300 miles away from each other to ensure there is enough distance to cover the natural level disasters, like floods, storms, earthquakes etc. This way Microsoft ensures that if one region goes down the second region that is paired with that region will be UP and gives you a set of features to allow you to replicate your Data, replicate your applicatiopn across multiple regions.
+For that reason Microsoft create Region Pairs. So Each Region has Region Pair. Pair Regions are at least 300 miles away from each other to ensure there is enough distance to cover the natural level disasters, like floods, storms, earthquakes etc. This way Microsoft ensures that if one region goes down the second region that is paired with that region will be UP and gives you a set of features to allow you to replicate your Data, replicate your application across multiple regions.
 
 Key Characteristics: (pic 33)
 
@@ -107,7 +113,7 @@ These Pairs not always within the same country but they must be close enough to 
 # Geography (pic 34)
 
 All Regions and Region Pairs are grouped into geographies.
-Each Geography describes a discreate market and contains typically at least two or more Regions and their purpose is yo ensure that all the Data level requirements are met. Like residency, sovereignty, resiliency and compliance. Additionally geographies are fault tolerant so they also protect you from region-wide failures and geographies are broken into areas, like: Americas, Europe, Asia Pacific, Middle East and Africa. Each region belongs to only one geography at the time.
+Each Geography describes a discreate market and contains typically at least two or more Regions and their purpose is you ensure that all the Data level requirements are met. Like residency, sovereignty, resiliency and compliance. Additionally geographies are fault tolerant so they also protect you from region-wide failures and geographies are broken into areas, like: Americas, Europe, Asia Pacific, Middle East and Africa. Each region belongs to only one geography at the time.
 
 Key Characteristics:
 
