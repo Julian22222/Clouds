@@ -36,4 +36,4 @@ In this model you take advantage of both -> Public and Private cloud. You connec
 
 When talking about advantages and disadvantages the obvious one is the great flexibility. (pic 23). But beyond that you can run applications in private Cloud, utilize existing infrastructure, meet any security requirements but everything else move to the cloud and take advantage of all the good stuff from the cloud.
 
-In this case Disadvantages are pretty obvious --> bigger environment, consisting fro both public and private cloud might be more expensive but it definitely more complicated to manage an as such puts a bigger strain and bigger requirement on the skills and expertise of your internal IT teams.
+In this case Disadvantages are pretty obvious --> bigger environment, consisting from both public and private cloud might be more expensive but it definitely more complicated to manage an as such puts a bigger strain and bigger requirement on the skills and expertise of your internal IT teams.
