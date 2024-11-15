@@ -126,7 +126,22 @@ CDN is one of those Networking services that helps customers to build their appl
 (pic 61 ) So let's take a Web application as an example, every Web application has some static content --> like JavaScript files, stylesheets, static pages or images. Normally if developers don't know about the existence of services like Content Delivery Network what they will do is bundle this application and put it into app service and host that app service in one of the Azure Regions around the world. For instance in West US so when a user from Alaska tries to connect to our Web application, his request will have to go through 1 600 miles to get this page and all of the content. So if our page has 50 elements on it that user has to make 50 requests. 50 separate requests with each having hundred milliseconds delay. This might not be an issue yet but if our users will start connecting from different continents. In this case the distance they need to cover is much greater. So the latency for every single request they make will be much greater when comparing to users connecting from Alaska. To help that scenario you ask your developers to upload all the static content into Content Delivery Network. Allowing CDN Service to distribute that content all around the world. So the users will connect to the closest location with their content available, reducing the latency but also the workload require by your Front-End services. (pic 62)
 
 Summery:
+Azure CDN allows for delivery of Web content to users to minimize the latency for Web applications so that you can build more scalable web applications and minimize the workload required by your Front-End services. And all that content is spread across multiple POP (point of presence) locations. Microsoft has over 120 locations available worldwide. As you can imagine this is more than Azure regions available. That means there might be points of presence closer to you that there are to the closest Azure region.
 
 CDN Key Characteristics:
 
-- Delicer web content to users
+- Deliver web content to users
+- Minimize latency
+- POP (point of presence) locations
+
+# Azure Networking Services Summary
+
+- Azure VirtualNetwork - service that allow us Emulate/represent our physical networking in the cloud and allow us to group, filter and segment the network and all the related resources
+- Azure VPN Gateway - service that allows us to connect our On-Premise networks with the Cloud Network and Virtual Networks with each other (remember about VNet Peering). It allow them to communicate to each other.
+
+Two Load Balancing solutions:
+
+- Azure Load Balancer - Even traffic distribution for non-HTTP (non-web) traffic across multiple services. It is designed for non-web traffic
+- Azure Application Gateway - If our traffic web based, we can distribute the traffic for HTTP (web). Because it has additional feature for filtering and security of web-based traffic
+
+- Azure Content Delivery Network (CDN) - Service that distributes and caches the content across multiple POP locations around the world to offload our Front-End services but also reduce latency required to deliver the content to our users. Which helps with scalability of our applications but alos gives us better user experience.

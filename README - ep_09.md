@@ -42,7 +42,7 @@ Key Characteristics:
 - Supports marketplace and custom images
 - Best suited for:
   - Custom software requiring custom system configuration
-  - lift0and-shift scenarios
+  - lift-and-shift scenarios
 - Can run any application/scenario
 
   - Web apps & Web services
@@ -93,7 +93,7 @@ Virtual machine scale sets are still infrastructure-as-a-Service(IaaS), because 
 
 Containers are little bit different than virtual machines. While there is still physical machine, there is still operating system underneath but instead of installing Virtualization Software, we install Container Runtime. Within Container Runtime --> you install containers. Container is a sandbox environment for each application and you can have multiple containers within a single runtime. The major differentce here is that there is no Operating System replicated across each container. As such the footprint of the container is much smaller than the one of virtual machine.
 
-Containers don't have their own operating system, they actually use host operating system but because application needs operating system to run, they emulate it. While VMs emulate the hardware, containers emulate operating system to provide the sandbox environment for your applications. Because of that they are more lightweight than VMs therefore there is less development effort required for your team, there is less maintenance because you don't need to maintain the operating system, patches, updates and other things. Ans because there is no operating system there is less compute storage requirements from those containers, therefore you can respond quicker to demand changes, so you can auto scale faster than when use VMs. But at the same time Containers are very close to VMs therefore they allow you to run almost any scenario in the cloud. That is why containers are so popular recently on the market.
+Containers don't have their own operating system, they actually use host operating system but because application needs operating system to run, they emulate it. While VMs emulate the hardware, containers emulate operating system to provide the sandbox environment for your applications. Because of that they are more lightweight than VMs therefore there is less development effort required for your team, there is less maintenance because you don't need to maintain the operating system, patches, updates and other things. And because there is no operating system there is less compute storage requirements from those containers, therefore you can respond quicker to demand changes, so you can auto scale faster than when use VMs. But at the same time Containers are very close to VMs therefore they allow you to run almost any scenario in the cloud. That is why containers are so popular recently on the market.
 
 Key Characteristics:
 
@@ -108,7 +108,7 @@ Key Characteristics:
 
 # Azure Container Instances
 
-Our First service for Containers is called --> Container Instances (pic 45). When it comes to container instances instead of bundling entire system you just grab the application, grab the configuration and other runtime, middleware, software that you need for this application to run. You ask your developers to bundle this application into a container image and host it into container repository. Container Repository is a simple storage service, where you host your own images. Similarly to VMs there are public marketplace and public repositories of other images for containers as well. You can grab any of those images and push it to Azure Container Instance which will create a container group a simple virtual machine underneath the acenes and host your containers. Some containers might be exposed to users, some might not. It depends on what container really does. If it is Web application -> it will be exposed to Users. If it is a simple batch script -> may be it won't be exposed to the Users. You can create more container groups and a host more containers depending on your needs.
+Our First service for Containers is called --> Container Instances (pic 45). When it comes to container instances instead of bundling entire system you just grab the application, grab the configuration and other runtime, middleware, software that you need for this application to run. You ask your developers to bundle this application into a container image and host it into container repository. Container Repository is a simple storage service, where you host your own images. Similarly to VMs there are public marketplace and public repositories of other images for containers as well. You can grab any of those images and push it to Azure Container Instance which will create a container group a simple virtual machine underneath the scenes and host your containers. Some containers might be exposed to users, some might not. It depends on what container really does. If it is Web application -> it will be exposed to Users. If it is a simple batch script -> may be it won't be exposed to the Users. You can create more container groups and a host more containers depending on your needs.
 
 Simplest and fastest way to run a container in Azure. It is a first service that is categorized as a platform as a service. Sometimes it is called serverless containers because you can actually abstract from the managing of the servers underneath completely. This service is designed for small and simple web applications, running background jobs, maybe some scheduled scripts.
 
@@ -117,7 +117,7 @@ Key Characteristics:
 - Simplest and fastest way to run a container in Azure
 - Platform as a Service
 - Serverless Containers
-- Sesigned for:
+- Designed for:
   - Small and Simple Web apps/services
   - Background jobs
   - Scheduled scripts
@@ -141,7 +141,7 @@ We maintain some degree of control because you are virtualizing operating system
 
 # Azure Kubernetes Services (AKS) (pic 46)
 
-Kubernetes it is another service that allows you to work with containers using the same principle. Either hosting your own containers within container repository or using marketplace public repositories. Kubernetes servers can use those Images to spread this across nodes/servers. Of corse nodes underneath are VMs. But they are separated and abstracted from you and kubernetes is managing the deployment of containers across those nodes. When deployment of containers is finished kubernetes exposes everything to Users or applications through a load balancer and it also gives you the same abilities like a skill set, like staic scaling or auto scaling.
+Kubernetes it is another service that allows you to work with containers using the same principle. Either hosting your own containers within container repository or using marketplace public repositories. Kubernetes servers can use those Images to spread this across nodes/servers. Of corse nodes underneath are VMs. But they are separated and abstracted from you and kubernetes is managing the deployment of containers across those nodes. When deployment of containers is finished kubernetes exposes everything to Users or applications through a Load Balancer and it also gives you the same abilities like a skill set, like static scaling or auto scaling.
 
 This is an open-source container orchestration platform. it is available in almost any cloud so it is not only Azure but also AWS and Google Cloud. Additionally this is one of the platform as a service offerings in Azure and it is highly scalable and customizable. So while container Instances were designed for a simple container deployments, kubernetes service is designed for high scale and highly customizable deployments of containers in the cloud. Because containers are so similar to VMs therefore almost any scenarion is supported.
 
@@ -162,7 +162,7 @@ Main purpose of the App Service is building Web Applications whenever those are 
 
 In this really simple service if you compare this diagram to our previous diagrams you see there is much less work. There is no need to create any Images and store them anywhere. You simple send your code to --> App Service.
 
-App Service is Azure offering for hosting enterprise grade web applications and it is another Platform-as-a-Service (PaaS) offering. App Service supports multiple programming languages amd also containers.
+App Service is Azure offering for hosting enterprise grade web applications and it is another Platform-as-a-Service (PaaS) offering. App Service supports multiple programming languages and also containers.
 
 App Services helps to quickly host your applications.
 
@@ -202,16 +202,16 @@ And extension will take care of everything else, packaging that code and sending
 
 # Comparing App Services with other services (pic 50)
 
-You have less controll over the hardware running underneath and over the platform itself but you have auto scaling feature and you can scale up to 20 or 100 nodes depending on the pricing tier. Which gives you pretty good scalability options for a simple web application service. It has a lot of enterprise great features so the maintenance is also pretty low.
+You have less control over the hardware running underneath and over the platform itself but you have auto scaling feature and you can scale up to 20 or 100 nodes depending on the pricing tier. Which gives you pretty good scalability options for a simple web application service. It has a lot of enterprise great features so the maintenance is also pretty low.
 
 # Azure Functions (also called --> Function Apps) (pic 48)
 
 This service is similar to App Service but the differece is in App Services we were creating a full-fledged Web Services or Web Applications but if we want to run a small pieces of code. Lets's say we have a function that adds two numbers --> a and b and returns a result. If we want to run the small piece of code as a small web service, we again ask developers to prepare a small package and deploy this to Function App.
 Function App similarly to app service will deploy this across multiple nodes and expose this as a App Service.
 
-If you paid attention this might look very similar to App services. Azure functions are based on Azure App Service, so yhey have a lot of same features and a lot of new features that allow you to host your application pieces of code very effectively.
+If you paid attention this might look very similar to App services. Azure functions are based on Azure App Service, so they have a lot of same features and a lot of new features that allow you to host your application pieces of code very effectively.
 
-Function Apps are Platform-as-a-Service although they are very often called serverless. Because they are completely obstruscting the way that you manage servers underneath. So if there is no traffic that means there are no servers and no charges. With Azure functions you have two hosting/ two pricing models --> a consumption based plan where you pay exactly for what you use. Like 20 cents for one million executions or you can have dedicated plan using App Services. It is up to you to choose what is the best option for you. This service is designed for building micro or nano services, state-led functions using a very small pieces of code. Therefore they are very simple. You shold not be using Azure Functions to build fully fledgd, big services but they can very nicely complement them if needed.
+Function Apps are Platform-as-a-Service although they are very often called serverless. Because they are completely obstruscting the way that you manage servers underneath. So if there is no traffic that means there are no servers and no charges. With Azure functions you have two hosting/ two pricing models --> a consumption based plan where you pay exactly for what you use. Like 20 cents for one million executions or you can have dedicated plan using App Services. It is up to you to choose what is the best option for you. This service is designed for building micro or nano services, state-led functions using a very small pieces of code. Therefore they are very simple. You shold not be using Azure Functions to build fully fledged, big services but they can very nicely complement them if needed.
 
 # Comparing Function Apps with other services (pic 50)
 
