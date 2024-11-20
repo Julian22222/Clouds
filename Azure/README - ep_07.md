@@ -28,20 +28,20 @@ There are plenty more Regions available. All the dots on the picture 26 it is a 
 ## Region (pic 27)
 
 - Region is simply a geographical area on the planet.
-- Region consists from one but usually more Data Centers and they need to be connected with low latency network. it should be under 2 milliseconds (,2 milliseconds ) latency between the Data Centers.
+- Region consists from one but usually more Data Centers and they need to be connected with low latency network. It should be under 2 milliseconds (2 milliseconds ) latency between the Data Centers.
 - Additionally this is the location for your services
 
-Location is a word that will come up very often when you work with Azure. Whenever you purchase any Azure service a location will be always mandatory field that you need to fill. It means which phisical server on the planet, which Region on the planet shoul you deploy your service to.
+Location is a word that will come up very often when you work with Azure. Whenever you purchase any Azure service a location will be always mandatory field that you need to fill. It means which phisical server on the planet, which Region on the planet should you deploy your service to.
 
 - Important things to remember. Some of the services are available only in certain regions. You should always check which Region has the services that you need to build your application.
 
 - Also, thre are some services that are called Global Services. They don't have any specific region and specific location assign. Things like traffic manager for DNS routing or Azure active directory.
 
-- Azure is globally available over 50 Regions available. New regions are being announced and built almost every day. In future can be more regions.
+- Azure is globally available in over 50 Regions. New regions are being announced and built almost every day. In future can be more regions.
 
 - Also, there are some special regions like government regions for government regulations and partner regions like China regions where Microsoft is providing the services but it doesn't really manage and run Data Centers themselves
 
-When you choosing Resource in Azure Cloud you choosing Location of this resource --> Choosing the Region of Azure on the globe where you will be deployying your service to.
+When you choosing Resource in Azure Cloud you choosing Location of this resource --> Choosing the Region of Azure on the globe where you will be deploying your service to.
 
 The Region that you choose must be as closer to your clients as posible, to decide which Region is closer we can check using link below, it calculates an average latency between your current location and all available Azure Regions
 
@@ -63,7 +63,7 @@ A group of Data Centers that are connected with super fast internet, they are ca
 
 In a typical scenario you don't have control to which Data center your services will be deploy to. That is why availability zones were created. this is a regional feature where each Data Center gets a number. A number that represent a grouping of physically separate facilities.
 
-Availability Zones are designed to protect from Data Center failures. Because each availability zone has its own Power, Cooling and Networking infrastructure. Whenever there is a failure in a single Data Center, other two Data Centers will continue working (pic 28). This is how Data Centers operate.
+Availability Zones are designed to protect from Data Center failures. Because each availability zone has its own Power, Cooling and Networking infrastructure. For example we have 3 Data centers, Whenever there is a failure in a single Data Center, other two Data Centers will continue working (pic 28). This is how Data Centers operate.
 
 Microsoft introduces Availability zones and also created services and features within services that can take advantage of this information. Those services are split in two cateories/types:
 

@@ -4,7 +4,7 @@ Resources, Resource Groups & Resource Manager are building blocks for management
 
 # Resources (pic 35)
 
-Users go yo Azure --> they purcase services (services like SQL database, Web application hosting, virtual machine etc). It doesn't matter which service user buy, all those services are represented as a generic object which is called --> Resource. You can think of Resources like an obect that are used to represent your services in Azure.
+Users go to Azure --> they purcase services (services like SQL database, Web application hosting, virtual machine etc). It doesn't matter which service user buy, all those services are represented as a generic object which is called --> Resource. You can think of Resources like an obect that are used to represent your services in Azure.
 
 Service Lifecycle (meaning)--> so as soon as you purchase a service in Azure you create a Resource, as soon as you delete the service you delete that Resource.
 
@@ -77,7 +77,7 @@ https://resources.azure.com/subscriptions/.....
 
 Click Subscriptions --> resourceGroups --> choose resource group --> providers --> storageAccounts
 
-# Resouce Gruops
+# Resouce Groups
 
 - Each resource must be in one, and only one Resource Group
 - Resource groups have their own location assigned (but this location is only used to store metadata, so it is not impacting resources)

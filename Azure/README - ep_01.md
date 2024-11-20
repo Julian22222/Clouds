@@ -91,7 +91,7 @@ Disaster recovery is the system's ability to recover from an event that has take
 
 Is a simple metric that measures how much uptime of the system being accessible to users deviding on system downtime. It is simple calculation between the uptime and entire lifetime of the system.
 Avilability is a measure of system uptime for either users or services.
-High availability means ability of the system to run for very extended periods of time with very ittle downtime.
+High availability means ability of the system to run for very extended periods of time with very little downtime.
 In Azure many services deliver very high availability by default.
 We can calculate availability per year, month or day.
 
