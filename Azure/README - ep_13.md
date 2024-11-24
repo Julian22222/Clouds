@@ -2,7 +2,9 @@
 
 It is very similar to online shop. As in online shops you can select your products that you need, add them to your basket and simply hit purchase. You can also search for the products that you need.
 Similar to this example inside of Azure marketplace you search for services and there are templates for those services provided by Microsoft and other vendors. A single template can provide one or multiple services.
-So from your perspective Azure marketplace is simply Azure shop where you purchase Azure services or out of the box solutions that take advantage of Azure services. Inside of the Azure marketplace you can find products created by both Microsoft but also third-party vendors. If your company builds a solution that based on Azure services or very well integrates with them you can build your own templates and publish them to Azure marketplace. So your customers can not only find you but very easily purchase services with a simple click of a button. The products that you will find within Azure marketplace might consist of services in all 3 categories. They might take advantage of Infrastructure as a service (IaaS), Platform as a service (PaaS) but also Software as a service (SaaS).
+So from your perspective Azure marketplace is simply Azure shop where you purchase Azure services or out of the box solutions that take advantage of Azure services. Inside of the Azure marketplace you can find products created by both Microsoft but also third-party vendors. If your company builds a solution that based on Azure services or very well integrates with them you can build your own templates and publish them to Azure marketplace. So your customers can not only find you but very easily purchase services with a simple click of a button.
+
+The products that you will find within Azure marketplace might consist of services in all 3 categories. They might take advantage of Infrastructure as a service (IaaS), Platform as a service (PaaS) but also Software as a service (SaaS).
 
 Purchasing products in Azure marketplace is very simple, you can do it through one of multiple ways.
 

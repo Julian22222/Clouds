@@ -13,9 +13,13 @@ Here we will focus only on structured and semi-structured data types
 # Azure Cosmos DB
 
 (pic 65) In ep_11 we were talking about semi-structured data sets can be uploaded by either users or applications to a table entities hosted by Azure table storage service. In that sense Table Storage and Cosmos DB are very similar except for the table entities you have collections but instead of Table Storage you have Cosmos DB (pic 77). But the difference between two services lies somewhere else.
-One of the primary features of Azure Cosmos DB is ability to replicate geographically. This is because Azure Cosmos DB is available in many regions and Data replication across those regions is as simple as selecting check boxes. Once that checkbox is selected your data automatically get replicated across Azure regions of your choosing (pic 78). It is very simple. One of another feature of Cosmos DB is ability to not only read globally but also write globally. So you can write to the closest data center available to your application and to your users. Besides its geo-replication capabilities this database is also low latency database. That means if you are operating on a small objects it will return responses under 10 milliseconds. If you building real-time applications this might be the best choice for you of all of these services available in Azure.
+-One of the primary features of Azure Cosmos DB is ability to replicate geographically. This is because Azure Cosmos DB is available in many regions and Data replication across those regions is as simple as selecting check boxes. Once that checkbox is selected your data automatically get replicated across Azure regions of your choosing (pic 78). It is very simple.
+-One of another feature of Cosmos DB is ability to not only read globally but also write globally. So you can write to the closest data center available to your application and to your users. Besides its geo-replication capabilities this database is also low latency database. That means if you are operating on a small objects it will return responses under 10 milliseconds. If you building real-time applications this might be the best choice for you of all of these services available in Azure.
 
-Azure Cosmos DB is globally distributed NoSQL Database service in Azure. Allowing to store your semi-structured data sets. Because semi-structured data sets do not require to follow schema this is a schema-less database. Another feature of Cosmos DB is ability to use one of multiple available APIs. Standard one is core SQL API whichallows you to query your data quite effectively. But if you are building application based on MongoDB, Cassandra, Gremlin, Table Storage you can very easily migrate to Cosmos DB and use those respective APIs. One of the cool things to note here is that Gremlin is for graph databases. So Azure Cosmos DB is not only a document database to store JSON files, you can also store graph data and Table Storage API allows you very easily to migrate from Table Storage to Cosmos DB if you need that Geo-distribution or better performance. This database is designed to build either highly responsive or multi-regional applications or both. If you need that Cosmos DB might be the perfect option for you.
+Azure Cosmos DB is globally distributed NoSQL Database service in Azure. Allowing to store your semi-structured data sets. Because semi-structured data sets do not require to follow schema this is a schema-less database.
+-Another feature of Cosmos DB is ability to use one of multiple available APIs. Standard one is core SQL API which allows you to query your data quite effectively. But if you are building application based on MongoDB, Cassandra, Gremlin, Table Storage you can very easily migrate to Cosmos DB and use those respective APIs. One of the cool things to note here is that Gremlin is for graph databases.
+
+So Azure Cosmos DB is not only a document database to store JSON files, you can also store graph data and Table Storage API allows you very easily to migrate from Table Storage to Cosmos DB if you need that Geo-distribution or better performance. This database is designed to build either highly responsive or multi-regional applications or both. If you need that Cosmos DB might be the perfect option for you.
 
 Key Characteristics:
 
@@ -49,7 +53,7 @@ It is a family of products with a similar capabilities and the one we learned ju
 
 - If you need full capabilities of SQL Server from On-Premis but in the cloud. Azure SQL also offers you a --> Managed Instance. This is much more pricey option but it gives you full capabilities. So if there are some features missing in SQL Database you can use Managed Instance.
 
-- SQL Data Warehouse - this is version of the SQL server for massively parellel processing operations, for big data Data Warehousing and we eill learn a bit more about this servis in future lessons.
+- SQL Data Warehouse - this is version of the SQL server for massively parallel processing operations, for big data Data Warehousing and we will learn a bit more about this servis in future lessons.
 
 - SQL VM - Azure SQL gives you ability to install SQL Server on a VM. This is an Infrastructure as a service option but it is also very close to Platform as a service. Because you get all the cool features of Azure SQL like backups, replication, security, monitoring and automated updates on operating system.
 
@@ -63,12 +67,12 @@ It is a family of products with a similar capabilities and the one we learned ju
   - Resource group
   - Database name
   - Server (creat server <-- giving admin login and password)
-  - Whant to use SQL elastic pool ? -> No
+  - Want to use SQL elastic pool ? -> No
   - Compute + Storage (take basic size of the server)
 
 Also, it allows you to add tables, column or make any queries using SQL in SQL database panel in Azure Portal. Go to SQL database and on the left side menu click --> Query editor. Then logIn to your database. Now you can write any queries and see all the tables in your database from Azure Portal SQL databse service.
 
-Summery:
+Summary:
 Cosmos DB which is globally distributed NoSQL Database in the cloud allowing customers to take advantage of low latency, multi-master which is perfect for building globally distributed applications and serversless applications. Azure SQL database is reliable relational database based on SQL Server. Azure Database for MySQL takes advantage of Azure SQL platform offering with MySQL database engine and similar case for PostgreSQL. Azure SQL delivers many great features but underneath it runs on a PostgreSQL database engine. Additionally if you need fully fledged SQL Server totally managed by Microsoft then you can take Azure SQL Managed Instance. This is more pricey option but with more features just like an On-Premise SQL Server and if some reason you need a total control over the Infrastructure then you can use SQL Server on a VM. Which is fully fledged SQL Server on Infrastructure as a Service. If you working with big data you might be interested in SQL Data Warehouse (SQL DW) it is part of Azure synapse analytics which is massively power processing version of the SQL Server, book big data and big data warehousing.
 
 Azure Database Services Summary:
