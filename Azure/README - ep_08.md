@@ -20,7 +20,7 @@ and there are some other non-common properties that are different and used to de
 
 But No Resource in Azure can be created without --> Resource Group
 
-# Resource Group (pic 37)
+# Resource Group (pic 37) ![logo28](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo28.jpg)
 
 It is logical container for only resources and it is requirement in order to create any Resource in Azure.
 It is a grouping of Resources, you should use it to logically group related resources (it is like a bag where you keep all resources for particular application in one Resource group)
@@ -48,7 +48,9 @@ Create Resource groups first , to creating new resource group you need to fill a
 - Resource group property --> create a name for this Resource group
 - Region property --> choose where the servers will be located with your Data
 
-#### Also, you can work with Azure Cloud using CLI in terminal
+#### Also, you can work with Azure Cloud using Azure CLI or PowerShell in terminal
+
+You just need to install PowerShell or CLI and you will be able to connect to Azure through terminal, (see --> Episode_19)
 
 one of the comands, comand to login to Azure Cloud, which will open the browser window
 

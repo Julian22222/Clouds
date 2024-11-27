@@ -8,11 +8,12 @@ Machine Learning - is a subcategory of AI where we use that software and we teac
 
 Typically the process of building a machine learning model consist of training the model based on our data then packaging and validating that model. If we are happy with the results we can deploy those models as a Web Services then monitoring those services and retraining the model to get even better results.
 Azure Machine Learning is here to help us with this entire process by providing us with set of tools:
--Tools like notebooks written in Pyton or R or
--a visual designer which allows us to build machine learning models using a simple drag and drop experience directly in our browsers.
--Additionally machine learning models allows us to manage all the compute resources where we train package validate and deploy those models. So we don't need to worry about Azure infrastructure and underlying resources ourselves.
--Additionally Azure machine learning comes with something caled - AUTO ML, this is automated process allows us to drop random algorithms at our data and see which one scores the best and deploy that as our designated Web service.
--And lastly there is also a feature of pipelines which allow us to build this entire process end-to-end.
+
+- Tools like notebooks written in Pyton or R or
+- a visual designer which allows us to build machine learning models using a simple drag and drop experience directly in our browsers.
+- Additionally machine learning models allows us to manage all the compute resources where we train package validate and deploy those models. So we don't need to worry about Azure infrastructure and underlying resources ourselves.
+- Additionally Azure machine learning comes with something caled - AUTO ML, this is automated process allows us to drop random algorithms at our data and see which one scores the best and deploy that as our designated Web service.
+- And lastly there is also a feature of pipelines which allow us to build this entire process end-to-end.
 
 Whether we are using those notebooks, designer or auto tools. This is complete end-to-end solution for building machine learning models.
 
@@ -36,9 +37,10 @@ For example on left side menu bar we have: (pic 94)
 - If this wasn't enough you also have Designer, It is a visual way of building machine learning models with a drag and drop features.
 
 (pic 94) Machine Learning has also a lot of features around asset management (in Asset section, on the left side menu bar). Assets like Datasets, Experiments, Pipelines, Models that you have built and Endpoints that you deploy those models to. There is also plenty of other feature which allow you to manage your compute resources (pic 94, left side menu bar)
--Compute, where you train and deploy your models.
--Datastores, where you connect to your data sources in Azure. For example Azure Blob Storage and Azure File Share.
--Data Labeling
+
+- Compute, where you train and deploy your models.
+- Datastores, where you connect to your data sources in Azure. For example Azure Blob Storage and Azure File Share.
+- Data Labeling
 
 Let's go back to Designer. Where you can build your own machine learning model using a visual experience. Click on --> + (pic 95). Before we begin, we can create a compute target, so a simple Virtual Machine that will run our workflow.
 

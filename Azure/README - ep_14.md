@@ -85,4 +85,4 @@ Key Characteristics:
 
   - IoT Hub is a managed service for bi-directional comunication of IoT devices in the cloud. It is a platform as a service (PaaS), used to build custom IoT applications. But your organization can leverage, existing industry standard specific templates for building IoT solutions. In that case use -->
   - IoT Central, which is an IoT application platform with dozen of functionalities for provisioning management and monitoring of IoT solutions. Software as a service (SaaS).
-  - Azure Sphere, which is end-to-end approach for building secure IoT solutions by providing both hardware operating system and communication channels for securing our IoT solutions.
+  - Azure Sphere, which is end-to-end approach for building secure IoT solutions by providing both hardware, operating system and communication channels for securing our IoT solutions.

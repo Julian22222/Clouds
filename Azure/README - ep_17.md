@@ -31,19 +31,21 @@ Key Characteristics:
 # Azure Logic Apps (pic 98) ![logo22](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo22.jpg)
 
 This service allows you to build workflows using a visual interface. Those workflows can represent both business scenarios but also cross-application integrations. (Numbers on pic 98 represent 1 of 4 options below)
-1.So you can build a simple step-by-step workflows or
-2.you can do something more complex with conditions,
-3.you can do loops if you need to or
-4.you can do parallel runs.
+
+1. So you can build a simple step-by-step workflows or
+2. you can do something more complex with conditions,
+3. you can do loops if you need to or
+4. you can do parallel runs.
 
 All of those scenarios are very easy to implement using Azure Logic Apps.
 
 Additionally each flow can be triggered. For example:
--it can be triggered by a web request.
--Or you can trigger your flows using emails.
--Or triggered them based on office 365 events.
--Or you can trigger them based on what is happening in your Azure subscriptions.
-There is over 200 connectors (options to trigger each flow) available to you. So you can trigger your workflows not only based on Microsoft technologies but also other clouds, other software as a service aplications, like Salesforce, SAP and etc.
+
+- it can be triggered by a web request.
+- Or you can trigger your flows using emails.
+- Or triggered them based on office 365 events.
+- Or you can trigger them based on what is happening in your Azure subscriptions.
+  There is over 200 connectors (options to trigger each flow) available to you. So you can trigger your workflows not only based on Microsoft technologies but also other clouds, other software as a service aplications, like Salesforce, SAP and etc.
 
 Additionally all of those 200 connectors allow you to use them within the flow. So you can send web request if you need to you, maybe send an email or save some files to Blob storage or write data to SQL database.
 

@@ -24,8 +24,11 @@ We were talking about unstructured data and any kind of unstructured data can be
 BLOB <-- stands for Binary Large OBject so any kind of file. And you can put those blobs into Azure Blob storage into something called container. Container is just a bucket for multiple blobs. You can have more than one container with an Azure blob storage. It is designed to allow both applications and users to work with unstructured files in the Cloud.
 
 Azure Blob storage is simply a service designed to store any kind of file in Azure. Additionally there are 3 storage tiers. Storage tiers allow Microsoft to provide better performance and better pricing depending on how often do you access your data. That's why there are 3 storage tiers.
+
 -First tier is called - Hot tier. You use this for your frequently accessed data. So if you are building Web application and this web application is serving images to your customers then this would be the storage tier that you would use. Because hot storage tier provides the best performance for your files.
+
 -But if your solution also store files that are accessed less frequently then you can use --> Cool tier. With Cool tier you are accepting lower availability and lower performance for accessing your files while maintaining high durability and getting significant discount for storing that data. This is the perfect solution for storing older versions and backups for your applications.
+
 -But if you have files that you never plan to access, like a very very long term backups, let's say backup that you need to keep for 10 years. Then you can use archive storage tier. In this case the availability is the lowest because retrieving that data might even take couple of hours but the price for this tier is lowest. You are getting 10 times the discount for storing data in Archive tier. This really is the lowest price per Gigabyte that you can get when storing data in Azure.
 
 Azure Blob Storage Key Characteristics:

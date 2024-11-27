@@ -4,7 +4,7 @@
 
 [-->> TEST HERE <<--](https://marczak.io/az-900/#ep01)
 
-## Cloud Computing (See pic 1)
+## Cloud Computing (See pic 1) ![pic01](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic01.jpg)
 
 it is a delivery model for services. Services like:
 

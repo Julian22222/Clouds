@@ -4,7 +4,7 @@ Here we will learn about the tools that will help us with management of our Azur
 
 # Azure Portal
 
-As ausers we simply open browser, type in [portal.azure.com](portal.azure.com) to connect to Azure and manage our Azure resources.
+As a users we simply open browser, type in [portal.azure.com](portal.azure.com) to connect to Azure and manage our Azure resources.
 
 Key Characteristics:
 
@@ -30,7 +30,7 @@ sudo apt-get install -y powershell
 Key Characteristics:
 
 - PowerShell and module. PowerShell is simply a module that Microsoft created for a popular PowerShell scripting language.
-- Designed for automation. Helps wit automation tasks when it comes to Azure. With this module and PowerShell language you can create very complex logic using scripts.
+- Designed for automation. Helps with automation tasks when it comes to Azure. With this module and PowerShell language you can create very complex logic using scripts.
 - Multi-platform with PowerShell Core. Now we can use PowerShell in any operating system -> Windows, Linux or macOS.
 - Simple to use. The module is simple to use. For example: you can type
   - Connect-AzAccount - script to LogIn into Azure
@@ -61,8 +61,13 @@ Key Characteristics:
 - Command Line Interface for Azure
 - Designed for automation just like PowerShell
 - Multi-platform (Python) . It is based on Python so you can use it on any operating system
-- Simple to use, just like PowerShell. Type: - az login - script to log into Azure - az group list - will list all resource groups - az group create - to create a new resource group - az vm create - to create new VM
-  CLI is just a tool for the native terminal. So depending on which operating system terminal you are using you will have different scripting capabilities.
+- Simple to use, just like PowerShell. Type:
+  - az login - script to log into Azure
+  - az group list - will list all resource groups
+  - az group create - to create a new resource group
+  - az vm create
+  - to create new VM
+    CLI is just a tool for the native terminal. So depending on which operating system terminal you are using you will have different scripting capabilities.
 - Native OS terminal scripting
 
 In general you can use either PowerShell or CLI to perform most of the tasks when it comes to Azure. It is just a matter of preference. Microsoft wanted to provide you with tool kit. So that you can use your existing skills whether you are coming from Windows or more unix-based environments and integrate with Azure in no time.
