@@ -28,7 +28,7 @@ Key Characteristics:
   - middleware
   - configuration
 
-# Virtual Machines (VMs) ![logo1](https://github.com/Julian22222/Clouds/tree/main/Azure/logologo1.jpg)
+# Virtual Machines (VMs) ![logo1](https://github.com/Julian22222/Clouds/tree/main/Azure/logo/logo1.jpg)
 
 (pic 42) Virtualization in the cloud is done through Azure Virtual Machine Service. The process is very simple, you either grab Microsoft prepared Virtual machine images whenever this is Ubuntu, Windows, Oracle machine. Microsoft already prepared virtual machine images for you in the marketplace that you can start from. Or if you want you can configure your own system, install services, runtimes, applications and ask your developers to prepare a custom image for your own company and put that image into some storage. Azure virtual machine service grabs those images and allows you to choose a custom or marketplace image to start creating new Virtual machines and exposing them to your users. It doesn't matter which one you choose, in just couple of minutes a virtual machine will be provisioned and ready to use.
 
