@@ -10,7 +10,7 @@ Types of Data: (from ep_11)
 
 Here we will focus only on structured and semi-structured data types
 
-# Azure Cosmos DB
+# Azure Cosmos DB ![logo14](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo14.jpg)
 
 (pic 65) In ep_11 we were talking about semi-structured data sets can be uploaded by either users or applications to a table entities hosted by Azure table storage service. In that sense Table Storage and Cosmos DB are very similar except for the table entities you have collections but instead of Table Storage you have Cosmos DB (pic 77). But the difference between two services lies somewhere else.
 -One of the primary features of Azure Cosmos DB is ability to replicate geographically. This is because Azure Cosmos DB is available in many regions and Data replication across those regions is as simple as selecting check boxes. Once that checkbox is selected your data automatically get replicated across Azure regions of your choosing (pic 78). It is very simple.
@@ -30,7 +30,7 @@ Key Characteristics:
   - Highly responsive (real time) applications with super low latency responses <10ms
   - Multi-regional applications
 
-# Azure SQL Database (pic 79)
+# Azure SQL Database (pic 79) ![logo15](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo15.jpg)
 
 It is our first service for storing structured data sets in Azure. This service allows both users and applications upload data to SQL database. Within SQL databse you define tables, each table entity will have a specific schema that each row within that table will have to follow. Of course within the database you can have more than one table with its own schema. Once the tables are defined you can also define relationship to represent business relationship between the entities.
 

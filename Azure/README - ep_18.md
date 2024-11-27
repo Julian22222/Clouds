@@ -6,7 +6,7 @@ DevOps it is a interaction model between Developers who write the code and devel
 
 DevOps aims to shorten the development life cycle by providing continuous integration and delivery (CI/CD) capabilities while ensuring high quality of deliverables. DevOps goal is to shorten the development lifecycle by providing customers with set of tools for continuous integration and continuous delivery (CI/CD) of their software ensuring high quality of their deliverables. Deliver faster while ensuring high quality.
 
-# Azure DevOps (pic 101)
+# Azure DevOps (pic 101) ![logo24](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo24.jpg)
 
 Key features that Azure DevOps service delivers:
 
@@ -30,14 +30,14 @@ Key Characteristics:
 - Extensible with Marketplace - over 1000 of available apps. If there is anything missing just go to marketplace and extend the functionalities of Azure DevOps.
 - Evelved from TFS (Team Foundation Server), through VSTS (Visual Studio Team Services). DevOps oroginally was called TFS (Team Foundation Server On-Premises) then moved to cloud where it was called VSTS (Visual Studio Team Services). And now it is called Azure DevOps.
 
-# Azure DevTest Labs (pic 102)
+# Azure DevTest Labs (pic 102) ![logo25](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo25.jpg)
 
 This service is a little bit similar to Azure Machine Learning service. Because it is all about providing a workspace for the users within Azure. So users connect to DevTest Labs and they are able to provision/supply virtual machines and in a simple terms this is what this service is all about.
 Users like developers and testers coming to Azure DevTest Labs where they create VMs by choosing an Image for their operating system, the base Image. Then they additionally install some artifacts --> like Visual Studio or 7-ZIP or GIT. And they can do this configuration for every single VM that they create. And you can choose any artifacts they want and any operating systems.
 
 DevTest Labs aims to provide users with the ability to create VMs at will. So they can very quickly test things, develop things and destroy them as soon as they don't need it. And they provide it within a single, concise workspace in Azure. But in order to control the cost and control your organizational resources admins can come to Azure DevTest Labs and provide set of policies like which operating system images can be used, what kind of sizes of VMs are available, what kind of quotas each user has. So how many VMs can each user provision/supply. Of course all of this is to be cost effective while still providing great flexibility for developers and testers.
 
-# How to use DevTest Labs
+# How to use DevTest Labs ![logo25](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo25.jpg)
 
 - Create DevTest Labs service
 - Go to that just created service

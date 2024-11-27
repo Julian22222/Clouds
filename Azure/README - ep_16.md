@@ -4,7 +4,7 @@ Artificial Intelegence (AI) - is a branch of computer science where we use our s
 
 Machine Learning - is a subcategory of AI where we use that software and we teach it to draw some conclusions and make some predictions based on our data. And the process of teaching the software to do that is called - building a model. And a the key service to do that in Azure is -->
 
-# Azure Machine Learning (pic 91)
+# Azure Machine Learning (pic 91) ![logo21](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo21.jpg)
 
 Typically the process of building a machine learning model consist of training the model based on our data then packaging and validating that model. If we are happy with the results we can deploy those models as a Web Services then monitoring those services and retraining the model to get even better results.
 Azure Machine Learning is here to help us with this entire process by providing us with set of tools:

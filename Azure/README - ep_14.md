@@ -7,7 +7,7 @@ These are services within Azure that helps us build IoT based solutions.
 Internet of Things - it is a network of internet connected devices so called IoT devices (IoT Devices). those devices are embeded within everyday objects and they enable those objects to send and receive data from the cloud such as settings or telemetry.
 Most of us have some sort of IoT device at home whether it is something as simple as a smart lighting, maybe a mobile phone, a plant watering system or something more complex like a door lock or a smart car or raspberry pi. Most of us have some sort of IoT devices at home already. And to build solutions based on those IoT devices you need a set of specific services for that purpose.
 
-# Azure IoT Hub (pic 82)
+# Azure IoT Hub (pic 82) ![logo16](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo16.jpg)
 
 This service allows for BI- Directional communication (both side communication) between the cloud and IoT devices and then allows developers to take advantage of these information to provide Insights, Monitoring and develop custom solutions for their IoT platform.
 
@@ -46,7 +46,7 @@ Now you can send the data from IoT device to the cloud. Now all the data is gath
 
 If building solutions from scratch is not something that your organization wants to do then you should use -->
 
-# Azure IoT Central (pic 83)
+# Azure IoT Central (pic 83) ![logo17](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo17.jpg)
 
 this service is very similar to IoT Hub but it works on entirely different level. It still allows for connectivity of your IoT devices with the cloud. But IoT Central as a service provides you a set of tamplates for building applications using standardized templates. It is application delivery platform for IoT for device management and centralization purposes. This is an amazing solution for organizations that want to take advantage for IoT and they don't want to build applications from scratch.
 
@@ -61,7 +61,7 @@ Key Characteristics:
 - Highly secure,scalable and reliable
 - Built on top of the IoT Hub service and 30+ other services
 
-# Azure Sphere (pic 84)
+# Azure Sphere (pic 84) ![logo18](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo18.jpg)
 
 It is not really a service alone it is a set of components allowing you to build secure IoT applications.
 

@@ -72,7 +72,7 @@ In Azure when you create a Virtual machine it will give you a list of virtual ma
 - VMs give you a lot of control over the system but that also gives you additional maintenance therefore I rate them quite high when it comes to control and maintenance
 - they have no Auto scaling features therefore you always work with 1 node /1 Virtual Machine at a time. Scalability of this solution is quite low because you can't auto scale, the only way of scaling is vertical scaling by adding faster CPUs or more Memory, Faster Drives etc.
 
-# Virtual Machine Scale Sets (pic 43)
+# Virtual Machine Scale Sets (pic 43) ![logo2](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo2.jpg)
 
 with this service you pick an image, whenever it is a Custom Image or a Marketplace Image. This Image is automatically scaled across multiple virtual machines. Those virtual machines are hidden behind a Load Balancer which redirects the traffic from your users or applications to one of those virtual machines within the scale set. The amount of Virtual machines can be set statically by saying 3,5,10 or 100 or automatically with autoscaling feature. So you can increase the amount of virtual machines in scale set or decrease the amount based on your application demand.
 
@@ -106,7 +106,7 @@ Key Characteristics:
 - Respond quicker to demand changes
 - Designed for almost any scenario
 
-# Azure Container Instances
+# Azure Container Instances ![logo3](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo3.jpg)
 
 Our First service for Containers is called --> Container Instances (pic 45). When it comes to container instances instead of bundling entire system you just grab the application, grab the configuration and other runtime, middleware, software that you need for this application to run. You ask your developers to bundle this application into a container image and host it into container repository. Container Repository is a simple storage service, where you host your own images. Similarly to VMs there are public marketplace and public repositories of other images for containers as well. You can grab any of those images and push it to Azure Container Instance which will create a container group a simple virtual machine underneath the scenes and host your containers. Some containers might be exposed to users, some might not. It depends on what container really does. If it is Web application -> it will be exposed to Users. If it is a simple batch script -> may be it won't be exposed to the Users. You can create more container groups and a host more containers depending on your needs.
 
@@ -139,7 +139,7 @@ To use just created Container Instance --> we need to go to just created Contain
 
 We maintain some degree of control because you are virtualizing operating system. So you can install extra runtimes, extra software but it is still much less than maintaining full-fledged operational system. In container Instances there is no auto scaling but cool thing is that at minimum you don't need to run any servers, so you can have Minumum Nodes/ ammount of servers = 0 running if you don't need any. but at maximum you can have 20 container groups/ max nodes = 20. For scalability of this solution is not that great but this service is simple for simple use cases. If you need sacalability there are other services that deliver that like kuberneres services.
 
-# Azure Kubernetes Services (AKS) (pic 46)
+# Azure Kubernetes Services (AKS) (pic 46) ![logo4](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo4.jpg)
 
 Kubernetes it is another service that allows you to work with containers using the same principle. Either hosting your own containers within container repository or using marketplace public repositories. Kubernetes servers can use those Images to spread this across nodes/servers. Of corse nodes underneath are VMs. But they are separated and abstracted from you and kubernetes is managing the deployment of containers across those nodes. When deployment of containers is finished kubernetes exposes everything to Users or applications through a Load Balancer and it also gives you the same abilities like a VM Scale Sets, like static scaling or auto scaling.
 
@@ -156,7 +156,7 @@ key Characteristics:
 
 when comparing kubernetes service to other services, this is a very sophisticated platform offering. And because you are managing the containers and virtualizing operating system the degree of control is pretty high but it also requires quite a lot of skills from your team. Therefore the maintenance is also high and because it has autoscaling feature and scan scale up to 100 nodes at the time. The scalability of this solution is pretty good. Because containers have smaller footprint than Virtual Machines you can host more applications using 100 nodes than you can with VMs. But if we want to reduce the maintenance cost even further, we can move to --> App Services.
 
-# App Services (pic 47)
+# App Services (pic 47) ![logo5](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo5.jpg)
 
 Main purpose of the App Service is building Web Applications whenever those are user facing applications or web services. You ask developers to prepare a simple deployment package and send it to app service. This App Service responsibility to deploy this package across multiple nodes and expose this to users.
 
@@ -204,7 +204,7 @@ And extension will take care of everything else, packaging that code and sending
 
 You have less control over the hardware running underneath and over the platform itself but you have auto scaling feature and you can scale up to 20 or 100 nodes depending on the pricing tier. Which gives you pretty good scalability options for a simple web application service. It has a lot of enterprise great features so the maintenance is also pretty low.
 
-# Azure Functions (also called --> Function Apps) (pic 48)
+# Azure Functions (also called --> Function Apps) (pic 48) ![logo6](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo6.jpg)
 
 This service is similar to App Service but the differece is in App Services we were creating a full-fledged Web Services or Web Applications but if we want to run a small pieces of code. Lets's say we have a function that adds two numbers --> a and b and returns a result. If we want to run the small piece of code as a small web service, we again ask developers to prepare a small package and deploy this to Function App.
 Function App similarly to app service will deploy this across multiple nodes and expose this as a App Service.

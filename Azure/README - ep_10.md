@@ -14,7 +14,7 @@ In general this is the category of services that allows customers to connect the
 
 First service that we will learn is -->
 
-## Azure Virtual Network (pic 51)
+## Azure Virtual Network (pic 51) ![logo7](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo7.jpg)
 
 Imagine you have 2 resources in Azure, let's say 2 virtual machines, because virtual machines are representation of the physical hardware in the cloud. They also need to be placed into representation of the physical network infrastructure. That representation in Azure is called -> Azure Virtual Network.
 
@@ -41,7 +41,7 @@ Key Characteristics of Azure Virtual Network:
 - When it comes to segmentation part you can achive that using Subnets, segmentation into one or more Subnets
 - Subnets allow customers to divide Virtual Networks so that they can better and more effectively manage their IP address allocation but also manage Network filtering for something called -> Network Security Groups(NSG) or Application Security Groups (network filtering via Network Security Groups (NSG) or Application Security Groups (ASG)) <-- will learn about these in future lessons
 
-# Network Security Groups (pic 52)
+# Network Security Groups (pic 52) ![logo8](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo8.jpg)
 
 Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 separate Subnets. If you want to control the traffic that comes from internet to that Virtual Machine you can place a Network Security Group (NSG) on that Subnet. Those Security Groups will only allow specific traffic to reach that Virtual Machine. You can also use Network Security Groups to manage the traffic across Subnets. It is really a tool for you to manage your networking in secure and efficient manner.
 
@@ -67,7 +67,7 @@ Open Virtual Network default service and Put in search bar --> Diagram. Azure wi
 
 This Diagram not only allows you very easily to see how your networking is organized within this Virtual Network, but also allows you to quickly find related resources. For instance if you want to manage Security rules for this Virtual Machine you can simply click on the Network Security Group (NSG). And all those components that you have seen on the Diagram are used to manage everything related to Networking for this Virtual Machine.
 
-# Virtual Network Gateway (also called --> VPN Gateway) (pic 56)
+# Virtual Network Gateway (also called --> VPN Gateway) (pic 56) ![logo9](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo9.jpg)
 
 VPN Gateway allows you to connect to your On-Premise environments so you can enable your Virtual Network to talk to the network within your On-Premise environments. This communication is done over the Public Internet but it is entirely encrypted. Additionally VPN Gateway can be also used to connect Virtual Networks to each other but it is a less common case.
 
@@ -80,7 +80,7 @@ Azure VPN Gateway Key Characteristics:
 - Cross-regional communication of Azure Virtual Networks
   - VNet peering Vs VPN Gateway should be chosen based on the organization needs
 
-# Azure Load Balancer (pic 57)
+# Azure Load Balancer (pic 57) ![logo10](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo10.jpg)
 
 Load Balancing simply means distribution of the traffic across multiple resorces. If you have 2 Virtual Machines you can create Load Balancer in front and evenly distribute the traffic across those 2 Virtual Machines. And there are many reasons to do that. One of the reason is scalability because by adding additional instances, scaling out. You can scale to accommodate much larger workloads versus scaling up, where you simply add more power to the machine. And second reason is high availability. So if those Virtual Machines would be a premium SSD Virtual by defaut from Microsoft you will get 99.9% of SLA.That means each Virtual Machine is guaranteed to run for 99.9% of the time. But if you put those Virtual Machines into separate Availability Zones and put that in front of the Load Balancer then Microsoft guarantees you 99.99% of SLA. In which case you increase SLI and availability for your application by 10 times. Because Load Balancer automatically checks the health of the application components that it is connected to. So if one of the Virtual Machines will stop working it will automatically redirect traffic to the second Virtual Machine and the chance for both of them to stop running is significantly lower than with one Virtual Machine.
 
@@ -99,7 +99,7 @@ Azure Load Balancer Key Characteristics:
 - Both TCP (transmission control protocol) and UDP (user datagram protocol) applications
 - External and Internal traffic
 
-# Application Gateway (pic 59)
+# Application Gateway (pic 59) ![logo11](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo11.jpg)
 
 If we are talking about traffic distribution for resources. If that traffic is a Web traffic so --> HTTP traffic. You usually use --> App Gateway instead of Load Balancer. This is because Application Gateway is still traffic distribution service but it is designed to support Web traffic, it has more feature that allow customers to better manage their Web traffic.
 
@@ -121,7 +121,7 @@ Azure Application Gateway Key Characteristics:
 - URL Routing
 - SSL termination
 
-# Content Delivery Network (CDN)
+# Content Delivery Network (CDN) ![logo12](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo12.jpg)
 
 CDN is one of those Networking services that helps customers to build their applications.
 (pic 61 ) So let's take a Web application as an example, every Web application has some static content --> like JavaScript files, stylesheets, static pages or images. Normally if developers don't know about the existence of services like Content Delivery Network what they will do is bundle this application and put it into app service and host that app service in one of the Azure Regions around the world. For instance in West US so when a user from Alaska tries to connect to our Web application, his request will have to go through 1 600 miles to get this page and all of the content. So if our page has 50 elements on it that user has to make 50 requests. 50 separate requests with each having hundred milliseconds delay. This might not be an issue yet but if our users will start connecting from different continents. In this case the distance they need to cover is much greater. So the latency for every single request they make will be much greater when comparing to users connecting from Alaska. To help that scenario you ask your developers to upload all the static content into Content Delivery Network. Allowing CDN Service to distribute that content all around the world. So the users will connect to the closest location with their content available, reducing the latency but also the workload require by your Front-End services. (pic 62)

@@ -1,6 +1,6 @@
 # Azure Storage Services such as --> Blob storage, Queue storage, Table storage, Files storage, Disk storage and Storage Tiers
 
-create Storage Account first in Azure Portal to get access to create one of the services below ->
+create Storage Account first in Azure Portal to get access to create one of the services below -> ![logo13](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo13.jpg)
 
 4 Services:
 
@@ -102,7 +102,7 @@ Key Characteristics:
 - Highly durable (99.999999999% - 11 nines, up to 16 nines)
 - Cheapest per GB storage
 
-### How to use Azure Storage Account
+### How to use Azure Storage Account ![logo13](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo13.jpg)
 
 - Press Create resource (top left corner in Azure Portal)
 - put --> Storage account

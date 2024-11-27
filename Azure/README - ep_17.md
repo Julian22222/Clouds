@@ -6,7 +6,7 @@ Serverless computing is cloud-hosted execution environment that allows customers
 
 Serverless computing is a way of hosting your applications in the cloud while completely abstracting the infrastructure part. So we are just deploying our applications or using out of the box products available in Azure and let Microsoft scale up and out the infrastructure to match our demand.
 
-# Azure Functions (Function Apps)
+# Azure Functions (Function Apps) ![logo6](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo6.jpg)
 
 We have already talked about Azure functions as part of the compute episode. Let's quickly rewise, because while there are a compute resources, there are also a serverless compute resource.
 
@@ -28,7 +28,7 @@ Key Characteristics:
   - PowerShell
   - etc.
 
-# Azure Logic Apps (pic 98)
+# Azure Logic Apps (pic 98) ![logo22](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo22.jpg)
 
 This service allows you to build workflows using a visual interface. Those workflows can represent both business scenarios but also cross-application integrations. (Numbers on pic 98 represent 1 of 4 options below)
 1.So you can build a simple step-by-step workflows or
@@ -71,7 +71,7 @@ Logic Apps Key Characteristics:
   - integration workflows for applications, data, systems and services
 - It is very powerful, No-code service solution. You can build your applications without writing a single line of code.
 
-# Event Grid (100)
+# Event Grid (pic 100) ![logo23](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo23.jpg)
 
 It is a service for routing messages as such there will be a lot of services sending events to event grid.
 Services like Azure Blob Storage, Azure Subscription with some subscription events or Event Hubs, or custom Web application sending custom events. Those messages are called - Topics. Once Topics are sent to Event Grid, Event Grid will have a lot of other services that will subscribe to those messages, like azure Functions, Azure Logic Apps, custom Webhooks or Storage Queues. All of those are called - Subscribers.
