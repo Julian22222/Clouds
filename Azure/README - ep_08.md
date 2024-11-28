@@ -2,7 +2,7 @@
 
 Resources, Resource Groups & Resource Manager are building blocks for management of Azure services
 
-# Resources (pic 35)
+# Resources ![pic35](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic35.jpg)
 
 Users go to Azure --> they purcase services (services like SQL database, Web application hosting, virtual machine etc). It doesn't matter which service user buy, all those services are represented as a generic object which is called --> Resource. You can think of Resources like an obect that are used to represent your services in Azure.
 
@@ -20,14 +20,16 @@ and there are some other non-common properties that are different and used to de
 
 But No Resource in Azure can be created without --> Resource Group
 
-# Resource Group (pic 37) ![logo28](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo28.jpg)
+# Resource Group ![logo28](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo28.jpg)
+
+![pic37](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic37.jpg)
 
 It is logical container for only resources and it is requirement in order to create any Resource in Azure.
 It is a grouping of Resources, you should use it to logically group related resources (it is like a bag where you keep all resources for particular application in one Resource group)
 
 One of the purpose of Resource Groups is to use --> acces control (IAM), where you can add permissions for your coleagues for this Resource Group Resouces
 
-# How to group resources together in Resource Groups ? (pic 38)
+# How to group resources together in Resource Groups ? ![pic38](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic38.jpg)
 
 There are many strategies to do that, for instance there is a strategy that you can group your resources by services --> as example: all SQL databases in one Resource Group, all other resources in separate Resource groups for your web applications.
 
@@ -68,7 +70,7 @@ Here you can review you JSON definition, if you want to see the common propertie
 
 There are 2 options how to do it
 
-1. Option 1 (pic 39)
+1. Option 1 ![pic39](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic39.jpg)
    Go to your Resource group in Azure portal --> copy URL link starting from --> subscriptions/..... and paste it to https://resources.azure.com/ <-- add this URL here
 
 ```C#
@@ -94,7 +96,7 @@ Click Subscriptions --> resourceGroups --> choose resource group --> providers -
 
   It is up to you to decide that what works best for your organization
 
-  # Resource Manager (pic 40)
+  # Resource Manager ![pic40](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic40.jpg)
 
   As an Azure customer you can use one of many methods of purchasing services:
 

@@ -1,4 +1,4 @@
-# Cloud service type models (pic 13)
+# Cloud service type models ![pic13](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic13.jpg)
 
 Let imagine we are startup company and we want to host our own application and build entire infrastructure for that reason.
 We need:
@@ -56,7 +56,7 @@ ownership
   - Platform --> Operating system, Middleware, Runtime
   - Software --> Data and Applications
 
-### Infrastructure-as-a-Service (IaaS) (pic 14)
+### Infrastructure-as-a-Service (IaaS) ![pic14](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic14.jpg)
 
 But if you decide to outsource the infrastructure. Purchase the infrastructure from the Cloud provider. So let Microsoft manage the Infrastructure while you manage the Platform and Software --> this is called Infrastructure as a Service (IaaS)
 
@@ -86,7 +86,7 @@ The list of services used in Azure to implement Infrastructure-as-a-Service solu
 
 But in general, the rule of thumb is if someone says that they have Infrastucture-as-a-Service solution that means they have a lot of Virtual machines and probably this is the skills they are looking for.
 
-### Platfors-as-a-Service (pic 15)
+### Platfors-as-a-Service ![pic15](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic15.jpg)
 
 Key Characteristics:
 Ownership
@@ -117,7 +117,7 @@ If you are building applications you are most likely using Platfors-as-a-Service
 - logic apps for enterprise integrations
 - function apps for serverless and one of the hundreds of other services allowing to take advantage of the Cloud in a Platfors-as-a-Service model
 
-### Software-as-a-Service (SaaS) (pic 16)
+### Software-as-a-Service (SaaS) ![pic16](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic16.jpg)
 
 Key Characteristics:
 Ownership
@@ -135,7 +135,7 @@ If you decide to outsource everything to Microsoft. That means you are using Sof
 Use cases:
 usually this means buying of-the-shell applications. Applications like Outlook, Skype, One drive and all the other business applications that you are probably using every day
 
-# Diffrences between these service models (pic 17)
+# Diffrences between these service models ![pic17](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic17.jpg)
 
 ```C#
 //Infrastructure-as-a-Service (IaaS)

@@ -2,7 +2,7 @@ Expenditure - is an action of spending your company funds
 
 How your Expenditure differes whenever you are purchasing servers from the CLOUD or for your On-Premises environment
 
-# Capital Expenditure (CapEx) (See pic 8)
+# Capital Expenditure (CapEx) ![pic08](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic08.jpg)
 
 It means buying your own infrastructure.
 Most of the componies moved to the CLOUD, but anyway this model is very often seen even these days
@@ -27,7 +27,7 @@ All of those costs drive the initial investment higher and higher. But once the 
 
 Buying Servers in this model means you buy a Static Capacity of the server. But in real scenarios your application will use that capasity over time when they grow and grow or more applications come until they use the full capasity of the server as you can imagine all the capasity until that happens is Wasted. Additionally because you are managing your own infrastructure you will have a lot of additional maintenance required while the maintenance cost is small you still need some people to manage these maintenance + power costs for your servers + networking costs for your servers + repair hardwares (when fails). And operational staff is required to manage your own infrastructure
 
-# Operational Expandeter (OpEx) (See pic 9)
+# Operational Expandeter (OpEx) ![pic09](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic09.jpg)
 
 It means buying services in the CLOUD
 
@@ -40,4 +40,4 @@ Key Characteristics:
 
 If we will take the same scenario for this model and draw diagram of the cost of our infrastructure over time the diagram would look much different. Because we pay only for what we use. And our cost is based on the CLOUD services usage. And Server capasity always matches what you are using and therefore there is no initial investment unless you are actually buying something upfront. When it comes to maintenance in Cloud , most of the maintenance is performed by the Cloud vender. You only need to maintain small operation teams to manage most important tasks around your infrastructure. Other than that Microsoft manages everything and it is included in the price when you purchasing services
 
-# Differences between CapEx vs. OpEx (See pic 10)
+# Differences between CapEx vs. OpEx ![pic10](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic10.jpg)

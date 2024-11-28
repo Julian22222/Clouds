@@ -6,7 +6,7 @@ It is a category of services in Azure allowing you to build and run cloud-based 
 
 Our first Service is Virtual Machine (VM), but before we talk about VM lets talk about virtualization in general.
 
-(pic 41) If you have a physical server (physical machine) -> what you will do first is install Operating System, which have standard components like file system, some services, some ports and other configuration.
+![pic41](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic41.jpg) If you have a physical server (physical machine) -> what you will do first is install Operating System, which have standard components like file system, some services, some ports and other configuration.
 
 If you want to run applications on this physical machine you will simply install them on that operating system. But the problem with hosting multiple applications on the same operating system is that they will share the same file system, same services, same ports and other system configurations. Because there is no boundaries between those applications at some point or another they will collide and it doesn't matter whether they use the same service or same ports, at some point they will collide which is very bad. The thing that you can do to avoid that to use virtualization.
 
@@ -30,7 +30,7 @@ Key Characteristics:
 
 # Virtual Machines (VMs) ![logo1](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo1.jpg)
 
-(pic 42) Virtualization in the cloud is done through Azure Virtual Machine Service. The process is very simple, you either grab Microsoft prepared Virtual machine images whenever this is Ubuntu, Windows, Oracle machine. Microsoft already prepared virtual machine images for you in the marketplace that you can start from. Or if you want you can configure your own system, install services, runtimes, applications and ask your developers to prepare a custom image for your own company and put that image into some storage. Azure virtual machine service grabs those images and allows you to choose a custom or marketplace image to start creating new Virtual machines and exposing them to your users. It doesn't matter which one you choose, in just couple of minutes a virtual machine will be provisioned and ready to use.
+![pic42](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic42.jpg) Virtualization in the cloud is done through Azure Virtual Machine Service. The process is very simple, you either grab Microsoft prepared Virtual machine images whenever this is Ubuntu, Windows, Oracle machine. Microsoft already prepared virtual machine images for you in the marketplace that you can start from. Or if you want you can configure your own system, install services, runtimes, applications and ask your developers to prepare a custom image for your own company and put that image into some storage. Azure virtual machine service grabs those images and allows you to choose a custom or marketplace image to start creating new Virtual machines and exposing them to your users. It doesn't matter which one you choose, in just couple of minutes a virtual machine will be provisioned and ready to use.
 
 Virtual machines are Infrastructure-as-a-Service (IaaS). That you are responsible for both application , platform and operating system configurations. Because of that you have total control over operating system and the software running on it. You have support for marketplace but also custom provided images. Also, you can prepare your own images as a starting point for the virtual machines containing your organizational setup out of the box.
 This service is best suited for a custom software requiring, custom system configuration or lift and shift scenarios. So moving your On-Premises environment application to the Cloud without a need to redesign. When it comes to supported scenarios you can run almost any application, any scenario using virtual machines whether this is a web application, web service, database, desktop application or using this as a jumpbox to connect to secure environmant or just data gateways or many other scenarios that virtual machines can support.
@@ -67,12 +67,14 @@ In Azure when you create a Virtual machine it will give you a list of virtual ma
 - Then Open that downloaded File --> login with your Username and Password administrative account and it is DONE
 - Then You have a Server virtualized in the Cloud
 
-# Comparing VMs and Summarize of Virtual Machines (pic 50)
+# Comparing VMs and Summarize of Virtual Machines ![pic50](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic50.jpg)
 
 - VMs give you a lot of control over the system but that also gives you additional maintenance therefore I rate them quite high when it comes to control and maintenance
 - they have no Auto scaling features therefore you always work with 1 node /1 Virtual Machine at a time. Scalability of this solution is quite low because you can't auto scale, the only way of scaling is vertical scaling by adding faster CPUs or more Memory, Faster Drives etc.
 
-# Virtual Machine Scale Sets (pic 43) ![logo2](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo2.jpg)
+# Virtual Machine Scale Sets ![logo2](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo2.jpg)
+
+![pic43](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic43.jpg)
 
 with this service you pick an image, whenever it is a Custom Image or a Marketplace Image. This Image is automatically scaled across multiple virtual machines. Those virtual machines are hidden behind a Load Balancer which redirects the traffic from your users or applications to one of those virtual machines within the scale set. The amount of Virtual machines can be set statically by saying 3,5,10 or 100 or automatically with autoscaling feature. So you can increase the amount of virtual machines in scale set or decrease the amount based on your application demand.
 
@@ -83,13 +85,13 @@ Key Characteristics:
 - Built-in auto scaling features
 - Designed for manual and auto-scaled workloads like web services, batch processing etc.
 
-# Comparing VMs and VM Scale Sets (VMSS) (pic 50)
+# Comparing VMs and VM Scale Sets (VMSS) ![pic50](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic50.jpg)
 
 VMSS have quite a lot of maintenance but high degre of control over the virtual machine scale sets.
 
 Virtual machine scale sets are still infrastructure-as-a-Service(IaaS), because you still managing the Virtual Machines you need still prepare Images but they are set of identical virtual machines created from the same Image. As such they have built-in auto scaling features allowing you to create and delete virtual machines based on demand and they are designed for manual or out of scale workloads, things like web services, batch processing etc. This is your way to scale out with virtual machines in the Cloud. In this case you still have quite a lot of maintenance but high degree of control over the virtual machine scale sets. In this case you are getting autoscaling features, so you can scale up to maximum of thousand nodes/servers or 600 depending whenever this is custom or marketplace Image which makes scales as one of the most scalable services in Azure. If you want to decrease the maintenance required you can move away from Virtual Machines into containers.
 
-# Contatainers Vs. VMs (pic 44)
+# Contatainers Vs. VMs ![pic44](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic44.jpg)
 
 Containers are little bit different than virtual machines. While there is still physical machine, there is still operating system underneath but instead of installing Virtualization Software, we install Container Runtime. Within Container Runtime --> you install containers. Container is a sandbox environment for each application and you can have multiple containers within a single runtime. The major differentce here is that there is no Operating System replicated across each container. As such the footprint of the container is much smaller than the one of virtual machine.
 
@@ -135,11 +137,13 @@ This service will be created and provided for us much faster than the VM.
 
 To use just created Container Instance --> we need to go to just created Container Instance (just created resource), where we can review all the details about the service. Then we can copy IP address from there of our created container. Then we can past that public IP adress into new browser window to open the application that is currently hosted in my container.
 
-# Comparing Container Instances to VMs and VM Scale Sets (pic 50)
+# Comparing Container Instances to VMs and VM Scale Sets ![pic50](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic50.jpg)
 
 We maintain some degree of control because you are virtualizing operating system. So you can install extra runtimes, extra software but it is still much less than maintaining full-fledged operational system. In container Instances there is no auto scaling but cool thing is that at minimum you don't need to run any servers, so you can have Minumum Nodes/ ammount of servers = 0 running if you don't need any. but at maximum you can have 20 container groups/ max nodes = 20. For scalability of this solution is not that great but this service is simple for simple use cases. If you need sacalability there are other services that deliver that like kuberneres services.
 
-# Azure Kubernetes Services (AKS) (pic 46) ![logo4](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo4.jpg)
+# Azure Kubernetes Services (AKS) ![logo4](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo4.jpg)
+
+![pic46](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic46.jpg)
 
 Kubernetes it is another service that allows you to work with containers using the same principle. Either hosting your own containers within container repository or using marketplace public repositories. Kubernetes servers can use those Images to spread this across nodes/servers. Of corse nodes underneath are VMs. But they are separated and abstracted from you and kubernetes is managing the deployment of containers across those nodes. When deployment of containers is finished kubernetes exposes everything to Users or applications through a Load Balancer and it also gives you the same abilities like a VM Scale Sets, like static scaling or auto scaling.
 
@@ -152,11 +156,13 @@ key Characteristics:
 - Highly scalable and customizable
 - Designed for high scale container deployments (anything really!)
 
-# Comparing Kubernetes service to Container Instances VMs and VM Scale Sets (pic 50)
+# Comparing Kubernetes service to Container Instances VMs and VM Scale Sets ![pic50](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic50.jpg)
 
 when comparing kubernetes service to other services, this is a very sophisticated platform offering. And because you are managing the containers and virtualizing operating system the degree of control is pretty high but it also requires quite a lot of skills from your team. Therefore the maintenance is also high and because it has autoscaling feature and scan scale up to 100 nodes at the time. The scalability of this solution is pretty good. Because containers have smaller footprint than Virtual Machines you can host more applications using 100 nodes than you can with VMs. But if we want to reduce the maintenance cost even further, we can move to --> App Services.
 
-# App Services (pic 47) ![logo5](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo5.jpg)
+# App Services ![logo5](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo5.jpg)
+
+![pic47](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic47.jpg)
 
 Main purpose of the App Service is building Web Applications whenever those are user facing applications or web services. You ask developers to prepare a simple deployment package and send it to app service. This App Service responsibility to deploy this package across multiple nodes and expose this to users.
 
@@ -200,11 +206,13 @@ Once the template is initialized developers can use Visual Studio extension for 
 
 And extension will take care of everything else, packaging that code and sending this to app service.
 
-# Comparing App Services with other services (pic 50)
+# Comparing App Services with other services ![pic50](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic50.jpg)
 
 You have less control over the hardware running underneath and over the platform itself but you have auto scaling feature and you can scale up to 20 or 100 nodes depending on the pricing tier. Which gives you pretty good scalability options for a simple web application service. It has a lot of enterprise great features so the maintenance is also pretty low.
 
-# Azure Functions (also called --> Function Apps) (pic 48) ![logo6](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo6.jpg)
+# Azure Functions (also called --> Function Apps) ![logo6](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo6.jpg)
+
+![pic48](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic48.jpg)
 
 This service is similar to App Service but the differece is in App Services we were creating a full-fledged Web Services or Web Applications but if we want to run a small pieces of code. Lets's say we have a function that adds two numbers --> a and b and returns a result. If we want to run the small piece of code as a small web service, we again ask developers to prepare a small package and deploy this to Function App.
 Function App similarly to app service will deploy this across multiple nodes and expose this as a App Service.
@@ -213,7 +221,7 @@ If you paid attention this might look very similar to App services. Azure functi
 
 Function Apps are Platform-as-a-Service although they are very often called serverless. Because they are completely obstruscting the way that you manage servers underneath. So if there is no traffic that means there are no servers and no charges. With Azure functions you have two hosting/ two pricing models --> a consumption based plan where you pay exactly for what you use. Like 20 cents for one million executions or you can have dedicated plan using App Services. It is up to you to choose what is the best option for you. This service is designed for building micro or nano services, state-led functions using a very small pieces of code. Therefore they are very simple. You shold not be using Azure Functions to build fully fledged, big services but they can very nicely complement them if needed.
 
-# Comparing Function Apps with other services (pic 50)
+# Comparing Function Apps with other services ![pic50](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic50.jpg)
 
 Because this service is serverless therefore it offers the lowest degree of control over the running infratructure but also requires the least maintenance from development teams. With its amazing autoscaling features from 0 to 200 servers, it is one of the most scalable services in Azure. And with its amazing consumption-based pricing model, it is one of the core services for building very cheap and very scalable web applications
 
@@ -254,4 +262,4 @@ Key Characteristics:
 - Azure Functions (PaaS)(Functions as a Service)(Serverless)
   Micro/nano-services, excellent consumption-based pricing, easy to start
 
-(Pic 49) The Choice what service to use is not always straightforward for that reason Microsoft prepared a Compute decision flow that helps architects to decide which Azure Compute Services they should use for their application. Whether this is migration of existing application to the Cloud or building something entirely new.
+![pic49](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic49.jpg) The Choice what service to use is not always straightforward for that reason Microsoft prepared a Compute decision flow that helps architects to decide which Azure Compute Services they should use for their application. Whether this is migration of existing application to the Cloud or building something entirely new.
