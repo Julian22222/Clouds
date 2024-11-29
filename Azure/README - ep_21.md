@@ -1,5 +1,7 @@
 # Azure Security Groups | Network Security Groups and Application Security Groups (NSG, ASG)
 
+Use these groups to secure our Networks
+
 ## Network Security Groups (NSG) ![logo8](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo8.jpg)
 
 ![pic113](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic113.jpg)
