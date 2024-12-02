@@ -23,9 +23,9 @@ If we go to Azure Resource Group that means we already have access to view that 
 
 All of that things/processes like controlling, verifying, tracking and managing access to authorized users and applications is called Access Management.
 
-# Azure Active Directory (Azure AD) --> now it is Microsoft Entra ID ![logo33](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo33.jpg)
+# Microsoft Entra ID ![logo33](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo33.jpg)
 
-Azure Active Directory is now Microsoft Entra ID
+Azure Active Directory (Azure AD) is now Microsoft Entra ID
 
 ![pic136](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic136.jpg)
 
@@ -66,6 +66,40 @@ And our new User Identity has been created --> It will show on Microsoft Entra I
   - Members <-- Here you can assign members to this Group
 - Then hit --> Create
 
+### Where to use just created Users and Groups
+
 ![pic139](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic139.jpg)
 
-When you have created User Identity you can go to specific Resource Group (wehere you want to manage some user accesability) and on the left side menu click --> Access control (IAM) (step 1 on the picture). Then click --> + Add. It is step 2 on the picture (to add role assignment for this resource group, step 3 on the picture). Then give an access for this new user for this specifc Resource Group. You can assign A Role for any user in this Resource Group (Owner, reader, contributor, etc.)
+- When you have created User Identity (through Microsoft Entra ID) or a Group you can go to specific Resource Group (wehere you want to manage some user accesability) and on the left side menu click --> Access control (IAM) (step 1 on the picture).
+- Then click --> + Add. It is step 2 on the picture (to add role assignment for this resource group, step 3 on the picture).
+- Then give an access/assign a Role (example: Owner, reader, contributor, etc.) for a new user/ or full Users Group that we just created --> for this specifc Resource Group.
+
+- When you have added new User to some certain Resource Group, this Resource group will be shown in that User's Resource Group section. For example if you have added Tom to your Resource Group which is called RG-Test, then Tom will have this RG-Test Resource Group in his Azure Portal account.
+
+Key Characteristics:
+
+- Microsoft Entra ID is our Identity but also also Access Management services in Azure.
+- It allows us manage our Identities, things like --> users, groups and applications
+- Access management for our Azure Resources --> subscriptions, resource groups, roles, role assignments, authentication & authorization settings for our organization, etc.
+- It is used by multiple Microsoft cloud platforms: (has centralized system for logIn to any other Microsoft cloud platform)
+  - Azure
+  - Microsoft 365
+  - Office 365
+  - Live.com services (Skype, OneDrive,etc.)
+- If your organizaion uses Microsoft Entra ID in your On-Premises environment you can use a Sync service that will sync your On-Premise Identities with the Cloud. So you will be able to use the same accounts for both environments which is important for Hybrid Cloud environments and organizations that are starting to move to the Cloud.
+
+# Multi-factor Authentication
+
+Providing username and password is not enough. Servers need more credentials, more authentication factors from their users in order to prove their identity. For example providing a code that was sent to their mobile phones. This type of process is called multi-factor authentication. It is a process of presenting 2 or more pices of evidence, factors to prove user identity.
+
+Key Characteristics:
+
+- It is a process of authentication using more than 1 factor (evidence) to prove identity.
+- There are many factor types that you can use, for example:
+  - Knowledge Factor <-- "something you know", example: password, pin
+  - Possesion Factor <-- "something you have", example: phone, token, card, key.
+  - Physical Characteristic Factor <-- "something you are", example: fingerprint, voice, face, eye iris
+  - Location Factor <--"somewhere you are", example GPS location
+- Supported by Microsoft Entra ID by default (simple on-off switch)
+
+There are many different Factor types, so Multi-factor Authentication simply means use more than one of those factor types and all of that is supported by --> Microsoft Entra ID
