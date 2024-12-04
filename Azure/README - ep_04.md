@@ -22,8 +22,10 @@ First one is:
 
 1. Compute
 
-It is a power of virtual machine (the size of virtual machine that we purchased). if your usage changes per day or your size changes per day you will be charged different amount each day. Additionally to your virtual machine usually there is a storage attached and you will be priced for that storage separately. If you have small virtual machine but a lot of storage you will pay different price comparing if you have big virtual machine and very low amount of storage. Also, there is additional metrics that are separately priced on the top of your service --> like networking and can be other additional costs depending from services that you use and complexity. Because some services are easier to price other are harder but Microsoft separate all the services and charge you appropriately to your usage.
-Therefore, Consumption-based Model have multiple pricing components per each service. The charges are very granular, if you use only virtual machine for 20 seconds you will only pay for 20 seconds of the usage
+It is a power of virtual machine (the size of virtual machine that we purchased). if your usage changes per day or your size changes per day you will be charged different amount each day. Additionally to your virtual machine usually there is a storage attached and you will be priced for that storage separately. If you have small virtual machine but a lot of storage you will pay different price comparing if you have big virtual machine and very low amount of storage.
+
+2. Also, there is additional metrics that are separately priced on the top of your service --> like networking and can be other additional costs depending from services that you use and complexity. Because some services are easier to price other are harder but Microsoft separate all the services and charge you appropriately to your usage.
+   Therefore, Consumption-based Model have multiple pricing components per each service. The charges are very granular, if you use only virtual machine for 20 seconds you will only pay for 20 seconds of the usage
 
 # To check the costs of the CLOUD resources ![logo27](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo27.jpg)
 

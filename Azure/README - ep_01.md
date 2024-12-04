@@ -4,7 +4,9 @@
 
 [-->> TEST HERE <<--](https://marczak.io/az-900/#ep01)
 
-## Cloud Computing ![pic01](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic01.jpg)
+## Cloud Computing
+
+![pic01](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic01.jpg)
 
 it is a delivery model for services. Services like:
 
@@ -27,28 +29,34 @@ All of these services are delivered over the internet and this is basically what
 
 Cloud computing also has some certain characteristics. Which we will list below:
 
-## Scalability ![pic02](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic02.jpg)
+## Scalability
+
+![pic02](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic02.jpg)
 
 - it is ability of the system to scale. Scaling it is a process of allocating (adding) or deallocating (removing) resources.
 
-image you have a resource, resource can be anything. it can be web application, it can be a database, it can be a virtual machine which gives us opportunity to scale.
+imagine you have a resource, resource can be anything. it can be web application, it can be a database, it can be a virtual machine which gives us opportunity to scale.
 
 1. To scale up this virtual machine by increasing its size. Increasing the size of the resource means adding more POWER, like CPU, memory, faster sorage. In this case we are moving along the vertical line --> that's why this is called VERTICAL SCALING.
 
 Increasing the size of the resource is called --> SCALING UP.
 If you decrease the size, decrease the power of the virtual machine this is called SCALING DOWN
 
-2. Besides of changing the size of our resource, changing the POWER of the resource you can also scale by adding more resources to your environmen. Increasing the amount of the resources. In this case we are moving along horizontal line, thit's called HORIZONATL SCALING.
+2. Besides of changing the size of our resource, changing the POWER of the resource you can also scale by adding more resources to your environment. Increasing the amount of the resources. In this case we are moving along horizontal line, thit's called HORIZONATL SCALING.
    If you increase the amount of your resources, this is called --> SCALING OUT.
    if you decrease the amount of your resources, this is called --> SCALING IN.
 
-## Elasticity ![pic03](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic03.jpg)
+## Elasticity
+
+![pic03](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic03.jpg)
 
 Best way to explain elasticity to show workload of the typical application during the day. Where the user workload changes during the day, making more busier during some certain ours during the day. In this case you need to assign the specific amount of resources to handle the workload. Properly design system will be able to allocate and deallocate resources whenever needed.
 If this porcess done automatically it is called --> Automatic Scaling
 Automatic Scaling means automatic scaling by adding and removing resources depending from workload
 
-## Agility ![pic04](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic04.jpg)
+## Agility
+
+![pic04](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic04.jpg)
 
 - ability to react quickly and in the CLOUD this means being able to allocate and deallocate your resources in very short time.
 
@@ -64,7 +72,9 @@ Major difference between the CLOUD and ON-PREMISES is that:
 - requesting resources ON-PREMISES environment usually takes days, weeks or somethimes even months.
 - In CLOUD once you request the resource, you will most likely get it within seconds or minutes and for very big servises this might take few hours.
 
-## Fault Tolerance ![pic05](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic05.jpg)
+## Fault Tolerance
+
+![pic05](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic05.jpg)
 
 As a user you purchase services from the cloud, whenever that's Web application, Virtual machine or SQL but regardless of the service that you choose, all that services need to run on Servers in a Data Centers, storing their Data on DISK ARRAYS.
 If there is any service or component failures on those Servers, there automatically move to another Server and the same for DISK ARRAYS. The Data is automatically stored on multiple disk and multiple disk arrays to ensure no Data is LOST.
@@ -73,7 +83,9 @@ Fault tolerance is the ability of the system to remain up and running during com
 
 Also, can happen much greater failures than the localized failures - Disaster
 
-## Disaster Recovery ![pic06](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic06.jpg)
+## Disaster Recovery
+
+![pic06](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic06.jpg)
 
 Disaster - is a serious disruption of entire service caused by natural or human induced causes. It can be:
 
@@ -87,7 +99,9 @@ They can affect entire Azure region or entire Azure servers from working properl
 Disaster recovery means creating 2 copies of the same application into Azure Regions and then setting up replication between them. So we have 2 identical copies of your application then in front of those applications you need to set up a simple DNS Routing. That your users are automatically redirected to the working version of your application. If any service fails they --> DNS Routing will automayically get rederected to replicated version of your application.
 Disaster recovery is the system's ability to recover from an event that has taken down entire Region or service (disaster)
 
-## High Availability ![pic07](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic07.jpg)
+## High Availability
+
+![pic07](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic07.jpg)
 
 Is a simple metric that measures how much uptime of the system being accessible to users deviding on system downtime. It is simple calculation between the uptime and entire lifetime of the system.
 Avilability is a measure of system uptime for either users or services.
