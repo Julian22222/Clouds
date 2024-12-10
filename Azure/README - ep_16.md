@@ -4,7 +4,9 @@ Artificial Intelegence (AI) - is a branch of computer science where we use our s
 
 Machine Learning - is a subcategory of AI where we use that software and we teach it to draw some conclusions and make some predictions based on our data. And the process of teaching the software to do that is called - building a model. And a the key service to do that in Azure is -->
 
-# Azure Machine Learning (pic 91) ![logo21](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo21.jpg)
+# Azure Machine Learning ![logo21](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo21.jpg)
+
+![pic91](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic91.jpg)
 
 Typically the process of building a machine learning model consist of training the model based on our data then packaging and validating that model. If we are happy with the results we can deploy those models as a Web Services then monitoring those services and retraining the model to get even better results.
 Azure Machine Learning is here to help us with this entire process by providing us with set of tools:
@@ -23,11 +25,16 @@ In Azure Portal there is not a lot of things we can do, there are very few blade
 
 - Create resorce
 - find Azure machine learning service
-- then go to just created resource --> press Launch studio btn (pic 92) or hit the URL. It will allow to go to machine learning workspace
+- then go to just created resource --> press Launch studio btn
+  ![pic92](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic92.jpg)
+  or hit the URL. It will allow to go to machine learning workspace
 - Clicking on --> Launch studio btn /or URL will open Azure Machine Learning Studio.
 
-Azure Machine Learning Studio (pic 93) - It is a Web-based visual interface for management of entire Azure Machine Learning Service.
-For example on left side menu bar we have: (pic 94)
+Azure Machine Learning Studio
+![pic93](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic93.jpg)
+-> It is a Web-based visual interface for management of entire Azure Machine Learning Service.
+For example on left side menu bar we have:
+![pic94](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic94.jpg)
 -Notebooks
 -Automated ML
 -Visual designer
@@ -36,21 +43,28 @@ For example on left side menu bar we have: (pic 94)
 - Or instead of writing scripts, try Automated ML which allows you to throw random algorithms at your data, making some small parameter corrections and see which model score the best and deploy that as a Web service.
 - If this wasn't enough you also have Designer, It is a visual way of building machine learning models with a drag and drop features.
 
-(pic 94) Machine Learning has also a lot of features around asset management (in Asset section, on the left side menu bar). Assets like Datasets, Experiments, Pipelines, Models that you have built and Endpoints that you deploy those models to. There is also plenty of other feature which allow you to manage your compute resources (pic 94, left side menu bar)
+![pic94](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic94.jpg)
+Machine Learning has also a lot of features around asset management (in Asset section, on the left side menu bar). Assets like Datasets, Experiments, Pipelines, Models that you have built and Endpoints that you deploy those models to. There is also plenty of other feature which allow you to manage your compute resources
+![pic94](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic94.jpg)
 
 - Compute, where you train and deploy your models.
 - Datastores, where you connect to your data sources in Azure. For example Azure Blob Storage and Azure File Share.
 - Data Labeling
 
-Let's go back to Designer. Where you can build your own machine learning model using a visual experience. Click on --> + (pic 95). Before we begin, we can create a compute target, so a simple Virtual Machine that will run our workflow.
+Let's go back to Designer. Where you can build your own machine learning model using a visual experience. Click on --> +
+![pic95](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic95.jpg)
+
+. Before we begin, we can create a compute target, so a simple Virtual Machine that will run our workflow.
 
 - Then we click --> Select Compute target link
 - Then, Press --> Create New and give it a name
 
 Summary:
-Azure Machine Learning isan end-to-end cloud-based platform for creating, managing and publishing of our machine learning models. This is a Platform as a service (PaaS). A top level resource in Azure machine learning service is called machine learning workspace. Workspace ties everything together, all compute resources, all the permissions, all the runs, pipelines, experiments, history, connection to external services like Azure Storage accounts, Container registry, deployments of your model literally everything is managed through Azure Machine Learning workspace. Machine Learning Studio is a Web portal that we are using for end-to-end management of the workspace.
+Azure Machine Learning is an end-to-end cloud-based platform for creating, managing and publishing of our machine learning models. This is a Platform as a service (PaaS). A top level resource in Azure machine learning service is called machine learning workspace. Workspace ties everything together, all compute resources, all the permissions, all the runs, pipelines, experiments, history, connection to external services like Azure Storage accounts, Container registry, deployments of your model literally everything is managed through Azure Machine Learning workspace. Machine Learning Studio is a Web portal that we are using for end-to-end management of the workspace.
 
-A QUICK NOTE (pic 96)--> In the past there was another service called Machine Learning Studio. This is completely different from the one that we are talking about today. Because that service is no longer actively being developed and new customers are being encouraged to use new Machine Learning because it also has studio experience with some additional features. The key features that you get by using Azure Machine Learning service are Notebooks(written in Pyton or R), Automated ML - where you can throw a lot of algorithms and tweak some parameters to find best algorithm and to build the best model for your data. With Visual Designer you can build your machine learning pipelines without writing a single line of code. You can also manage your data and compute resources. So all the resources to manage and store your data as well as process those models and deploy them as a web services. And lastly everything is nicely tied into Azure Machine Learning pipelines which allow you orchestrate this model training deployment and all the management tasks.
+A QUICK NOTE
+![pic96](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic96.jpg)
+--> In the past there was another service called Machine Learning Studio. This is completely different from the one that we are talking about today. Because that service is no longer actively being developed and new customers are being encouraged to use new Machine Learning because it also has studio experience with some additional features. The key features that you get by using Azure Machine Learning service are Notebooks(written in Pyton or R), Automated ML - where you can throw a lot of algorithms and tweak some parameters to find best algorithm and to build the best model for your data. With Visual Designer you can build your machine learning pipelines without writing a single line of code. You can also manage your data and compute resources. So all the resources to manage and store your data as well as process those models and deploy them as a web services. And lastly everything is nicely tied into Azure Machine Learning pipelines which allow you orchestrate this model training deployment and all the management tasks.
 
 Azure Machine Learning Key Characteristics:
 

@@ -4,10 +4,10 @@ create Storage Account first in Azure Portal to get access to create one of the 
 
 4 Services:
 
+- Blob storage
 - File storage
 - Table storage
 - Queue storage
-- Disk storage
 
 # General classification of Data
 
@@ -17,7 +17,9 @@ Types of Data:
 2. Semi-Structured data - you still have a table but each row within this table don't need to follow any specific schema. That means each row can have its own unique properties. The only common property is usually some sort of Key, like an Id column. You can say this is a less formalized way of storing your data
 3. Unstructured data - data like images, movies, applications, binary application files, txt files and many more files. Files that don't follow structure that can represent pretty much any kind of data.
 
-# Azure Blob Storage (pic 63)
+# Azure Blob Storage
+
+![pic63](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic63.jpg)
 
 We were talking about unstructured data and any kind of unstructured data can be called --> BLOB
 
@@ -40,7 +42,9 @@ Azure Blob Storage Key Characteristics:
   - Cool - infrequently accessed data (lower availability, high durability)
   - Archive - rarely (if-ever) accessed data
 
-# Azure Queue Storage (pic 64)
+# Azure Queue Storage
+
+![pic64](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic64.jpg)
 
 It is very small service but very significant when building applications. When you have application that has several tasks to be completed and each of those 3 tasks might take some time to complete. What you can do is output those into Azure Queue as a separate messages. This will allow background processes and other services to pick those messages from the queue at their own pace and let them process those asynchronously. This will not only offload your Front-End application but also allow you to pick more suited services for the background processing.
 
@@ -51,7 +55,9 @@ Key Characteristics:
 - Storage for small pieces of data (messages)
 - Designed for scalable asynchronous processing
 
-# Azure Table Storage (pic 65)
+# Azure Table Storage
+
+![pic65](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic65.jpg)
 
 This service was designed with semi-structured data in mind. Both users and application can output the semi-structured data form into tables and this table is part of Table storage. Of corse you can have more than one table because table storage is just like database, where you store multiple tables with your data. Just remember this is a semi-structured database. So there are no joins, no schemas, just your data as a simple storage. This kind of databases are also called --> No SQL databases.
 
@@ -64,7 +70,9 @@ Key Characteristics:
   - Designed for fast access
 - Many programming interfaces and SDKs
 
-# Azure File Storage (pic 66)
+# Azure File Storage
+
+![pic66](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic66.jpg)
 
 This service is similar to Blob Storage. As we already said the Blob is synonym for file.
 
@@ -118,36 +126,51 @@ Key Characteristics:
   - Replication
   - Access tier --> Cool or Hot (it is storage tiers)
 
-After creating Storage Account --> go to this just created resource. (pic 67) By default in first screen in the Essentials Section (located in the bottom of the page) you will see 4 Services that we just learned. -->
+After creating Storage Account --> go to this just created resource.
+
+![pic67](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic67.jpg)
+
+By default in first screen in the Essentials Section (located in the bottom of the page) you will see 4 Services that we just learned. -->
 
 - Containers - which is the Blob storage.
 - File shares - which is File storage.
 - Tables - which is a Table storage.
 - Queues - Queue Storage.
 
-#### How to use Containers (Blob storage)
+### How to use Containers (Blob storage)
 
 Go to just created Storage Account service and in the bottm of the page there is Essentials Section with Containers, File shares, Tables, Queues
 
 1. Click on Containers for example and create new container. it will be a bucket for our files.
 2. Than we can open just created container and press --> Upload btn (to upload any files to this container) --> and your file is in the Cloud
 
-### how to use File Share (File storage)
+### How to use File Share (File storage)
 
 Go to just created Storage Account service and in the bottm of the page there is Essentials Section with Containers, File shares, Tables, Queues
 
 1. Click on File shares and create file share and mount it to my local machine by selecting --> + File share.
 2. Then giving a name and Quota <-- which is maximum storage.
 3. Then hit create btn. To mount the file share you need to select that "share" that we just created and open it. Inside of that file share we click --> Connect btn.
-4. Then you will see Connection settings (pic 68), where you can choose operating system (Windows, Linux, macOS). and Microsoft will provide box script (a string) for each different operating system that you need to copy. For example, if you have Windows VM then it is PowerShell. you copy all this script, then go to your windows VM and press windows start btn, --> open Windows PowerShell (pic 69) and just paste that script over here. By default this script firstly test the connectivity and then mount the storage (pic 70). If everything worked correctly you will see message on the screen that the new share was mounted.
+4. Then you will see Connection settings, ![pic68](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic68.jpg)
 
-You can varify that by going to you computer on Windows VM (pic 71) --> to This PC and you will see new share attached. For example, you can even open that share and create a small file, like txt file, by clicking right click--> New --> Text Document. And now if you go back to Azure Portal you will see new txt file will be in the File share (in the cloud) <-- it is that file that we just created in Windows VM File share storage
+where you can choose operating system (Windows, Linux, macOS). and Microsoft will provide box script (a string) for each different operating system that you need to copy. For example, if you have Windows VM then it is PowerShell. you copy all this script, then go to your windows VM and press windows start btn, --> open Windows PowerShell
 
-Also, from Storage Account panel you can click on --> Storage Explorer (pic 72) on the left side menu bar. It is a web tool that allows us to review everything on the Storage Account (pic 73). Will show what files and tables you have in which storage. Also, you can create new table from here (from Storage Explorer). When table created you can add new rows to it by clicking --> + Add (pic 74). By default each row has to have a compound key containing PartitionKey and a RowKey, this value has to be unique. Also, you can add additional proporties like Name (pic 75).
+![pic69](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic69.jpg)
+
+and just paste that script over here. By default this script firstly test the connectivity and then mount the storage.
+![pic70](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic70.jpg)
+
+If everything worked correctly you will see message on the screen that the new share was mounted.
+
+You can varify that by going to you computer on Windows VM ![pic71](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic71.jpg) --> to This PC and you will see new share attached. For example, you can even open that share and create a small file, like txt file, by clicking right click--> New --> Text Document. And now if you go back to Azure Portal you will see new txt file will be in the File share (in the cloud) <-- it is that file that we just created in Windows VM File share storage
+
+Also, from Storage Account panel you can click on --> Storage Explorer ![pic72](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic72.jpg) on the left side menu bar. It is a web tool that allows us to review everything on the Storage Account ![pic73](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic73.jpg). Will show what files and tables you have in which storage. Also, you can create new table from here (from Storage Explorer). When table created you can add new rows to it by clicking --> + Add ![pic74](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic74.jpg). By default each row has to have a compound key containing PartitionKey and a RowKey, this value has to be unique. Also, you can add additional proporties like Name ![pic75](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic75.jpg).
 
 Azure Storage Account has a lot of additional features that allows you to take advantage of this highly scalable storage in the cloud.
 
-# Azure Disk Storage (pic 76)
+# Azure Disk Storage
+
+![pic76](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic76.jpg)
 
 It is used for VMs. When it comes to Windows Virtual Machines you probably remember that you have multiple partitions like --> C: , D: , E; , etc Storage Disks. All these partitions are stored on one or more disks. In Azure this is done via Disk Storage service. This Storage service is simply set at disk emulation in the cloud allowing customers to attach a persistent storage for their virtual machines. Both for operating systems and application data. Disks in Azure come with different sizes, different types so you can pick either SSD or HDD in different performance tiers. Of course the bigger and the more performant disk is the higher the price. It is good that you have that choice because you can grab slower disk for your non-crirical systems and development environments.
 Disk storage allows customers to store their disk in unmanaged or managed form. Unmanaged means each disk is stored as a file on a Blob Storage. It is called unmanaged because it is not managed by cloud provider, customers are responsible for managing those Blobs and those drives in the Storage Accounts. Managed form is more popular option, it means Microsoft is managing all the Blob storage, all the files and all the services behind the scenes giving you a separate resource called - Manage disk, which not only hides the complexity of managing the disk themselves but gives you some additional features.

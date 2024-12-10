@@ -1,6 +1,6 @@
 # Azure Serverless Computing Services | Azure Functions, Azure Logic Apps, Event Grid
 
-What is zure Serverless Computing Services? and What services in Azure fall under this category?
+What is Azure Serverless Computing Services? and What services in Azure fall under this category?
 
 Serverless computing is cloud-hosted execution environment that allows customers to run their applications in the cloud while completely abstracting underlying infrastracture.
 
@@ -10,7 +10,9 @@ Serverless computing is a way of hosting your applications in the cloud while co
 
 We have already talked about Azure functions as part of the compute episode. Let's quickly rewise, because while there are a compute resources, there are also a serverless compute resource.
 
-Azure Functions (Function Apps) (pic 97) - is a service that allows customers to build applications using code. In this case small pieces of code and host those as a Web services. In which case customers create a small pieces of code, package them and send them to the Function Apps. From this point onword this is the serverless part. Because Azure Function app grab your code and deploy this across multiple servers and allow external services to communicate with you application and if necessary scaling up and down depending on your need.
+Azure Functions (Function Apps)
+![pic97](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic97.jpg)
+-> is a service that allows customers to build applications using code. In this case small pieces of code and host those as a Web services. In which case customers create a small pieces of code, package them and send them to the Function Apps. From this point onword this is the serverless part. Because Azure Function app grab your code and deploy this across multiple servers and allow external services to communicate with you application and if necessary scaling up and down depending on your need.
 
 Azure Functions is our serverless coding platform so called function as a service allowing us to build nano-services architecture and event-based application. It also allows for quick scaling up and scaling down. It is highly scalable because in this case you can go up to 200 servers if required. And lastly this service supports most popular languages and frameworks that are used for building web services. That means you don't have to learn any new languages to start using Azure Functions.
 
@@ -28,7 +30,9 @@ Key Characteristics:
   - PowerShell
   - etc.
 
-# Azure Logic Apps (pic 98) ![logo22](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo22.jpg)
+# Azure Logic Apps ![logo22](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo22.jpg)
+
+![pic98](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic98.jpg)
 
 This service allows you to build workflows using a visual interface. Those workflows can represent both business scenarios but also cross-application integrations. (Numbers on pic 98 represent 1 of 4 options below)
 
@@ -53,7 +57,9 @@ Additionally all of those 200 connectors allow you to use them within the flow. 
 
 - Create --> Logic Apps
 - go to just created Logic App service. Where you can either use standard out of the box templates available for Logic Apps or start from the blank application.
-- then press Blank Logic app. Or you can use ready templates (pic 99)
+- then press Blank Logic app. Or you can use ready templates
+  ![pic99](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99.jpg)
+
 - then in the search box (search for connectors) --> we can search for Blob, for example. Because in your scenario when new files added to Blob Storage, or modified in Blob Storage --> it will trigger other processes.
 
 - After Selection of needed connector --> fill form:
@@ -73,7 +79,9 @@ Logic Apps Key Characteristics:
   - integration workflows for applications, data, systems and services
 - It is very powerful, No-code service solution. You can build your applications without writing a single line of code.
 
-# Event Grid (pic 100) ![logo23](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo23.jpg)
+# Event Grid ![logo23](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo23.jpg)
+
+![pic100](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic100.jpg)
 
 It is a service for routing messages as such there will be a lot of services sending events to event grid.
 Services like Azure Blob Storage, Azure Subscription with some subscription events or Event Hubs, or custom Web application sending custom events. Those messages are called - Topics. Once Topics are sent to Event Grid, Event Grid will have a lot of other services that will subscribe to those messages, like azure Functions, Azure Logic Apps, custom Webhooks or Storage Queues. All of those are called - Subscribers.

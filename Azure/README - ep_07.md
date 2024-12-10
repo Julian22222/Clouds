@@ -1,6 +1,8 @@
 # Azure phisical infrastructure, Data Centers, Geographies, Regions, Region Pairs & Availability Zones
 
-## Data Center ![pic24](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic24.jpg)
+## Data Center
+
+![pic24](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic24.jpg)
 
 Key Characteristics:
 
@@ -15,7 +17,9 @@ Data Center is used to host a group of network servers. A Data Center has its ow
 - Cooling
 - Networking infrastructure
 
-So Data Centers are building blocks of global Azure infrastructure ![pic25](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic25.jpg). A group of Data Centers that are connected with each other with high throughput internet connectivity are called - Regions. Microsoft has many Regions across the globe of different sizes. Regions can be as small as single Data Center or they can contain multiple Data Centers.
+So Data Centers are building blocks of global Azure infrastructure ![pic25](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic25.jpg).
+
+A group of Data Centers that are connected with each other with high throughput internet connectivity are called - Regions. Microsoft has many Regions across the globe of different sizes. Regions can be as small as single Data Center or they can contain multiple Data Centers.
 
 Regions are globally distributed ![pic26](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic26.jpg)
 
@@ -23,9 +27,11 @@ For instance in USA you have one --> East US Region and one --> West US Region.
 In Ireland there is a --> North Europe region and
 in Singapore we have --> Southeast Asia region.
 There is also one in Japan --> Japan East region.
-There are plenty more Regions available. All the dots on the picture 26 it is a different Region in Azure. It is 50 dots on the map and you can choose any from those Regions but it must be as close to your clients as possible. It is important decision for every Azure developer and Architect because the closer your Region is to client the lower the latency between the servers and your clients.
+There are plenty more Regions available. All the dots (on the picture above) it is a different Region in Azure. It is 50 dots on the map and you can choose any from those Regions but it must be as close to your clients as possible. It is important decision for every Azure developer and Architect because the closer your Region is to client the lower the latency between the servers and your clients.
 
-## Region ![pic27](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic27.jpg)
+## Region
+
+![pic27](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic27.jpg)
 
 - Region is simply a geographical area on the planet.
 - Region consists from one but usually more Data Centers and they need to be connected with low latency network. It should be under 2 milliseconds (2 milliseconds ) latency between the Data Centers.
@@ -51,7 +57,9 @@ Remember, not all the services are available on all of the Regions. Microsoft ha
 
 [--> Check Here<--](https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region)
 
-## Availability Zone ![pic28](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic28.jpg)
+## Availability Zone
+
+![pic28](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic28.jpg)
 
 A Data Center has its own:
 
@@ -63,14 +71,16 @@ A group of Data Centers that are connected with super fast internet, they are ca
 
 In a typical scenario you don't have control to which Data center your services will be deploy to. That is why availability zones were created. this is a regional feature where each Data Center gets a number. A number that represent a grouping of physically separate facilities.
 
-Availability Zones are designed to protect from Data Center failures. Because each availability zone has its own Power, Cooling and Networking infrastructure. For example we have 3 Data centers, Whenever there is a failure in a single Data Center, other two Data Centers will continue working (pic 28). This is how Data Centers operate.
+Availability Zones are designed to protect from Data Center failures. Because each availability zone has its own Power, Cooling and Networking infrastructure. For example we have 3 Data centers, Whenever there is a failure in a single Data Center, other two Data Centers will continue working (picture above). This is how Data Centers operate.
 
 Microsoft introduces Availability zones and also created services and features within services that can take advantage of this information. Those services are split in two cateories/types:
 
 1. Zonal services (you choose availability zone where to save a copy of your service)
    you can choose to which availability zones are you doing the deployment to. In case virtual machines now you have a choice, you can create two virtual machines for highly available environment and specify that the first virtual machine goes to availability zone number 1 and second virtual machine goes to availablity zone number 2 or 3. This way you ensure that if there is a data center level failure your virtual machine at least one of them will continue working. In the classical scenarion without availability zones it is possible that your virtual machine even in a big region could be deployed to the same Data Center or even to the same physical server. That is why zonal services are so good and availability zones allow you to create those highly available applications.
 
-(pic 31) When you choose the location for your service in Azure Cloud, also you can choose a specific availability zone from the drop down menu that i want to deploy to.
+![pic31](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic31.jpg)
+
+When you choose the location for your service in Azure Cloud, also you can choose a specific availability zone from the drop down menu that i want to deploy to.
 
 2. Zone-redundant (Automatically replicate Data across multiple availability zones)
    Those services like SQL database, storage accounts allow you to take advantage of multiple availability zones out of the box. With simple check of an option your services will automatically replicate data across multiple availability zones and will work in redundant way. So if there is a Data Center level failure you wouldn't even notice it in your application. Few things you should note here:
@@ -83,7 +93,9 @@ Some of Azure Regions will have logical groupings over their Data Centers --> ma
 ![pic30](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic30.jpg) When you choose the location for your service in Azure Cloud, also you can choose in Replication option --> Zone-redundant (<--This service will atocatically will be replicate Data across multiple availability zones)
 If you choose Region that doesn't support --> Zone-redundant, we won't see Zone-redundant option in Replication section
 
-# What happens if there is region level failure, if entire region goes down? ![pic32](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic32.jpg)
+# What happens if there is region level failure, if entire region goes down?
+
+![pic32](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic32.jpg)
 
 It doesn't matter if you did use availablility zones.
 

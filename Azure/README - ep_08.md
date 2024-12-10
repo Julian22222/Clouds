@@ -2,13 +2,17 @@
 
 Resources, Resource Groups & Resource Manager are building blocks for management of Azure services
 
-# Resources ![pic35](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic35.jpg)
+# Resources
+
+![pic35](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic35.jpg)
 
 Users go to Azure --> they purcase services (services like SQL database, Web application hosting, virtual machine etc). It doesn't matter which service user buy, all those services are represented as a generic object which is called --> Resource. You can think of Resources like an obect that are used to represent your services in Azure.
 
 Service Lifecycle (meaning)--> so as soon as you purchase a service in Azure you create a Resource, as soon as you delete the service you delete that Resource.
 
-(Pic 36) Azure uses Resources to save all the configurations that you make for your service. Any configuration option that you have for your service is represented as a property on that Resource. All the resources in Azure can be represented as a json (JavaScript Object Notation) template. It is simple file that has properties and values. It is very common used standards on the market described almost any object.
+![pic36](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic36.jpg)
+
+Azure uses Resources to save all the configurations that you make for your service. Any configuration option that you have for your service is represented as a property on that Resource. All the resources in Azure can be represented as a json (JavaScript Object Notation) template. It is simple file that has properties and values. It is very common used standards on the market described almost any object.
 There are 4 common properties across all resorces:
 
 - TYPE
@@ -96,7 +100,9 @@ Click Subscriptions --> resourceGroups --> choose resource group --> providers -
 
   It is up to you to decide that what works best for your organization
 
-  # Resource Manager ![pic40](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic40.jpg)
+  # Resource Manager
+
+  ![pic40](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic40.jpg)
 
   As an Azure customer you can use one of many methods of purchasing services:
 
@@ -112,7 +118,7 @@ Click Subscriptions --> resourceGroups --> choose resource group --> providers -
 
   Azure Resource Manager - is a centrlized management layer for all the resources and resource groups in Azure. And because it has unified language unified template language you always send the same properties and the same validations and everything is consistent across multiple interfaces.
 
-  Resource Manager also is responsible for checking your privilages with Azure Active Directory (Azure AD). Because Azure Active Directory (Azure AD) is a centralized identity and access management service in Azure , so this is where all the privileges are stored (IAM). So Azure Resource Manager will check with Azure id whenever the user that is requesting Resource creation, deletion or changes as a proper privilages is assigned.
+  Resource Manager also is responsible for checking your privilages with Microsoft Entra ID (previously was known as --> Azure Active Directory (Azure AD)). Because AMicrosoft Entra ID is a centralized identity and access management service in Azure , so this is where all the privileges are stored (IAM). So Azure Resource Manager will check with Azure id whenever the user that is requesting Resource creation, deletion or changes as a proper privilages is assigned.
 
   Azure Resource Manager is also responsible for controlling the access and management of the Resources.
 

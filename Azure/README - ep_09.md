@@ -8,7 +8,7 @@ Our first Service is Virtual Machine (VM), but before we talk about VM lets talk
 
 ![pic41](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic41.jpg) If you have a physical server (physical machine) -> what you will do first is install Operating System, which have standard components like file system, some services, some ports and other configuration.
 
-If you want to run applications on this physical machine you will simply install them on that operating system. But the problem with hosting multiple applications on the same operating system is that they will share the same file system, same services, same ports and other system configurations. Because there is no boundaries between those applications at some point or another they will collide and it doesn't matter whether they use the same service or same ports, at some point they will collide which is very bad. The thing that you can do to avoid that to use virtualization.
+If you want to run applications on that physical machine you will simply install them on that operating system. But the problem with hosting multiple applications on the same operating system is that they will share the same file system, same services, same ports and other system configurations. Because there is no boundaries between those applications at some point or another they will collide and it doesn't matter whether they use the same service or same ports, at some point they will collide which is very bad. The thing that you can do to avoid that to use virtualization.
 
 # Virtualization
 
@@ -110,7 +110,10 @@ Key Characteristics:
 
 # Azure Container Instances ![logo3](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo3.jpg)
 
-Our First service for Containers is called --> Container Instances (pic 45). When it comes to container instances instead of bundling entire system you just grab the application, grab the configuration and other runtime, middleware, software that you need for this application to run. You ask your developers to bundle this application into a container image and host it into container repository. Container Repository is a simple storage service, where you host your own images. Similarly to VMs there are public marketplace and public repositories of other images for containers as well. You can grab any of those images and push it to Azure Container Instance which will create a container group a simple virtual machine underneath the scenes and host your containers. Some containers might be exposed to users, some might not. It depends on what container really does. If it is Web application -> it will be exposed to Users. If it is a simple batch script -> may be it won't be exposed to the Users. You can create more container groups and a host more containers depending on your needs.
+Our First service for Containers is called --> Container Instances.
+![pic45](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic45.jpg)
+
+When it comes to container instances instead of bundling entire system you just grab the application, grab the configuration and other runtime, middleware, software that you need for this application to run. You ask your developers to bundle this application into a container image and host it into container repository. Container Repository is a simple storage service, where you host your own images. Similarly to VMs there are public marketplace and public repositories of other images for containers as well. You can grab any of those images and push it to Azure Container Instance which will create a container group a simple virtual machine underneath the scenes and host your containers. Some containers might be exposed to users, some might not. It depends on what container really does. If it is Web application -> it will be exposed to Users. If it is a simple batch script -> may be it won't be exposed to the Users. You can create more container groups and a host more containers depending on your needs.
 
 Simplest and fastest way to run a container in Azure. It is a first service that is categorized as a platform as a service. Sometimes it is called serverless containers because you can actually abstract from the managing of the servers underneath completely. This service is designed for small and simple web applications, running background jobs, maybe some scheduled scripts.
 
@@ -184,7 +187,7 @@ In Azure Portal --> choose App Services
 
 - Resource Group
 - Publish: choose Code or Docker Container
-- Rutime stack: choose language of your app (many languages supported)
+- Runtime stack: choose language of your app (many languages supported)
 - Region: where the resource will be hosted
 - Size: Dev / Test (for less demanding workloads)
 
@@ -254,7 +257,7 @@ Key Characteristics:
 - VM Scale Sets (IaaS)
   Auto-scaled workloads for VMs
 - Container Instances (PaaS)
-  Simple container hoting, easy to start
+  Simple container hosting, easy to start
 - Kubernetes Service (PaaS)
   Highly scalable and customizable container hosting platform
 - App Services (PaaS)

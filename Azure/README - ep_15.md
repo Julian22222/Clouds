@@ -8,7 +8,9 @@ Big Data - is a filed of technology that helps us with solving typical challenge
 
 Based on these 3 characteristics we can define whether this data is considered to be Big Data or Not. But as soon as we go high on one of those vectors, one of those characteristics traditional software will not be able to process this kind of data set. And this is how big data technologies came to be. They were specifically designed softwares to help us with those kind of challenges.
 
-# Azure Synapse Analytics (pic 85) ![logo19](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo19.jpg)
+# Azure Synapse Analytics ![logo19](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo19.jpg)
+
+![pic85](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic85.jpg)
 
 In order to talk about Synapse Analytics and its benefits we need to talk about how typical process looks like when it comes to transforming an analysis of our data. Most data engineers will start their process by identifying where is their data, whether those are flat files, some web services or databases and from there a typical development process starts.
 First developers need to ingest their data from their sources to the cloud then they need to transform those data sets and store them somewhere and after storing the data, expose this to other tools like reporting tools so that business users can take insights out of their data and make good business desicions. Azure Synapse Analytics help with all of those steps.
@@ -27,7 +29,9 @@ Key Characteristics:
   - Synapse Pipelines (Data Factory-ETL)
   - Studio (Unified experience)
 
-# Azure HDInsight (pic 86)
+# Azure HDInsight
+
+![pic86](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic86.jpg)
 
 As we were talking about the typical development process. HDInsight can also support pretty much every stage of that process by providing -> Big Data Clusters. And when it comes to HDInsight there are many clusters available. Clusters like -> Hadoop clusters, Spark, Kafka, HBase, Hive, Machine learning services or Apache Storm or many others. In general the idea of the service is to provide you with open source big data technologies from the market allow you to provision clusters so that Microsoft manages those clusters and you just grab the technology that you need to perform specific tasks that you need. All of these tools serve a different purpose but you can use them in combination to support end-to-end development lifecycle for your application.
 
@@ -38,11 +42,15 @@ Key Characteristics:
 - Flexible multi-purpose big data platform (PaaS)
 - Multiple technologies supported ( Hadoop, Spark, Kafka, HBase, Hive, Storm, Machine Learning)
 
-# Azure Databricks (pic 87) ![logo20](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo20.jpg)
+# Azure Databricks ![logo20](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo20.jpg)
+
+![pic87](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic87.jpg)
 
 It is quite similar to HDInsight except the cluster that we create are based on Apache Spark and Apache Spark alone. The main purpose of this service is to help you with data transformation at large scale. Because Apache Spark is one of the leaders when it comes to performance and data transformations for big data. But besides the data transformation the creators of Databricks also wanted to provide this as a collaboration platform for data engineers and data analysts. So that they have a single place where they can manage their cluster and collaborate on their data solutions.
 
-# How to use (pic 88)
+# How to use
+
+![pic88](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic88.jpg)
 
 - Go to Azure portal and create Azure Databricks service
 - go to just created Databricks resource and press --> Launch Workspace btn (it will take you away from Azure Portal into separate portal, designed for collaboration on Azure Databricks solution, which is called Workspace )
@@ -55,11 +63,15 @@ It is quite similar to HDInsight except the cluster that we create are based on 
 - Then press --> Create Cluster (located in top center), it takes 4-5 minutes to create the cluster.
 - Now we have a big data technology cluster based on Apache Spark. Running in the cloud and ready to be used.
 
-Now we can create some scripts by going to Workspace (left side menu bar - pic 89). Then you can have your personal workspace --> in Users section. Or in a Shared workspace section you can share and collaborate with other users.
+Now we can create some scripts by going to Workspace.
+![pic89](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic89.jpg)
+Then you can have your personal workspace --> in Users section. Or in a Shared workspace section you can share and collaborate with other users.
 
 -In personal workspace or Shared workspace you can create catalogs (by right click) --> and in catalog you can create --> Notebook.
 -Notebook is a simple scripts in Azure Databricks, selecting the language which do you want to use in Azure Databricks.
--(pic 90)Inside you just created Notebook you can write your scripts. This Script is connects to open datasets from Microsoft with some sample data. It takes just few lines of code, it is very simple and very straightforward.
+-picture-->
+![pic90](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic90.jpg)
+Inside you just created Notebook you can write your scripts. This Script is connects to open datasets from Microsoft with some sample data. It takes just few lines of code, it is very simple and very straightforward.
 -(pic 90)But when you pulling the Data you can use familiar SQL language in this case it is Spark SQL.
 -Also from Notebook (bottom menu) you can download your Data as a CSV, change the chart type and do all sorts of data transformation and analysis based on your needs.
 
