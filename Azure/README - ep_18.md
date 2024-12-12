@@ -6,12 +6,14 @@ DevOps it is a interaction model between Developers who write the code and devel
 
 DevOps aims to shorten the development life cycle by providing continuous integration and delivery (CI/CD) capabilities while ensuring high quality of deliverables. DevOps goal is to shorten the development lifecycle by providing customers with set of tools for continuous integration and continuous delivery (CI/CD) of their software ensuring high quality of their deliverables. Deliver faster while ensuring high quality.
 
-# Azure DevOps (pic 101) ![logo24](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo24.jpg)
+# Azure DevOps ![logo24](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo24.jpg)
+
+![pic101](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic101.jpg)
 
 Key features that Azure DevOps service delivers:
 
 - Boards, this feature allows customers to track their work, track the progress across the team members but also manage all the deliverables, all the work status , all the features and user stores for the project in a single place.
-- Additionally you have Repos, Repos allow you to manage code repositories and code versioning for yuor project and their deliverables.
+- Additionally you have Repos, Repos allow you to manage code repositories and code versioning for your project and their deliverables.
 - Pipelines, which allows to create automated builds and automated deployment processes for your code and your application across multiple environments
 - Artifacts, which allows to create hosts, share packages with your team. You can also add the artifacts that you created to your CI/CD pipeline with a single click, etc.
 - Test Plans, which allows you to track your testing progress with manual and exploratory testing tools.
@@ -30,7 +32,9 @@ Key Characteristics:
 - Extensible with Marketplace - over 1000 of available apps. If there is anything missing just go to marketplace and extend the functionalities of Azure DevOps.
 - Evelved from TFS (Team Foundation Server), through VSTS (Visual Studio Team Services). DevOps oroginally was called TFS (Team Foundation Server On-Premises) then moved to cloud where it was called VSTS (Visual Studio Team Services). And now it is called Azure DevOps.
 
-# Azure DevTest Labs (pic 102) ![logo25](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo25.jpg)
+# Azure DevTest Labs ![logo25](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo25.jpg)
+
+![pic102](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic102.jpg)
 
 This service is a little bit similar to Azure Machine Learning service. Because it is all about providing a workspace for the users within Azure. So users connect to DevTest Labs and they are able to provision/supply virtual machines and in a simple terms this is what this service is all about.
 Users like developers and testers coming to Azure DevTest Labs where they create VMs by choosing an Image for their operating system, the base Image. Then they additionally install some artifacts --> like Visual Studio or 7-ZIP or GIT. And they can do this configuration for every single VM that they create. And you can choose any artifacts they want and any operating systems.
@@ -42,7 +46,10 @@ DevTest Labs aims to provide users with the ability to create VMs at will. So th
 - Create DevTest Labs service
 - Go to that just created service
   When you open just created DevTest Labs service, you will see all the available options for you to manage your DevTest Labs environment.
-- Here can create new DevTest Lab environment (here we can creating VM), click on btn --> + Add. (pic 103)
+- Here can create new DevTest Lab environment (here we can creating VM), click on btn --> + Add.
+
+![pic103](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic103.jpg)
+
 - then you need to choose (in search bar) from the base image, that will be a starting point for the VM. For example, you type in search bar --> Windows 10, because you want Windows 10 VM. And then choose needed Image for operating system.
 - Then fill VM form:
   - VM name

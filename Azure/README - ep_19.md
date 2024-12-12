@@ -13,7 +13,9 @@ Key Characteristics:
 - Customizable. You can create your own dashboards to get a quick glance at your Azure resources and their statuses.
 - Simple tasks.
 
-# Azure PowerShell (pic 104)
+# Azure PowerShell
+
+![pic104](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic104.jpg)
 
 This tool that allows to automate stuff in Azure. Besides the classic approach of using browser and accessing Azure through Azure Portal. You can also access Azure through a terminal. So this works --> Windows, Linux and macOS. You just need to install PowerShell modules and you will be able to connect to Azure. To work with Azure resources through a command terminal. This is one of the ways of managing Azure resources in an imperative way.
 
@@ -41,7 +43,9 @@ Key Characteristics:
 So using those commands and very powerful scripting language which is PowerShell, you can create almost any automation tasks in no time. You can then grab those scripts and either automate them in Azure or in a tool like Azure DevOps.
 PowerShell in general is a very native approach for IT professionals who are working with Windows servers in the past. But if your background is more on the Linux side you might prefer to use Azure CLI instead.
 
-# Azure CLI (Command Line Interface) (pic 104)
+# Azure CLI (Command Line Interface)
+
+![pic104](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic104.jpg)
 
 Just like PowerShell you will use terminal to log into Azure and manage Azure resources but instead of installing modules for PowerShell you will install CLI. This is just another way of managing other resources through terminal.
 
@@ -72,13 +76,17 @@ Key Characteristics:
 
 In general you can use either PowerShell or CLI to perform most of the tasks when it comes to Azure. It is just a matter of preference. Microsoft wanted to provide you with tool kit. So that you can use your existing skills whether you are coming from Windows or more unix-based environments and integrate with Azure in no time.
 
-# Azure Cloud Shell (pic 105)
+# Azure Cloud Shell
+
+![pic105](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic105.jpg)
 
 Everything that we talked about in this episode 19 is happening on user machine. So users need to either use their own browsers or they need to install tools like PowerShell or Azure CLI Tools (in VS Code extensions) to perform automations with azure. But there are many scenarios where you simply won't be able to install those tools locally (Azure PowerShell and Azure CLI) or you don't have access to user machine on a specific time. Microsoft wanted to solve those challenges by providing you with another environment. Where all the tools will be pre-installed for you and will always be up to date. This extra environment is called --> Cloud Shell. You can access Cloud Shell through many interfaces for example through a Web browser by navigating to [Shell.Azure.com](Shell.Azure.com).
 
 There are a lot of great things about Cloud Shell environment, for example it is based on Ubuntu container. You get a lot of additional tools that come with Linux natively. You can use both PowerShell and CLI depending on which do you prefer. And this environment is competely Free, so you can perform your day-to-day operations directly from the browser without the need to install a single tool on your local machine. Azure Cloud Shell also comes with a lot of interfaces to use. You can use it from dedicated shell.azure.com portal, you can also use portal.azure.com with a small integration directly in Azure portal or if you are on the go and you don't have access to your machine or you don't want to open this you can use mobile application which has a native integration with Cloud Shell
 
-# How to use Cloud Shell (pic 106)
+# How to use Cloud Shell
+
+![pic106](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic106.jpg)
 
 - go to [portal.azure.com](portal.azure.com). it is one of interfaces to use Cloud Shell.
 - on the main portal page click --> Cloud Shell btn, it will open new cloud session.

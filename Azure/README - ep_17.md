@@ -34,7 +34,7 @@ Key Characteristics:
 
 ![pic98](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic98.jpg)
 
-This service allows you to build workflows using a visual interface. Those workflows can represent both business scenarios but also cross-application integrations. (Numbers on pic 98 represent 1 of 4 options below)
+This service allows you to build workflows using a visual interface. Those workflows can represent both business scenarios but also cross-application integrations. (Numbers on picture above represent 1 of 4 options below)
 
 1. So you can build a simple step-by-step workflows or
 2. you can do something more complex with conditions,

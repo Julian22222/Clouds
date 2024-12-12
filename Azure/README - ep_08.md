@@ -118,7 +118,7 @@ Click Subscriptions --> resourceGroups --> choose resource group --> providers -
 
   Azure Resource Manager - is a centrlized management layer for all the resources and resource groups in Azure. And because it has unified language unified template language you always send the same properties and the same validations and everything is consistent across multiple interfaces.
 
-  Resource Manager also is responsible for checking your privilages with Microsoft Entra ID (previously was known as --> Azure Active Directory (Azure AD)). Because AMicrosoft Entra ID is a centralized identity and access management service in Azure , so this is where all the privileges are stored (IAM). So Azure Resource Manager will check with Azure id whenever the user that is requesting Resource creation, deletion or changes as a proper privilages is assigned.
+  Resource Manager also is responsible for checking your privilages with Microsoft Entra ID (previously was known as --> Azure Active Directory (Azure AD)). Because Microsoft Entra ID is a centralized identity and access management service in Azure , so this is where all the privileges are stored (IAM). So Azure Resource Manager will check with Azure id whenever the user that is requesting Resource creation, deletion or changes as a proper privilages is assigned.
 
   Azure Resource Manager is also responsible for controlling the access and management of the Resources.
 

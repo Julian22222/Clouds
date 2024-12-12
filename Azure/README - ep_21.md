@@ -2,7 +2,12 @@
 
 Use these groups to secure our Networks
 
+Check Episode_10 , It has different connections between Subnets and Virtual Networks
+
 ## Network Security Groups (NSG) ![logo8](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo8.jpg)
+
+![pic52](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic52.jpg)
+Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 separate Subnets. If you want to control the traffic that comes from internet to that Virtual Machine you can place a Network Security Group (NSG) on that Subnet. Those Security Groups will only allow specific traffic to reach that Virtual Machine. You can also use Network Security Groups to manage the traffic across Subnets. It is really a tool for you to manage your networking in secure and efficient manner.
 
 ![pic113](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic113.jpg)
 
@@ -23,16 +28,16 @@ But in our scenario this is something that we don't want to happen because our i
   Inbound security rules - is the place where we can manage all the rules for INCOMING traffic to our server.
 
 In this case there is a rule called --> RDP, which allows all the traffic coming from the PORT 3389 which is used by Remote Desctop Protocol.
+
+--> Here you can click on each line to edit, delete or adjust certain traffic rule. (It will open the same pop up window when you add a rule to NSG)
 ![pic116](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic116.jpg)
 Also you can click --> +Add and add new security group rule
 
 ![pic117](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic117.jpg)
 
---> You can click on each line to edit, delete or adjust certain traffic rule. (will open the same pop up window when you add a rule)
-
 When you adding a new rule or editing you get the Security rule form:
 
-- In Source , wecan select --> Any, which mean anyone from anywhere in the planet from any IP can connect to this server.
+- In Source , we can select --> Any, which mean anyone from anywhere in the planet from any IP can connect to this server.
   Other options: - IP addresses (to allow specific IP addresses to connect), - Service Tag (allow a specific service category within Azure to coonect), - Application security group
 - Source port ranges : \* , it means any port
 - Destination: Any, means protected by this network security groups
@@ -63,7 +68,7 @@ And the rules themselves are created by specifying source and destination by usi
 
 ## Application Security Groups (ASG) ![logo29](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo29.jpg)
 
-ASG helps with management of ourr traffic even further.
+ASG helps with management of our traffic even further.
 
 If we want the internet traffic go only to our web services, then block the traffic from the internet to our logic server. Only our Web applications can connect to the services, handling the business logic. And further this allow the internet traffic going to the database server only allowing the business logic web service to call database servers and block the traffic from web services directly to database.
 
