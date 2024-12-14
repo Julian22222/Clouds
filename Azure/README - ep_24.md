@@ -37,7 +37,7 @@ One of the best things about DDoS Protection is that the basic plan for DDoS Pro
   ![pic134](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic134.jpg)
 - Click Protected resources section (step 1 on the picture)
 - Then Click --> + Add(step 2 on the picture) , to add resources to that protection plan.
-- Then in this panel you need to choose the Resource Group and then choose Virtual Network within that Resource Group that will be protected. Then hot --> Add button
+- Then in this panel you need to choose the Resource Group and then choose Virtual Network within that Resource Group that will be protected. Then hit --> Add button
 
 Now all the Resources within this Virtual Network will be protected.
 
@@ -53,4 +53,4 @@ If attacker will try to attack your service with hundreds of servers all that tr
 - Two tiers:
   - Basic - automatically enabled for all Azure services. If you use any Azure services which are exposed to a public internet and could be targeted by DDoS attack and those are automatically protected by the basic tier of Azure DDoS protection.
   - Standard - additional mitigation & monitoring capabilities for all the resources which are located within Azure Virtual Networks.
-- Standard tier uses machine learning to analyze traffic patterns for better accuracy. Standard tier is designed for more high-value applications of yours
+    Standard tier uses machine learning to analyze traffic patterns for better accuracy. Standard tier is designed for more high-value applications of yours

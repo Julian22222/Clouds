@@ -1,12 +1,13 @@
-# Azure Security Center
+# Azure Security Center ![logo34](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo34.jpg)
 
 What is Security Center and how does this service help us protect our Azure resources?
 
 ![pic140](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic140.jpg)
 
-In Azure Security center is responsible for continuously scanning your Azure services, whether those are Platform as a Service or Infrastructure as a Service services. Security Center continuously scans those services and helps you protect your Azure environment. Additionally Security Center provides you with recommendations, so that you administrators and developers can act immediately and protect their environments on their on their own.
+Azure Security center is responsible for continuously scanning your Azure services, whether those are Platform as a Service or Infrastructure as a Service services. Security Center continuously scans those services and helps you protect your Azure environment. Additionally Security Center provides you with recommendations, so that you administrators and developers can act immediately and protect their environments on their own.
 
 One cool feature of security center is that while it protects Azure services you can also install agents on your On-Premise Virtual Machines to extend the functionality of Security Center to protect your hybrid environments. It reminds Azure Advisor with similar functionality.
+
 ![pic141](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic141.jpg)
 
 We talked about how Azure Advisor scans your environments and provide you with a lot of recommendations including security recommendations. It is worth noting that those security recommendations are actually provided by Security Center itself.
@@ -21,11 +22,12 @@ So you can review your recommendations directly in Security Center or you can ac
 - type Security
 - on the left menu panel click --> Security Center (Here you can see all recommendations that you need to apply, and you can see how important are these recommendations --> the most impactful recommendations will be always be at the top)
   Using left side menu we can see, adjust many things
-  ![pic143](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic143.jpg)
+
+![pic143](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic143.jpg)
 
 - Here you can see adjust your security levels
 - Identity Secure score <-- it is overall status of your environment, it gives you virtual points how secure your environment is.
-- Here you can check risky users, who tried to login to your applications and how many times, you can block those users IP addresses from here
+- Here you can check risky users (Cyber-attack users), who tried to login to your applications and how many times, you can block those users IP addresses from here
 - Here you can check many more things regarding security
 
 Key Characteristics:

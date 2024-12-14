@@ -25,11 +25,13 @@ All of that things/processes like controlling, verifying, tracking and managing 
 
 # Microsoft Entra ID ![logo33](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo33.jpg)
 
-Azure Active Directory (Azure AD) is now Microsoft Entra ID
+Previous service --> Azure Active Directory (Azure AD) is now Microsoft Entra ID
 
 ![pic136](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic136.jpg)
 
-Everything that we did so far in Azure Portal when we as a users were connecting to Azure and managing our Subscriptions, our Resources like VMs, Databases and Resource Groups went through Azure AD. So not only Azure AD is storing our Azure accounts but also is granting permissions to access Azure Resources and it governs/control all the access to those specific resources. Also Azure AD doesn't only work with Azure platform. If you are using one of the live.com services liek -> SKYPE, OUTLOOK, ONEDRIVE. Again your user account on live.com is also stored in Azure AD and also Azure AD governing/controlling access to those services. If you are using your organizational resources like -> ONEDRIVE for business, SHAREPOINT, POWERBI, TEAMS or any other product from Office 365 platform again you are going through Azure AD. Azure AD manages your users groups, licenses and access to those services. Also, you can extend your own applications with authentication and authorization features of Azure Active Directory (Azure AD). Azure AD is quite powerful service
+Everything that we did so far in Azure Portal when we as a users were connecting to Azure and managing our Subscriptions, our Resources like VMs, Databases and Resource Groups went through Microsoft Entra ID. So not only Microsoft Entra ID is storing our Azure accounts but also is granting permissions to access Azure Resources and it governs/control all the access to those specific resources. Also Microsoft Entra ID doesn't only work with Azure platform. If you are using one of the live.com services liek -> SKYPE, OUTLOOK, ONEDRIVE. Again your user account on live.com is also stored in Microsoft Entra ID and also Microsoft Entra ID governing/controlling access to those services. If you are using your organizational resources like -> ONEDRIVE for business, SHAREPOINT, POWERBI, TEAMS or any other product from Office 365 platform again you are going through Azure AD. Microsoft Entra ID manages your users groups, licenses and access to those services. Also, you can extend your own applications with authentication and authorization features of Microsoft Entra ID.
+
+Microsoft Entra ID is quite powerful service
 
 # How to use Azure Active Directory (Azure AD) --> now it is Microsoft Entra ID
 
@@ -39,7 +41,7 @@ There are multiple ways how you can access Microsoft Entra ID.
 
 ![pic137](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic137.jpg)
 
-In order to manage Azure Active Directory (Azure AD) you need to have a Global administrator (step 1 on the picture), You can check that in the Microsoft Entra ID panel. Only then you will be able to manage evry aspect of it.
+In order to manage Microsoft Entra ID you need to have a Global administrator (step 1 on the picture), You can check that in the Microsoft Entra ID panel. Only then you will be able to manage every aspect of it.
 
 On the left side menu you have a lot of blades that allow you to manage most important things when it comes to Identities. For example: Users and Groups <- will allow you to create new Users and Groups (step 2 on the picture).
 
@@ -48,10 +50,10 @@ On the left side menu you have a lot of blades that allow you to manage most imp
 ![pic138](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic138.jpg)
 
 - Let's create new User Identity, Click on Users and then click -> + New user (to create new user)
-- Fill new User Identity form:
-  - User name <- which is our login and + add the domain (here you can use custom domain as well)
+- Fill new User Identity form: (see picture above)
+  - User name <- which is our login and + add the domain (here you can use custom domain as well), it is work email / user name for Azure Portal
   - Name <-- Display name (this name that will be displayed everywhere else in Azure Portal especially when we search for the specific user)
-  - Password (we can either auto generate or create yourself)
+  - Password (we can either auto generate or create yourself). Pasword to LogIn to Azure Portal
 - Then press --> Create
 
 And our new User Identity has been created --> It will show on Microsoft Entra ID panel. We can prove that this Identity works by LogIn to Azure Portal.
@@ -61,18 +63,23 @@ And our new User Identity has been created --> It will show on Microsoft Entra I
 - Go to Groups
 - Press --> + New group (to create new group)
 - Fill new Group form:
-  - Group type (Security)
+  - Group type --> (choose Security)
   - Group name
   - Members <-- Here you can assign members to this Group
 - Then hit --> Create
+
+This just created group can be assign to Role assignment --> in IAM (in Resource Group) --> step
 
 ### Where to use just created Users and Groups
 
 ![pic139](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic139.jpg)
 
-- When you have created User Identity (through Microsoft Entra ID) or a Group you can go to specific Resource Group (wehere you want to manage some user accesability) and on the left side menu click --> Access control (IAM) (step 1 on the picture).
+![pic139a](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic139a.jpg)
+
+- When you have created User Identity (through Microsoft Entra ID) or a Group you can go to specific Resource Group (where you want to manage some user accesability) and on the left side menu click --> Access control (IAM) (step 1 on the picture).
 - Then click --> + Add. It is step 2 on the picture (to add role assignment for this resource group, step 3 on the picture).
-- Then give an access/assign a Role (example: Owner, reader, contributor, etc.) for a new user/ or full Users Group that we just created --> for this specifc Resource Group.
+- Then give an access/assign a Role (example: Owner (full administrative access to this Resource Group), reader, contributor, etc.) for a new user/ or full Users Group that we just created --> for this specifc Resource Group. It is step 4
+- In step 5 you can assign particular user or Group of users for particular Resource Group
 
 - When you have added new User to some certain Resource Group, this Resource group will be shown in that User's Resource Group section. For example if you have added Tom to your Resource Group which is called RG-Test, then Tom will have this RG-Test Resource Group in his Azure Portal account.
 
