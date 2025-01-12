@@ -41,7 +41,7 @@ Location is a word that will come up very often when you work with Azure. Whenev
 
 - Important things to remember. Some of the services are available only in certain regions. You should always check which Region has the services that you need to build your application.
 
-- Also, thre are some services that are called Global Services. They don't have any specific region and specific location assign. Things like traffic manager for DNS routing or Azure active directory.
+- Also, there are some services that are called Global Services. They don't have any specific region and specific location assign. Things like traffic manager for DNS routing or Entra ID (previously known as Azure active directory).
 
 - Azure is globally available in over 50 Regions. New regions are being announced and built almost every day. In future can be more regions.
 

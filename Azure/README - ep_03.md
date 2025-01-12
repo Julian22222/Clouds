@@ -5,7 +5,7 @@ How your Expenditure differes whenever you are purchasing servers from the CLOUD
 # Capital Expenditure (CapEx) ![pic08](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic08.jpg)
 
 It means buying your own infrastructure.
-Most of the componies moved to the CLOUD, but anyway this model is very often seen even these days
+Most of the companies moved to the CLOUD, but anyway this model is very often seen even these days
 
 Key Characteristics:
 

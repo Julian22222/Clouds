@@ -50,7 +50,7 @@ If you decrease the size, decrease the power of the virtual machine this is call
 
 ![pic03](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic03.jpg)
 
-Best way to explain elasticity to show workload of the typical application during the day. Where the user workload changes during the day, making more busier during some certain ours during the day. In this case you need to assign the specific amount of resources to handle the workload. Properly design system will be able to allocate and deallocate resources whenever needed.
+Best way to explain elasticity to show workload of the typical application during the day. Where the user workload changes during the day, making more busier during some certain hours during the day. In this case you need to assign the specific amount of resources to handle the workload. Properly design system will be able to allocate and deallocate resources whenever needed.
 If this porcess done automatically it is called --> Automatic Scaling
 Automatic Scaling means automatic scaling by adding and removing resources depending from workload
 
