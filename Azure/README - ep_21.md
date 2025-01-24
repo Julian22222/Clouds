@@ -24,8 +24,10 @@ But in our scenario this is something that we don't want to happen because our i
 - Create NSG, this a place where you can manage all the networking rules for your VM.
 - Your VM and created NSG must be in the same Resource Group ( common place for all the services that are related to each other)
 - go to just created NSG and click on Inbound security rules (left side menu panel)
-  ![pic115](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic115.jpg)
-  Inbound security rules - is the place where we can manage all the rules for INCOMING traffic to our server.
+
+![pic115](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic115.jpg)
+
+Inbound security rules - is the place where we can manage all the rules for INCOMING traffic to our server.
 
 In this case there is a rule called --> RDP, which allows all the traffic coming from the PORT 3389 which is used by Remote Desctop Protocol.
 
@@ -41,7 +43,7 @@ When you adding a new rule or editing you get the Security rule form:
   Other options: - IP addresses (to allow specific IP addresses to connect), - Service Tag (allow a specific service category within Azure to coonect), - Application security group
 - Source port ranges : \* , it means any port
 - Destination: Any, means protected by this network security groups
-- Destination port ranges: In case o RDP it allways must be 3389, this is PORT which use Remote Desktop Protocol
+- Destination port ranges: In case of RDP it allways must be 3389, this is PORT which use Remote Desktop Protocol
 - Protocol: In case of RDP always use --> TCP
 - Action: Allow, means allow this type of flow to go through our network security group
 - Priority: 100,

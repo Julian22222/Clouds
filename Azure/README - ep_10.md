@@ -161,3 +161,5 @@ Two Load Balancing solutions:
 - Azure Application Gateway - If our traffic web based, we can distribute the traffic for HTTP (web). Because it has additional feature for filtering and security of web-based traffic
 
 - Azure Content Delivery Network (CDN) - Service that distributes and caches the content across multiple POP locations around the world to offload our Front-End services but also reduce latency required to deliver the content to our users. Which helps with scalability of our applications but also gives us better user experience.
+
+Read more about Azure Network on Episode 21

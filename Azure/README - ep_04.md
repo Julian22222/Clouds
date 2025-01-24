@@ -31,7 +31,11 @@ It is a power of virtual machine (the size of virtual machine that we purchased)
 
 Azure service that allows to track all the costs you have on the CLOUD --> Cost Management + Billing.
 
-Using this service --> Cost Management + Billing , you can see the cost of your's subscription. On the left side menu bar click on --> Cost managemnt --> Cost analysis.
+Using this service --> Cost Management + Billing , you can see the cost of your's subscription. On the left side menu bar click on --> Cost managemnt (STEP 1 on pic)--> Cost analysis (STEP 2 on the pic).
 Here you can track your costs for any months and different resources per day
 
-To see what price you pay for each service per day (understand where are the costs coming from), choose--> Group by: Service name, Granularity: Daily , Column chart(stacked)
+![pic12a](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic12a.jpg)
+
+To see what price you pay for each service per day (understand where are the costs coming from), choose--> Group by: Service name (STEP 3 on pic), Granularity: Daily (STEP 4 on pic), Column chart(stacked) (STEP 5 on pic)
+
+![pic12b](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic12b.jpg)

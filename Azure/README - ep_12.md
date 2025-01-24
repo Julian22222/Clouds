@@ -83,7 +83,20 @@ It is a family of products with a similar capabilities and the one we learned ju
   - Want to use SQL elastic pool ? -> No
   - Compute + Storage (take basic size of the server)
 
-Also, it allows you to add tables, column or make any queries using SQL in SQL database panel in Azure Portal. Go to SQL database and on the left side menu click --> Query editor. Then logIn to your database. Now you can write any queries and see all the tables in your database from Azure Portal SQL databse service.
+Also, it allows you to add tables, column or make any queries using SQL in SQL database panel in Azure Portal. Go to SQL database and on the left side menu click --> Query editor (STEP 1 on pic). Then logIn to your database. Now you can write any queries and see all the tables in your database from Azure Portal SQL databse service.
+Here you can find connection strings (STEP 2 on the pic). Also, you can replicate the data here, get all details about current SQL database, make Diagnostics and Logs
+
+- Go to created SQL database resource (pic below)
+
+![pic81a](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic81a.jpg)
+
+-Go to SQL sever, to allow connect to our database from our local computer (see picture below)
+
+- Go to Network (Step 1)
+- Fill fields (Step 2 and 3 ), Step 3 - is your IP address,
+- Tick Step 4 and save
+
+![pic81b](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic81b.jpg)
 
 Summary:
 Cosmos DB which is globally distributed NoSQL Database in the cloud allowing customers to take advantage of low latency, multi-master which is perfect for building globally distributed applications and serversless applications.

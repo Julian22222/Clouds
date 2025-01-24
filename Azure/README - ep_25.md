@@ -29,7 +29,7 @@ Previous service --> Azure Active Directory (Azure AD) is now Microsoft Entra ID
 
 ![pic136](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic136.jpg)
 
-Everything that we did so far in Azure Portal when we as a users were connecting to Azure and managing our Subscriptions, our Resources like VMs, Databases and Resource Groups went through Microsoft Entra ID. So not only Microsoft Entra ID is storing our Azure accounts but also is granting permissions to access Azure Resources and it governs/control all the access to those specific resources. Also Microsoft Entra ID doesn't only work with Azure platform. If you are using one of the live.com services liek -> SKYPE, OUTLOOK, ONEDRIVE. Again your user account on live.com is also stored in Microsoft Entra ID and also Microsoft Entra ID governing/controlling access to those services. If you are using your organizational resources like -> ONEDRIVE for business, SHAREPOINT, POWERBI, TEAMS or any other product from Office 365 platform again you are going through Azure AD. Microsoft Entra ID manages your users groups, licenses and access to those services. Also, you can extend your own applications with authentication and authorization features of Microsoft Entra ID.
+Everything that we did so far in Azure Portal when we as a users were connecting to Azure and managing our Subscriptions, our Resources like VMs, Databases and Resource Groups went through Microsoft Entra ID. So not only Microsoft Entra ID is storing our Azure accounts but also is granting permissions to access Azure Resources and it governs/control all the access to those specific resources. Also Microsoft Entra ID doesn't only work with Azure platform. If you are using one of the live.com services like -> SKYPE, OUTLOOK, ONEDRIVE. Again your user account on live.com is also stored in Microsoft Entra ID and also Microsoft Entra ID governing/controlling access to those services. If you are using your organizational resources like -> ONEDRIVE for business, SHAREPOINT, POWERBI, TEAMS or any other product from Office 365 platform again you are going through Azure AD. Microsoft Entra ID manages your users groups, licenses and access to those services. Also, you can extend your own applications with authentication and authorization features of Microsoft Entra ID.
 
 Microsoft Entra ID is quite powerful service
 
@@ -97,7 +97,7 @@ Key Characteristics:
 
 # Multi-factor Authentication
 
-Providing username and password is not enough. Servers need more credentials, more authentication factors from their users in order to prove their identity. For example providing a code that was sent to their mobile phones. This type of process is called multi-factor authentication. It is a process of presenting 2 or more pices of evidence, factors to prove user identity.
+Providing username and password is not enough. Servers need more credentials, more authentication factors from their users in order to prove their identity. For example providing a code that was sent to their mobile phones. This type of process is called multi-factor authentication. It is a process of presenting 2 or more pieces of evidence, factors to prove user identity.
 
 Key Characteristics:
 

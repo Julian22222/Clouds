@@ -57,18 +57,43 @@ Additionally all of those 200 connectors allow you to use them within the flow. 
 
 - Create --> Logic Apps
 - go to just created Logic App service. Where you can either use standard out of the box templates available for Logic Apps or start from the blank application.
-- then press Blank Logic app. Or you can use ready templates
+- then press Blank Logic app. Or you can use ready templates.
+- We press Blank from picture below
+
   ![pic99](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99.jpg)
 
-- then in the search box (search for connectors) --> we can search for Blob, for example. Because in your scenario when new files added to Blob Storage, or modified in Blob Storage --> it will trigger other processes.
+- then in the search box (search for connectors) --> we can search for Blob (pic below), for example. Because in your scenario when new files added to Blob Storage, or modified in Blob Storage --> it will trigger other processes.
 
-- After Selection of needed connector --> fill form:
-  - Connection Name
-  - Storage Account
-- Once connection has been created, Then you will see pop up window --> now we can select the container, Azure Blob Storage container where our files will be uploaded (this is our connector in this case). And additionally we need to specify how often we going to check for any changes in that container.
-- Once this is done, then we can select an operation that will trigger other processes. In Search bar find a process that you want to run once new file will be added or modified in Blob Storage. For example, We can select Outlook.com and now search for actions (identify what to do with the email)--> select "SEND EMAIL(V2)"
+![pic99a](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99a.jpg)
+
+- After Selection of needed connector --> fill form: (pic below)
+  - Connection Name (step 1)
+  - Storage Account (step 2)
+
+![pic99b](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99b.jpg)
+
+- Once connection has been created, Then you will see pop up window --> now we can select the container, Azure Blob Storage container where our files will be uploaded (this is our connector in this case) - (STEP 1 on pic). And additionally we need to specify how often we going to check for any changes in that container- Step 2 on pic. In our case evry 1 minute.
+
+![pic99c](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99c.jpg)
+
+- Once this is done, then we can select an operation that will trigger other processes. In Search bar find a process that you want to run once new file will be added or modified in Blob Storage. For example, We can select Outlook.com and select outlook.com to use your private email account.
+
+![pic99d](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99d.jpg)
+
+and then search for actions (identify what to do with the email)--> select "SEND AN EMAIL(V2)" from the list
+
+![pic99e](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99e.jpg)
+
 - Then Sign In, in next pop up window to create a connection between Logic App and your email and give all permissions on your behalf.
-- Then it will show another pop up window --> select where do you want to send your emails, and email text to send. (Here you can choose dinamic data to attach it to email, such as File names, file links etc. that was added or modified)
+- Then it will show another pop up window (pic below)--> select where do you want to send your emails, subject and email text to send.
+
+![pic99f](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99f.jpg)
+
+(Also, Here you can choose dinamic data to attach it to email, such as uploaded File names, file links, files location etc. that was added or modified) - from Dynamic content section (step 1)
+
+we can search it from this Dynamic section list
+
+![pic99g](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic99g.jpg)
 
 Logic Apps Key Characteristics:
 

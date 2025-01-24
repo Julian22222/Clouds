@@ -4,7 +4,7 @@ In order to talk about Azure advisor let's picture a scenario typically when bui
 
 ![pic107](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic107.jpg)
 
-Azure Advisor - it is a service that was creaated to continuously scan those services for all of the improvements according to Microsoft best practices. Because you can imagine if you are just starting with Azure Microsoft might have some good tips for you. That will improve entire application works and how you operate your entire Azure platform and recomendations that you can get are around cost of your Azure resources, their performance, reliablility, security and operational excellence. All of those recomendations are then provided to either admins or developers. You can even setup some alerts to get automatically notified when there are new recommendations.
+Azure Advisor - it is a service that was created to continuously scan those services for all of the improvements according to Microsoft best practices. Because you can imagine if you are just starting with Azure Microsoft might have some good tips for you. That will improve entire application works and how you operate your entire Azure platform and recomendations that you can get are around cost of your Azure resources, their performance, reliablility, security and operational excellence. All of those recomendations are then provided to either admins or developers. You can even setup some alerts to get automatically notified when there are new recommendations.
 
 # How to use Azure Advisor ![logo26](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo26.jpg)
 
