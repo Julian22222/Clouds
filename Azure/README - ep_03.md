@@ -2,7 +2,9 @@ Expenditure - is an action of spending your company funds
 
 How your Expenditure differes whenever you are purchasing servers from the CLOUD or for your On-Premises environment
 
-# Capital Expenditure (CapEx) ![pic08](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic08.jpg)
+# Capital Expenditure (CapEx)
+
+![pic08](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic08.jpg)
 
 It means buying your own infrastructure.
 Most of the companies moved to the CLOUD, but anyway this model is very often seen even these days
@@ -40,4 +42,6 @@ Key Characteristics:
 
 If we will take the same scenario for this model and draw diagram of the cost of our infrastructure over time the diagram would look much different. Because we pay only for what we use. And our cost is based on the CLOUD services usage. And Server capasity always matches what you are using and therefore there is no initial investment unless you are actually buying something upfront. When it comes to maintenance in Cloud , most of the maintenance is performed by the Cloud vender. You only need to maintain small operation teams to manage most important tasks around your infrastructure. Other than that Microsoft manages everything and it is included in the price when you purchasing services
 
-# Differences between CapEx vs. OpEx ![pic10](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic10.jpg)
+# Differences between CapEx vs. OpEx
+
+![pic10](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic10.jpg)

@@ -24,6 +24,7 @@ We need to give acces to our server to go to this website through Azure Firewall
 - Put this Firewall resource together with other resources in one Resource Group (such as: Web serve, Virtual Network, NSG, Firewall)
 
 From the perspective of the Diagram. One web server which is connected to one Virtual Netwrk with Firewall provisioned.
+
 ![pic129](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic129.jpg)
 
 On the picture above we have Virtual Network and 2 Subnets. One Subnet with our Server and a Route table which redirects the traffic from the server into the firewall subnet directly to our Firewall.
@@ -32,11 +33,13 @@ On the picture above we have Virtual Network and 2 Subnets. One Subnet with our 
 - Go to Rules section (left menu bar, number 1 on the picture)
 - Then go to Application rule collection (number 2 on the picture)
 - Then press --> + Add application rule collection (number 3 on the picture)
+
   ![pic130](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic130.jpg)
 
 Collection it is just a multiple rules combined together.
 
 - Then Fill the application rule collection form:
+
   ![pic131](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic131.jpg)
 
   - Name (In our case name is AllowInternet)

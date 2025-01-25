@@ -24,7 +24,9 @@ But there are some Disadvantages, there is one major one when it comes to securi
 
 # Private Cloud
 
-On the other hand we have private cloud (On-Premises), which is reverse model ![pic20](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic20.jpg).
+On the other hand we have private cloud (On-Premises), which is reverse model
+
+![pic20](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic20.jpg)
 
 You don't have anything in public cloud, you host everything in your own Datacenter. Remember here you need to provide self service in order to be able to consider cloud and you need to provide all the benefits of the cloud except in your own Datacenter. In this scenario you are the one who maintaining all the hardware.
 
@@ -36,7 +38,9 @@ Advantages:
 
 - because you maintain everything you have all the possibilities, so you can support pretty much any scenario. You have total control over security and you can meet any security and compliant requirements but maintaining your own hardware comes at a cost and that cost is a big initial (CapEx) capital expenditure investment that you need to make. There is a limited agility because that agility is limited by the amount of hardware and skills of your team. Excellent skills and expertise of your internal team is pretty much mandatory when running private cloud. And these comes at a cost which brings us to the third model --> Hybrid Cloud model.
 
-# Hybrid Cloud model. ![pic22](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic22.jpg)
+# Hybrid Cloud model.
+
+![pic22](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic22.jpg)
 
 In this model you take advantage of both -> Public and Private cloud. You connect them together to provide the greatest flexibility out of those 3 options.
 

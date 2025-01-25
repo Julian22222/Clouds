@@ -22,6 +22,7 @@ In this case NVA is a Virtual Machine Image that was created with a firewall ins
 Route Table --> allows us to manage and override the default routes in Azure by creating our own routes. For example by adding 1 route we can affect how Web server connects to API server by redirecting the traffic to the NVA, which will inspect the traffic and forward or deny that traffic to the API server. If you want we can add one more route to affect the traffic going to the internet which will again go throughthe firewall if we want to.
 
 To recreate this scenario in Azure, where we have 1 Virtual Network with 3 Subnets. One Subnet has API server, Another Subnets has NVA server and third Subnet has Web server.
+
 ![pic123](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic123.jpg)
 
 We will use Route Tables in Azure to redirect the traffic from Web server to API server through NVA server.
@@ -32,19 +33,23 @@ We will use Route Tables in Azure to redirect the traffic from Web server to API
 - allocate all needed services in one Resoure Group (For example we will have api server, NVA server, NSG, etc. in one Resource Group)
 - Go to just creates Route table (It will allow to change the routes from Web server --> through NVA Server to --> API Server)
   Route table panel-->
+
   ![pic124](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic124.jpg)
 
 - Here we need to go to Subnets(left side menu - 1 on the picture) and press --> + Associate (2 on the picture). Which will associate/bind this with a Subnet where your Virtual Machine is located (3 on the picture). So all the traffic that is going out of the Subnet will be routed according your Route table (will be routed how you will adjust the routing).
 
 That is why you will go to Virtual Network and Select the Virtual Network where your servers are located.
+
 ![pic125](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic125.jpg)
 
 - Then Select Subnet(4 on the picture). In this case this is a the Public Subnet. So all the traffic that is going from this Public Subnet will be subject to our Route table. Here we Choose Subnet name in which subnet your Web Server located. Our Starting point for routing, where all the our custom routing will start.
 - Then press --> OK (5 on the picture), to save changes.
+
   ![pic126](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic126.jpg)
 
 - Then we go to Routes (6 on the picture) to add a Route, --> and click + Add
 - Then you fill the Route form:
+
   ![pic127](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic127.jpg)
 
   - Route name - give any name

@@ -34,7 +34,9 @@ One of the best things about DDoS Protection is that the basic plan for DDoS Pro
   - Location
 
 - Then go to just created DDoS protection plan
+
   ![pic134](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic134.jpg)
+
 - Click Protected resources section (step 1 on the picture)
 - Then Click --> + Add(step 2 on the picture) , to add resources to that protection plan.
 - Then in this panel you need to choose the Resource Group and then choose Virtual Network within that Resource Group that will be protected. Then hit --> Add button

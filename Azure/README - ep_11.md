@@ -151,20 +151,41 @@ Go to just created Storage Account service and in the bottm of the page there is
 1. Click on File shares and create file share and mount it to my local machine by selecting --> + File share.
 2. Then giving a name and Quota <-- which is maximum storage.
 3. Then hit create btn. To mount the file share you need to select that "share" that we just created and open it. Inside of that file share we click --> Connect btn.
-4. Then you will see Connection settings, ![pic68](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic68.jpg)
+4. Then you will see Connection settings,
+
+![pic68](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic68.jpg)
 
 where you can choose operating system (Windows, Linux, macOS). and Microsoft will provide box script (a string) for each different operating system that you need to copy. For example, if you have Windows VM then it is PowerShell. you copy all this script, then go to your windows VM and press windows start btn, --> open Windows PowerShell
 
 ![pic69](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic69.jpg)
 
 and just paste that script over here. By default this script firstly test the connectivity and then mount the storage.
+
 ![pic70](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic70.jpg)
 
 If everything worked correctly you will see message on the screen that the new share was mounted.
 
-You can varify that by going to you computer on Windows VM ![pic71](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic71.jpg) --> to This PC and you will see new share attached. For example, you can even open that share and create a small file, like txt file, by clicking right click--> New --> Text Document. And now if you go back to Azure Portal you will see new txt file will be in the File share (in the cloud) <-- it is that file that we just created in Windows VM File share storage
+You can varify that by going to you computer on Windows VM
 
-Also, from Storage Account panel you can click on --> Storage Explorer ![pic72](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic72.jpg) on the left side menu bar. It is a web tool that allows us to review everything on the Storage Account ![pic73](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic73.jpg). Will show what files and tables you have in which storage. Also, you can create new table from here (from Storage Explorer). When table created you can add new rows to it by clicking --> + Add ![pic74](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic74.jpg). By default each row has to have a compound key containing PartitionKey and a RowKey, this value has to be unique. Also, you can add additional proporties like Name ![pic75](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic75.jpg).
+![pic71](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic71.jpg)
+
+--> to This PC and you will see new share attached. For example, you can even open that share and create a small file, like txt file, by clicking right click--> New --> Text Document. And now if you go back to Azure Portal you will see new txt file will be in the File share (in the cloud) <-- it is that file that we just created in Windows VM File share storage
+
+Also, from Storage Account panel you can click on --> Storage Explorer
+
+![pic72](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic72.jpg)
+
+on the left side menu bar. It is a web tool that allows us to review everything on the Storage Account
+
+![pic73](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic73.jpg)
+
+Will show what files and tables you have in which storage. Also, you can create new table from here (from Storage Explorer). When table created you can add new rows to it by clicking --> + Add
+
+![pic74](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic74.jpg)
+
+By default each row has to have a compound key containing PartitionKey and a RowKey, this value has to be unique. Also, you can add additional proporties like Name
+
+![pic75](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic75.jpg).
 
 Azure Storage Account has a lot of additional features that allows you to take advantage of this highly scalable storage in the cloud.
 

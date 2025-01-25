@@ -1,4 +1,6 @@
-# Consumption-based Model ![pic11](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic11.jpg)
+# Consumption-based Model
+
+![pic11](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic11.jpg)
 
 Before you start working with Azure. You need to understand How Azure pricing being formed, therefore you need to understand Consumption-based Model.
 Typical usage, workload is changing over the time and match that usage demand you want to allocate as many resources as you need at any given time.
@@ -14,7 +16,9 @@ You will only pay for those resources during the time of the usage and only as m
 
 You will pay only for how much resources you used and for how long you have used those resources.
 
-### One more thing to understand ![pic12](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic12.jpg)
+### One more thing to understand
+
+![pic12](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic12.jpg)
 
 Let me use Virtual machine as an example here. Charging for a service like virtual machine might be very tricky. Therefore Microsoft created a few metrics that the price is based on.
 

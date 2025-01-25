@@ -64,13 +64,17 @@ It is quite similar to HDInsight except the cluster that we create are based on 
 - Now we have a big data technology cluster based on Apache Spark. Running in the cloud and ready to be used.
 
 Now we can create some scripts by going to Workspace.
+
 ![pic89](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic89.jpg)
+
 Then you can have your personal workspace --> in Users section. Or in a Shared workspace section you can share and collaborate with other users.
 
 -In personal workspace or Shared workspace you can create catalogs (by right click) --> and in catalog you can create --> Notebook.
 -Notebook is a simple scripts in Azure Databricks, selecting the language which do you want to use in Azure Databricks.
 -picture-->
+
 ![pic90](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic90.jpg)
+
 Inside you just created Notebook you can write your scripts. This Script is connects to open datasets from Microsoft with some sample data. It takes just few lines of code, it is very simple and very straightforward.
 -(pic 90)But when you pulling the Data you can use familiar SQL language in this case it is Spark SQL.
 -Also from Notebook (bottom menu) you can download your Data as a CSV, change the chart type and do all sorts of data transformation and analysis based on your needs.

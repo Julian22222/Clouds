@@ -11,7 +11,9 @@ Serverless computing is a way of hosting your applications in the cloud while co
 We have already talked about Azure functions as part of the compute episode. Let's quickly rewise, because while there are a compute resources, there are also a serverless compute resource.
 
 Azure Functions (Function Apps)
+
 ![pic97](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic97.jpg)
+
 -> is a service that allows customers to build applications using code. In this case small pieces of code and host those as a Web services. In which case customers create a small pieces of code, package them and send them to the Function Apps. From this point onword this is the serverless part. Because Azure Function app grab your code and deploy this across multiple servers and allow external services to communicate with you application and if necessary scaling up and down depending on your need.
 
 Azure Functions is our serverless coding platform so called function as a service allowing us to build nano-services architecture and event-based application. It also allows for quick scaling up and scaling down. It is highly scalable because in this case you can go up to 200 servers if required. And lastly this service supports most popular languages and frameworks that are used for building web services. That means you don't have to learn any new languages to start using Azure Functions.

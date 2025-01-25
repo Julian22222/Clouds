@@ -17,19 +17,23 @@ There are multiple ways to find Azure Advisor either by:
 - on the left side menu to --> All services and find it in the feature section.
 
 ![pic109](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic109.jpg)
+
 When you open Azure Advisor you will be presented with a dashboard showing you all the recomendations for your services in Azure. In here you have all the recommendations for cost, security, reliability, operational excellence and performance.
 
 ![pic110](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic110.jpg)
+
 On this picture currently the only one recomendations that You have are around reliability. Click on Reliability tile to open this recommendation and in here you can see that you have 3 recomendations around your Azure resources.
 ![pic111](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic111.jpg)
 
 You can check their impact (LOW, MEDIUM, HIGH). Then you can check description that is provided for each recomendation. Also, here you can see benefits if you follow the recommendations, and also here you can check how many resources are impacted from each recomendation.
 
 Another great thing about Azure Advisor is that you can act on this recomendation directly from the same panel, you don't have to research how to do that. You just click on the recommendation
+
 ![pic111](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic111.jpg)
 
 Then click on Recommended action link and then adjust your resource how it was recommended.
 If you want to postpone or you don't want to apply this recommendation you can select recomendation and hit dismiss
+
 ![pic112](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic112.jpg)
 
 --> and it will instantly disappear from the recommendations for Azure Advisor.

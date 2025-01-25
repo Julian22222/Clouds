@@ -15,12 +15,17 @@ Here we will focus only on structured and semi-structured data types
 ![pic65](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic65.jpg)
 
 In ep_11 we were talking about semi-structured data sets can be uploaded by either users or applications to a table entities hosted by Azure table storage service. In that sense Table Storage and Cosmos DB are very similar except for the table entities you have collections but instead of Table Storage you have Cosmos DB.
+
 ![pic77](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic77.jpg)
 
 But the difference between two services lies somewhere else.
 
-- One of the primary features of Azure Cosmos DB is ability to replicate geographically. This is because Azure Cosmos DB is available in many regions and Data replication across those regions is as simple as selecting check boxes. Once that checkbox is selected your data automatically get replicated across Azure regions of your choosing ![pic78](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic78.jpg).
-  It is very simple.
+- One of the primary features of Azure Cosmos DB is ability to replicate geographically. This is because Azure Cosmos DB is available in many regions and Data replication across those regions is as simple as selecting check boxes. Once that checkbox is selected your data automatically get replicated across Azure regions of your choosing
+
+![pic78](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic78.jpg)
+
+It is very simple.
+
 - One of another feature of Cosmos DB is ability to not only read globally but also write globally. So you can write to the closest data center available to your application and to your users. Besides its geo-replication capabilities this database is also low latency database. That means if you are operating on a small objects it will return responses under 10 milliseconds. If you building real-time applications this might be the best choice for you of all of these services available in Azure.
 
 Azure Cosmos DB is globally distributed NoSQL Database service in Azure. Allowing to store your semi-structured data sets. Because semi-structured data sets do not require to follow schema this is a schema-less database.
@@ -54,6 +59,7 @@ Key Characteristics:
 - High-performance, reliable, fully managed and secure database for building applications
 
 ![pic80](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic80.jpg)
+
 If you have been working with the Microsoft BI technologies like SQL Server, you might already know the products available in SQL Server family like database, reporting, integration services and analysis services. If you move to Azure those products are represented as a separate services from the SQL Server family only Azure SQL database is a representation of SQL Server database and when it comes to other services they were either migrated as a similar service or recreated with a new design in mind.
 
 # Azure SQL

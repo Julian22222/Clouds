@@ -54,11 +54,17 @@ Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 
 - Go to Azure Portal
 - Create resource --> type Virtual Network
 - Fill the form:
+
   - Subscription
   - Resource group
   - Name
   - Region (Virtual Network is a Single Region Resource)
-  - IP Address (step 1 on the picture below) ![pic53](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic53.jpg) --> where you can allocate address space for your Virtual Network. If you leave it as default, it will allocate 65 536 addresses for you to use. At the bottom you have a default Subnet (step 2 on the picture above). Default Subnet is a requirement for every Azure Virtual Network. This is a place where you can allocate part of your address space.
+  - IP Address (step 1 on the picture below)
+
+  ![pic53](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic53.jpg)
+
+  --> where you can allocate address space for your Virtual Network. If you leave it as default, it will allocate 65 536 addresses for you to use. At the bottom you have a default Subnet (step 2 on the picture above). Default Subnet is a requirement for every Azure Virtual Network. This is a place where you can allocate part of your address space.
+
   - Add Subnet
   - Security --> here you can enable some additional security features for your Virtual Network -> like Azure Azure firewall, DDoS Protection or BastionHost
 
@@ -67,7 +73,9 @@ Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 
 You need to go to VM resource and Open default Virtual Network setting.
 
 Virtual Networks have great feature that allows to see Diagram of your connection Infrastructure.
-Open Virtual Network default service and Put in search bar --> Diagram. Azure will draw a Diagram for you. ![pic55](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic55.jpg).
+Open Virtual Network default service and Put in search bar --> Diagram. Azure will draw a Diagram for you.
+
+![pic55](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic55.jpg).
 
 It will represent your current Networking Infrastructure for this specifc Virtual Network. From the PICTURE we have--> az-900-vm-vnet Virtual Network on the top with 1 Subnet--> called default (located lower on the picture above). And then there is 1 Network Interface (called amdemo-vm119, which located lower on the picture) that is connected directly to the Subnet which is used by a Virtual Machine which is called --> amdemo-vm (located on the left bottom line on picture). There is also a public IP connected to this Networking Interface allowing you to connect to this Virtual Machine from the Public Internet --> which is called amdemo-vm-ip (located on the right bottom line on picture). And the Network Security Group (NSG)--> which is called amdemo-vm-nsg (located in the center of bottom line). It controls all the traffic that goes to this virtual machine through this Networking Interface.
 
@@ -120,6 +128,7 @@ If we are talking about traffic distribution for resources. If that traffic is a
 Services like App Services can also be used, so Application Gateway allow you to redirect traffic to any Public IP or Address. You are not limited with Virtual Machines when building scalable distributed applications.
 
 Taking the same scenario from Load Balancer --> In case of building Multi-Tier application you will replace that Public Load Balancer with Application Gateway.
+
 ![pic60](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic60.jpg)
 
 Summary:
@@ -139,7 +148,12 @@ Azure Application Gateway Key Characteristics:
 # Content Delivery Network (CDN) ![logo12](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo12.jpg)
 
 CDN is one of those Networking services that helps customers to build their applications.
-![pic61](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic61.jpg) So let's take a Web application as an example, every Web application has some static content --> like JavaScript files, stylesheets, static pages or images. Normally if developers don't know about the existence of services like Content Delivery Network what they will do is bundle this application and put it into app service and host that app service in one of the Azure Regions around the world. For instance in West US so when a user from Alaska tries to connect to our Web application, his request will have to go through 1 600 miles to get this page and all of the content. So if our page has 50 elements on it that user has to make 50 requests. 50 separate requests with each having hundred milliseconds delay. This might not be an issue yet but if our users will start connecting from different continents. In this case the distance they need to cover is much greater. So the latency for every single request they make will be much greater when comparing to users connecting from Alaska. To help that scenario you ask your developers to upload all the static content into Content Delivery Network. Allowing CDN Service to distribute that content all around the world. So the users will connect to the closest location with their content available, reducing the latency but also the workload require by your Front-End services. ![pic62](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic62.jpg)
+
+![pic61](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic61.jpg)
+
+So let's take a Web application as an example, every Web application has some static content --> like JavaScript files, stylesheets, static pages or images. Normally if developers don't know about the existence of services like Content Delivery Network what they will do is bundle this application and put it into app service and host that app service in one of the Azure Regions around the world. For instance in West US so when a user from Alaska tries to connect to our Web application, his request will have to go through 1 600 miles to get this page and all of the content. So if our page has 50 elements on it that user has to make 50 requests. 50 separate requests with each having hundred milliseconds delay. This might not be an issue yet but if our users will start connecting from different continents. In this case the distance they need to cover is much greater. So the latency for every single request they make will be much greater when comparing to users connecting from Alaska. To help that scenario you ask your developers to upload all the static content into Content Delivery Network. Allowing CDN Service to distribute that content all around the world. So the users will connect to the closest location with their content available, reducing the latency but also the workload require by your Front-End services.
+
+![pic62](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic62.jpg)
 
 Summary:
 Azure CDN allows for delivery of Web content to users to minimize the latency for Web applications so that you can build more scalable web applications and minimize the workload required by your Front-End services. And all that content is spread across multiple POP (point of presence) locations. Microsoft has over 120 locations available worldwide. As you can imagine this is more than Azure regions available. That means there might be points of presence closer to you that there are to the closest Azure region.
@@ -162,4 +176,4 @@ Two Load Balancing solutions:
 
 - Azure Content Delivery Network (CDN) - Service that distributes and caches the content across multiple POP locations around the world to offload our Front-End services but also reduce latency required to deliver the content to our users. Which helps with scalability of our applications but also gives us better user experience.
 
-Read more about Azure Network on Episode 21
+# Read more about Azure Network on Episode 21

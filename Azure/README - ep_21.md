@@ -7,6 +7,7 @@ Check Episode_10 , It has different connections between Subnets and Virtual Netw
 ## Network Security Groups (NSG) ![logo8](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo8.jpg)
 
 ![pic52](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic52.jpg)
+
 Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 separate Subnets. If you want to control the traffic that comes from internet to that Virtual Machine you can place a Network Security Group (NSG) on that Subnet. Those Security Groups will only allow specific traffic to reach that Virtual Machine. You can also use Network Security Groups to manage the traffic across Subnets. It is really a tool for you to manage your networking in secure and efficient manner.
 
 ![pic113](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic113.jpg)
@@ -14,6 +15,7 @@ Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 
 Let's say we have 4 servers, 2 servers to handle Web application traffic, 1 server to handle business logic and 1 more server to host our database. Depending on our architectural decisions we can devide those into subnets. For example have 1 subnet for all the microservices and Web application traffic and another subnet to handle our data tier applications. And since those are subnets they need to reside/ be located in Virtual Network. If we create infrastructure like this and we don't do anything else. All the traffic coming from the internet will be allowed to all of these servers. Additionally all the traffic between these servers will be allowed. Therefore everything can communicate with everything.
 
 But in our scenario this is something that we don't want to happen because our internet traffic should not be reaching our database and not all of these services should be able to communicate with each other.
+
 ![pic114](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic114.jpg)
 
 --> This is where Network Security Groups (NSG) come in handy. For instance place NSG on the first subnet allowing traffic from internet (Web traffic) to reach our Web tier services. And by creating NSG on the second Subnet we can block the traffic comming from the internet but still allow the traffic coming from our own services.
@@ -32,7 +34,9 @@ Inbound security rules - is the place where we can manage all the rules for INCO
 In this case there is a rule called --> RDP, which allows all the traffic coming from the PORT 3389 which is used by Remote Desctop Protocol.
 
 --> Here you can click on each line to edit, delete or adjust certain traffic rule. (It will open the same pop up window when you add a rule to NSG)
+
 ![pic116](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic116.jpg)
+
 Also you can click --> +Add and add new security group rule
 
 ![pic117](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic117.jpg)

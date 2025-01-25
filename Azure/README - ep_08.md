@@ -33,7 +33,9 @@ It is a grouping of Resources, you should use it to logically group related reso
 
 One of the purpose of Resource Groups is to use --> acces control (IAM), where you can add permissions for your coleagues for this Resource Group Resouces
 
-# How to group resources together in Resource Groups ? ![pic38](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic38.jpg)
+# How to group resources together in Resource Groups ?
+
+![pic38](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic38.jpg)
 
 There are many strategies to do that, for instance there is a strategy that you can group your resources by services --> as example: all SQL databases in one Resource Group, all other resources in separate Resource groups for your web applications.
 
