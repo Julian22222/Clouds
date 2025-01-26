@@ -110,6 +110,8 @@ This Diagram not only allows you very easily to see how your networking is organ
 
 ![pic55a](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic55a.jpg)
 
+![pic55b](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic55b.jpg)
+
 ##### Creating Virtual Machine
 
 when filing VM resource Form – In Networking section -> you can give Virtual Network name (otherwise it will have default name), Subnet name (otherwise it will have default name), we can choose how this VM will work -> is this VM is taking all the internet traffic (vm - ip), we can add NSG and Public inbound ports (HTTP, RDP, etc.).
