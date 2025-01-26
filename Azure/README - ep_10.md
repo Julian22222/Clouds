@@ -43,7 +43,7 @@ Key Characteristics of Azure Virtual Network:
 - When it comes to segmentation part you can achive that using Subnets, segmentation into one or more Subnets
 - Subnets allow customers to divide Virtual Networks so that they can better and more effectively manage their IP address allocation but also manage Network filtering for something called -> Network Security Groups(NSG) or Application Security Groups (network filtering via Network Security Groups (NSG) or Application Security Groups (ASG)) <-- will learn about these in future lessons
 
-[Read more aabout Virtual Network here](https://www.expertnetworkconsultant.com/installing-and-configuring-network-devices/how-to-create-an-azure-network-infrastructure/)
+[Read more about Virtual Network here](https://www.expertnetworkconsultant.com/installing-and-configuring-network-devices/how-to-create-an-azure-network-infrastructure/)
 
 (Info From link above)-->
 
@@ -112,11 +112,7 @@ This Diagram not only allows you very easily to see how your networking is organ
 
 ![pic55b](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic55b.jpg)
 
-##### Creating Virtual Machine
-
-when filing VM resource Form – In Networking section -> you can give Virtual Network name (otherwise it will have default name), Subnet name (otherwise it will have default name), we can choose how this VM will work -> is this VM is taking all the internet traffic (vm - ip), we can add NSG and Public inbound ports (HTTP, RDP, etc.).
-
-[Read more aabout Virtual Network here](https://www.expertnetworkconsultant.com/installing-and-configuring-network-devices/how-to-create-an-azure-network-infrastructure/)
+[Read more about Virtual Network here](https://www.expertnetworkconsultant.com/installing-and-configuring-network-devices/how-to-create-an-azure-network-infrastructure/)
 
 (Info From link above)-->
 
@@ -128,6 +124,10 @@ when filing VM resource Form – In Networking section -> you can give Virtual N
 A network interface (NIC) is the interconnection between a VM and a virtual network (VNet). [A VM must have at least one NIC](), but can have more than one, depending on the size of the VM you create.
 
 You can create a VM with multiple NICs and add or remove NICs through the lifecycle of a VM. [Multiple NICs allow a VM to connect to different subnets and send or receive traffic over the most appropriate interface.]() If the VM is added to an availability set, all VMs within the availability set must have one or multiple NICs. VMs with more than one NIC aren’t required to have the same number of NICs, but they must all have at least two. [Each NIC attached to a VM must exist in the same location and subscription as the VM.]() Each NIC must be connected to a VNet that exists in the same Azure location and subscription as the NIC. You can change the subnet a VM is connected to after it’s created, but you cannot change the VNet. Each NIC attached to a VM is assigned a MAC address that doesn’t change until the VM is deleted.
+
+### Creating Virtual Machine
+
+when filing VM resource Form – In Networking section -> you can give Virtual Network name (otherwise it will have default name), Subnet name (otherwise it will have default name), we can choose how this VM will work -> is this VM is taking all the internet traffic (vm - ip), we can add NSG and Public inbound ports (HTTP, RDP, etc.).
 
 # Virtual Network Gateway (also called --> VPN Gateway) ![logo9](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo9.jpg)
 
