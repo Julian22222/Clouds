@@ -95,3 +95,9 @@ Summary:
 
 - Network Security Groups - Filtering of incoming and outgoing traffic for virtual network resources.
 - Application Security Groups - Logical grouping of virtual network resources for easier maintenance. have a feature that allows us to group our virtual network resources logically and then use those logical groupings inside network security group rules.
+
+###### We can create Network Security Group resource (NSG) or Application Security Groups (ASG)
+
+You can filter network traffic to and from Azure resources in an Azure virtual network with a network security group. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. To learn about which Azure resources can be deployed into a virtual network and have network security groups associated to them, see Virtual network integration for Azure services. For each rule, you can specify source and destination, port, and protocol
+
+Also, we can assign Network Security Group to Subnet to secure and filter the traffic.

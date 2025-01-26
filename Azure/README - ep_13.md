@@ -31,3 +31,12 @@ Inside of the Microsoft APPSOURCE you have products available for multiple micro
 Whereas in Azure marketplace you will find products available for Azure. But besides the product availability the other major difference is the users that those portals are targeting.
 -For Azure marketplace the key target the users that should be using this portal are developers and IT professionals who are building their solutions based on Azure services.
 -Whereas for Microsoft APPSOURCE the target are business users.
+
+# Microsoft 365
+
+- It is a product family of productivity software, collaboration and cloud-based services owned by Microsoft.
+- Including applications such as Word, Excel, PowerPoint,
+
+# live.com
+
+- Includes à Outlook.com, OneDrive, Microsoft Teams,Skype,

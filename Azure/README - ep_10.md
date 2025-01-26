@@ -43,6 +43,31 @@ Key Characteristics of Azure Virtual Network:
 - When it comes to segmentation part you can achive that using Subnets, segmentation into one or more Subnets
 - Subnets allow customers to divide Virtual Networks so that they can better and more effectively manage their IP address allocation but also manage Network filtering for something called -> Network Security Groups(NSG) or Application Security Groups (network filtering via Network Security Groups (NSG) or Application Security Groups (ASG)) <-- will learn about these in future lessons
 
+[Read more aabout Virtual Network here](https://www.expertnetworkconsultant.com/installing-and-configuring-network-devices/how-to-create-an-azure-network-infrastructure/)
+
+(Info From link above)-->
+
+#### What is an Azure Virtual Network (VNet)?
+
+We can create Virtual Network resource
+
+An Azure Virtual Network (VNet) is a representation of your own network in the cloud. It is a logical isolation of the Azure cloud dedicated to your subscription. You can use VNets to provision and manage virtual private networks (VPNs) in Azure and, optionally, link the VNets with other VNets in Azure, or with your on-premises IT infrastructure to create hybrid or cross-premises solutions. Each VNet you create has its own CIDR block and can be linked to other VNets and on-premises networks as long as the CIDR blocks do not overlap. You also have control of DNS server settings for VNets, and segmentation of the VNet into subnets.
+
+#### Azure Virtual Network (VNets) is Used in -
+
+Create a dedicated private cloud-only VNet. Sometimes you don’t require a cross-premises configuration for your solution. When you create a VNet, your services and VMs within your VNet can communicate directly and securely with each other in the cloud. You can still configure endpoint connections for the VMs and services that require Internet communication, as part of your solution.
+
+Securely extend your data center. With VNets, you can build traditional site-to-site (S2S) VPNs to securely scale your datacenter capacity. S2S VPNs use IPSEC to provide a secure connection between your corporate VPN gateway and Azure.
+
+Enable hybrid cloud scenarios. VNets give you the flexibility to support a range of hybrid cloud scenarios. You can securely connect cloud-based applications to any type of on-premises system such as mainframes and Unix systems.
+
+# Virtual Network Peering
+
+Virtual network peering enables you to seamlessly connect Azure virtual networks. Once peered, the virtual networks appear as one, for connectivity purposes. The traffic between virtual machines in the peered virtual networks is routed through the Microsoft backbone infrastructure, much like traffic is routed between virtual machines in the same virtual network, through private IP addresses only.
+
+- VNet peering – connecting VNets within the same Azure region
+- Global VNet peering – connecting VNets across Azure regions
+
 # Network Security Groups ![logo8](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo8.jpg)
 
 ![pic52](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic52.jpg)
@@ -68,7 +93,7 @@ Imagine you have 2 Virtual Machines within a single Virtual Network placed in 2 
   - Add Subnet
   - Security --> here you can enable some additional security features for your Virtual Network -> like Azure Azure firewall, DDoS Protection or BastionHost
 
-##### When you create Virtual Machine (VM), it is created with a Virtual Network default settings
+#### When you create Virtual Machine (VM), it is created with a Virtual Network default settings
 
 You need to go to VM resource and Open default Virtual Network setting.
 
@@ -80,6 +105,27 @@ Open Virtual Network default service and Put in search bar --> Diagram. Azure wi
 It will represent your current Networking Infrastructure for this specifc Virtual Network. From the PICTURE we have--> az-900-vm-vnet Virtual Network on the top with 1 Subnet--> called default (located lower on the picture above). And then there is 1 Network Interface (called amdemo-vm119, which located lower on the picture) that is connected directly to the Subnet which is used by a Virtual Machine which is called --> amdemo-vm (located on the left bottom line on picture). There is also a public IP connected to this Networking Interface allowing you to connect to this Virtual Machine from the Public Internet --> which is called amdemo-vm-ip (located on the right bottom line on picture). And the Network Security Group (NSG)--> which is called amdemo-vm-nsg (located in the center of bottom line). It controls all the traffic that goes to this virtual machine through this Networking Interface.
 
 This Diagram not only allows you very easily to see how your networking is organized within this Virtual Network, but also allows you to quickly find related resources. For instance if you want to manage Security rules for this Virtual Machine you can simply click on the Network Security Group (NSG). And all those components that you have seen on the Diagram are used to manage everything related to Networking for this Virtual Machine.
+
+# Example of Virtual Network Diagram , how big it can branch
+
+![pic55a](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic55a.jpg)
+
+##### Creating Virtual Machine
+
+when filing VM resource Form – In Networking section -> you can give Virtual Network name (otherwise it will have default name), Subnet name (otherwise it will have default name), we can choose how this VM will work -> is this VM is taking all the internet traffic (vm - ip), we can add NSG and Public inbound ports (HTTP, RDP, etc.).
+
+[Read more aabout Virtual Network here](https://www.expertnetworkconsultant.com/installing-and-configuring-network-devices/how-to-create-an-azure-network-infrastructure/)
+
+(Info From link above)-->
+
+### Azure Virtual Network Interface
+
+- We can create Virtual Network Interface resource
+- When creating a Virtual Machine, a network interface will be created for you automatically.
+
+A network interface (NIC) is the interconnection between a VM and a virtual network (VNet). [A VM must have at least one NIC](), but can have more than one, depending on the size of the VM you create.
+
+You can create a VM with multiple NICs and add or remove NICs through the lifecycle of a VM. [Multiple NICs allow a VM to connect to different subnets and send or receive traffic over the most appropriate interface.]() If the VM is added to an availability set, all VMs within the availability set must have one or multiple NICs. VMs with more than one NIC aren’t required to have the same number of NICs, but they must all have at least two. [Each NIC attached to a VM must exist in the same location and subscription as the VM.]() Each NIC must be connected to a VNet that exists in the same Azure location and subscription as the NIC. You can change the subnet a VM is connected to after it’s created, but you cannot change the VNet. Each NIC attached to a VM is assigned a MAC address that doesn’t change until the VM is deleted.
 
 # Virtual Network Gateway (also called --> VPN Gateway) ![logo9](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo9.jpg)
 

@@ -33,6 +33,10 @@ It is a grouping of Resources, you should use it to logically group related reso
 
 One of the purpose of Resource Groups is to use --> acces control (IAM), where you can add permissions for your coleagues for this Resource Group Resouces
 
+What is a Resource Group in Azure Portal?
+
+Resource Group- A container that holds related resources for an Azure solution. The resource group can include all the resources for the solution, or only those resources that you want to manage as a group. You decide how you want to allocate resources to resource groups based on what makes the most sense for your organization.
+
 # How to group resources together in Resource Groups ?
 
 ![pic38](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic38.jpg)
