@@ -45,7 +45,7 @@ layer 8 are called Software - The application and the data itself.
 
 # Who will manage what?
 
-### On-Premises Environment
+### On-Premises Environment(your own infrastructure)
 
 - if you manage all of these layers (all 8 layers) - that means we are talking about the ON-Premises. Clear ownership is on you, you manage all the infrastructure, platform and the software. And Cloud providers not even involved.
 

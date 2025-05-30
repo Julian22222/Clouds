@@ -6,12 +6,13 @@ How your Expenditure differes whenever you are purchasing servers from the CLOUD
 
 ![pic08](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic08.jpg)
 
-It means buying your own infrastructure.
+It means buying your own infrastructure.(ON PREMISES ENVIRONMENT)
+
 Most of the companies moved to the CLOUD, but anyway this model is very often seen even these days
 
 Key Characteristics:
 
-- Own infrastructure
+- Your own infrastructure (ON PREMISES ENVIRONMENT)
 - Big initial investment
 - lots of maintenance required:
   - Support staff

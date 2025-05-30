@@ -54,7 +54,7 @@ It is quite similar to HDInsight except the cluster that we create are based on 
 
 - Go to Azure portal and create Azure Databricks service
 - go to just created Databricks resource and press --> Launch Workspace btn (it will take you away from Azure Portal into separate portal, designed for collaboration on Azure Databricks solution, which is called Workspace )
-- Then inside that new Workspace we press --> new cluster btn (create new cluster) (pic 88)
+- Then inside that new Workspace we press --> new cluster btn (create new cluster) (see pic above)
 - By opening a new cluster panel we can specify a cluster (fill cluster form):
   - Name
   - Runtime Version
@@ -76,7 +76,7 @@ Then you can have your personal workspace --> in Users section. Or in a Shared w
 ![pic90](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic90.jpg)
 
 Inside you just created Notebook you can write your scripts. This Script is connects to open datasets from Microsoft with some sample data. It takes just few lines of code, it is very simple and very straightforward.
--(pic 90)But when you pulling the Data you can use familiar SQL language in this case it is Spark SQL.
+-(see pic above)But when you pulling the Data you can use familiar SQL language in this case it is Spark SQL.
 -Also from Notebook (bottom menu) you can download your Data as a CSV, change the chart type and do all sorts of data transformation and analysis based on your needs.
 
 Summary:

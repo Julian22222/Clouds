@@ -24,7 +24,7 @@ But there are some Disadvantages, there is one major one when it comes to securi
 
 # Private Cloud
 
-On the other hand we have private cloud (On-Premises), which is reverse model
+On the other hand we have private cloud (On-Premises environment or your own infrastructure), which is reverse model
 
 ![pic20](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic20.jpg)
 
