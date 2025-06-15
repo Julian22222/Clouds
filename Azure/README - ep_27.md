@@ -33,7 +33,7 @@ But Access policies allows you to manage the access and what kind of permissions
 
 ![pic145](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic145.jpg)
 
-Then you can navigate to Secrets and create a new secret and then retrieve that secret from another service called - Azure Logic app. To show how easy it is to integrate with Azure Key Vault from external service.
+Then you can navigate to Secrets and create a new secret and then retrieve that secret from another service called - Azure Logic app. ![logo22](https://github.com/Julian22222/Clouds/blob/main/Azure/logo/logo22.jpg) To show how easy it is to integrate with Azure Key Vault from external service.
 
 To generate new secret
 
@@ -48,11 +48,11 @@ But if you don't want to, you can just leave it as enabled, and press create but
 
 ![pic147](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic147.jpg)
 
-When the secret is created, we can open this and will see - CURRENT VERSION. Each secret will have ots own version. When you change the secret -> you create new version. All the version history and all the changes for your secrets are maintained in Azure Key Vault. (see pic below).
+When the secret is created, we can open this and will see - CURRENT VERSION. Each secret will have its own version. When you change the secret -> you create new version. All the version history and all the changes for your secrets are maintained in Azure Key Vault. (see pic below).
 
 ![pic148](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic148.jpg)
 
-When you open the curennt version you can see the secret identifier - which is the URL to your secret, you can review some details or just click on - show secret value to see what is the current version of that secret.(see pic below)
+When you open the current version you can see the secret identifier - which is the URL to your secret, you can review some details or just click on - show secret value to see what is the current version of that secret.(see pic below)
 
 ![pic149](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic149.jpg)
 
@@ -64,7 +64,7 @@ How we can retrieve this secret from an external application. To do that you nee
 
 ![pic150](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic150.jpg)
 
-- In this case we want this logic app to run every couple of hours and then connect to your external servers which is Azure Key Vault (click + New step)
+- In this case we want this logic app to run every couple of hours, (section with - Add new parameter leave blank) and then connect to your external servers which is Azure Key Vault (click + New step)
 
 ![pic151](https://github.com/Julian22222/Clouds/blob/main/Azure/IMG/pic151.jpg)
 
