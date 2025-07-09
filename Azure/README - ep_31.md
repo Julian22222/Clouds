@@ -2,7 +2,7 @@
 
 Azure Policy is one of the key elements of Azure control/ governance
 
-As a customers of Azure we go to Azure Portal to create Azure services, wo do that by specifying the common properties for each service. We specify the:
+As a customers of Azure we go to Azure Portal to create Azure services, we do that by specifying the common properties for each service. We specify the:
 
 - TYPE of the service that we want, let's say - App Service, which can host our Web Applications.
 - LOCATION, which is also called - Azure Region. In this case - Germany.
