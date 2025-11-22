@@ -176,3 +176,87 @@ Let’s imagine you’re building a simple web app:
 
 👉 You build your app by configuring these connections — AWS doesn’t need an extra “connection service.”
 The “glue” is mostly networking + permissions.
+
+# Cloud Computing is the delivery of compute resources through a cloud platform over the internet with pay for what you use model.
+
+# AWS (Amazon Web Services) is a cloud service platform which offers multiple secure on-demand operations like compute power, database storage, content delivery etc. to help corporates scale and grow.
+
+AWS -
+
+- is a secure cloud service platform from Amazon
+- can be used to create and deploy any type of application, machine learning, AI, etc. in the cloud
+- it provides services over the internet, you can access AWS through internet.
+- you pay only for what you use
+
+# Benefits of AWS
+
+- Easy to use
+- Flexibility, can integrate with other services even with services outside of AWS
+- Reliability
+- Services are scalable
+- Cost-Effective (using more services - per unit price drops down)
+- Security
+
+# AWS Products and Services
+
+- Compute
+- Storage
+- Database
+- Migration
+- Network and content delivery
+- Developer tools
+- Management Tools
+- Media Services
+- Machine Learning
+- Analytics
+- Security, Identity & Compliance
+- Mobile services
+- Application Integration
+- AR and VR
+- Customer Engagement
+- Business Productivity
+- Desktop and app streaming
+- IOT (Internet Of Things)
+  -etc.
+
+# Compute Services
+
+This service helps any user to develop, deploy and scale an application and workloads in the cloud.
+
+AWS offers many options to use compute services in the cloud. Some of them are
+
+- EC2 - is a VM in the cloud
+- Lambda - serverless computing in the cloud to compute service
+- Elastic Container Service - help batch processing and deploying applications
+- Elastic Load Balancer - when we run our applications on multiple servers
+
+# EC2
+
+It is a compute webservice which helps to resize your compute capacity where you can run your own application programs in the virtual machine.
+
+# Lambda
+
+Is a serverless compute service. It is used to execute backend code and scales automatically when required.
+
+# Storage Services
+
+AWS provide low-cost data storage for backup, archiving and disaster recovery with high durability and availability. AWS is known for its durability and availability.
+
+- S3 - storage for users and applications where files can be directly upload and download content from internet
+  -EBS - durable block storage that attaches to EC3 instance
+  -Glacer - archival storage in the cloud
+- Storage Gateway - is a gateway for storing data locally and having a backup in the cloud in case of disaster.
+
+# S3
+
+It is a web based storage service designed for online backup and archiving of the data. It provides very high durability, chances to lose your data nearly zero.
+
+# EBS
+
+It provides high availability and continuous block storage volume for Amazon EC2 instance in the cloud environment
+
+# Database Services
+
+AWS database domain provides cost efficient and reliable database (relational and non- relational) instances
+
+- RDS
