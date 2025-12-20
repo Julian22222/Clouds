@@ -25,21 +25,21 @@ We were talking about unstructured data and any kind of unstructured data can be
 
 BLOB <-- stands for Binary Large OBject so any kind of file. And you can put those blobs into Azure Blob storage into something called container. Container is just a bucket for multiple blobs. You can have more than one container with an Azure blob storage. It is designed to allow both applications and users to work with unstructured files in the Cloud.
 
-Azure Blob storage is simply a service designed to store any kind of file in Azure. Additionally there are 3 storage tiers. Storage tiers allow Microsoft to provide better performance and better pricing depending on how often do you access your data. That's why there are 3 storage tiers.
+Azure Blob storage is simply a service designed to store any kind of file in Azure. Additionally there are 4 storage tiers in Blob storage. Storage tiers allow Microsoft to provide better performance and better pricing depending on how often do you access your data. Choosing the right tier is all about balancing Storage Cost vs. Access Cost. That's why there are 4 storage tiers.
 
--First tier is called - Hot tier. You use this for your frequently accessed data. So if you are building Web application and this web application is serving images to your customers then this would be the storage tier that you would use. Because hot storage tier provides the best performance for your files.
-
--But if your solution also store files that are accessed less frequently then you can use --> Cool tier. With Cool tier you are accepting lower availability and lower performance for accessing your files while maintaining high durability and getting significant discount for storing that data. This is the perfect solution for storing older versions and backups for your applications.
-
--But if you have files that you never plan to access, like a very very long term backups, let's say backup that you need to keep for 10 years. Then you can use archive storage tier. In this case the availability is the lowest because retrieving that data might even take couple of hours but the price for this tier is lowest. You are getting 10 times the discount for storing data in Archive tier. This really is the lowest price per Gigabyte that you can get when storing data in Azure.
+- First tier is called --> Hot tier. You use this for your frequently accessed data. So if you are building Web application and this web application is serving images to your customers then this would be the storage tier that you would use. Because hot storage tier provides the best performance for your files.
+- But if your solution also store files that are accessed less frequently then you can use --> Cool tier. With Cool tier you are accepting lower availability and lower performance for accessing your files while maintaining high durability and getting significant discount for storing that data. This is the perfect solution for storing older versions and backups for your applications.
+- Azure Cloud recently introduced --> Cold tier, to fill the gap between Cool and Archive.
+- But if you have files that you never plan to access, like a very very long term backups, let's say backup that you need to keep for 10 years. Then you can use archive storage tier. In this case the availability is the lowest because retrieving that data might even take couple of hours but the price for this tier is lowest. You are getting 10 times the discount for storing data in Archive tier. This really is the lowest price per Gigabyte that you can get when storing data in Azure.
 
 Azure Blob Storage Key Characteristics:
 
 - Designed for sorage of files of any kind (BLOB - Binary Large OBject -file)
-- Three storage tiers:
+- Three storage tiers in Blob Storage:
 
   - Hot - frequently accessed data (provides the best performance )
   - Cool - infrequently accessed data (lower availability, high durability)
+  - Cold - Rarely accessed
   - Archive - rarely (if-ever) accessed data
 
 # Azure Queue Storage
@@ -54,6 +54,24 @@ Key Characteristics:
 
 - Storage for small pieces of data (messages)
 - Designed for scalable asynchronous processing
+
+In simple terms, it is a service that stores a large number of small messages (up to 64 KB each). Think of it as a holding area where one program can drop off a task and another program can pick it up whenever it's ready.
+
+- Capacity: A single queue can hold millions of messages (up to the total limit of your storage account, which can be hundreds of terabytes).
+- Accessibility: Messages can be accessed from anywhere in the world via simple web calls (HTTP/HTTPS).
+- Protocol: It generally follows FIFO (First-In, First-Out), though strict ordering is not guaranteed if you have many workers pulling at once.
+
+You should use Queue Storage when you want to decouple your application components.
+
+- To Handle Heavy Background Tasks: Example: A user uploads a high-res photo. Instead of making the user wait while your website resizes it, the web server drops a "Resize this photo" message into the Queue and tells the user "Upload Successful!" A background worker then picks up that message and does the heavy lifting.
+- To Manage Traffic Bursts (Load Leveling): Example: If your app suddenly gets 10,000 orders in one minute, your database might crash. Instead, you put those orders in a Queue. Your backend processes them at its own steady pace until the queue is empty.
+- To Increase Reliability: If your backend processing service goes down for maintenance, the "producer" (your website) can keep adding messages to the queue. Once the backend is back online, it starts right where it left off without any data being lost.
+
+🆚 Queue Storage vs. Service Bus
+Since you work in the Portal, you'll also see Service Bus Queues. Here is the "short and simple" rule for choosing:
+
+- Use Queue Storage if you need something simple, cheap, and massive (over 80 GB of total messages) and don't care about complex features.
+- Use Service Bus if you need guaranteed ordering, "sessions," or "duplicate detection" (enterprise-grade features).
 
 # Azure Table Storage
 
@@ -124,7 +142,7 @@ Key Characteristics:
   - Location
   - Account kind (size of computer)
   - Replication
-  - Access tier --> Cool or Hot (it is storage tiers)
+  - Access tier --> Hot, Cool, etc. (it is storage tiers)
 
 After creating Storage Account --> go to this just created resource.
 
@@ -139,7 +157,7 @@ By default in first screen in the Essentials Section (located in the bottom of t
 
 ### How to use Containers (Blob storage)
 
-Go to just created Storage Account service and in the bottm of the page there is Essentials Section with Containers, File shares, Tables, Queues
+Go to just created Storage Account service and in the bottom of the page there is Essentials Section with Containers, File shares, Tables, Queues
 
 1. Click on Containers for example and create new container. it will be a bucket for our files.
 2. Than we can open just created container and press --> Upload btn (to upload any files to this container) --> and your file is in the Cloud
