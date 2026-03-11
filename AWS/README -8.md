@@ -108,4 +108,124 @@ ElastiCache - it is in-memory managed Database
 
 ![pic252](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic252.jpg)
 
-09 -ep101
+# DynamoDB
+
+![pic253](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic253.jpg)
+
+![pic254](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic254.jpg)
+
+![pic255](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic255.jpg)
+
+# How to use DynamoDB
+
+- Search for DynamoDB service
+- click -> Create table
+- fill the form (see pic below)
+
+Here we are creating a Table without creating a Database. Database already exists, it is serverless. We don't need to provision service.
+
+![pic256](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic256.jpg)
+
+- then go to DynamoDB console and click on just created table
+
+![pic257](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic257.jpg)
+
+- then click on -> Explore table items (see pic below) to insert some data to our table
+
+![pic258](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic258.jpg)
+
+- then - create new items (add new row of data to your Table) (see pic below)
+
+![pic259](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic259.jpg)
+
+- then you add key - value pairs with the data type (see pic below)
+
+![pic260](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic260.jpg)
+
+- then you press -> Create Item and it will be added to your Table
+
+📍 You don't need to specify any Database just your Table.
+
+DynamoDB is NoSQL/ Non-Relational Database -> each item can have diferent data. It is very flexible type of Databse, can insert different keys and values - There is no schema like in Relational Databse/SQL DB.
+
+### Difference between RDS and DynamoDB
+
+- in DynamoDB all data is living in one/single table and there is no way to join/link your table with another table.
+
+# DynamoDB - Global tables
+
+For example: you create a DynamoDB Table in - us-east-1 region and setup this as a Global Table. Now users can read and write to this DynamoDB Table in N.Verginia (us-east-1). But it is possible for you to setup some replication for this (us-east-1) Global table. So we can create a new Global table in Paris (eu-west-3) and will say they are the same. So you have 2-way replication between these 2 tables. It means the same data is in "us-east-1" and "eu-west-3" but users that are close to Paris region can access this (Paris eu-west-3) Global Table with low latency in Paris. You can create 10 Global Tables in 10 different regions if you want. Global Tables allow to read and write to the table in any specific region and then it will replicate between other Global Tables that are connected in different regions. So user has read/write access to any Global Table. (see pic below)
+
+![pic261](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic261.jpg)
+
+# Redshift Overview
+
+This is next Database that we have in AWS
+
+![pic262](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic262.jpg)
+
+RDS is good for OLTP
+
+- Redshift is very good at analising data and making some computations. Also can build some kind of visualisations through dashboards on it.
+
+# Amazon EMR
+
+Another type of Database in AWS that works with Big data and analyse it.
+
+EMR actually not really a database it helps to create Hadoop clusters (when you want to do Big Data on AWS). Hadoop clusters are used to analise and process vast amount of data. Hadoop is open source technology that allows multiple servers that work in a cluster to analise the data together.
+
+![pic263](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic263.jpg)
+
+# Amazon Athena
+
+How the Athena works?
+
+Users will load the data to Amazon S3 and then -> Amazon Athena will be used to query and analyze the data. And then -> if you want you can do some Reporting on the top of Athena, such as using Amazon QuickSight (see schema on the pic below)
+
+![pic264](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic264.jpg)
+
+![pic265](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic265.jpg)
+
+# DocumentDB
+
+The same way as AWS Aurora it is a AWS designed and improved version of PostgreSQL /MySQL for AWS only. DocumentDB is the same as mongoDB but in AWS. DocumentDB is based on top of the mongoDB technology. It is compatable with mongoDB
+
+![pic266](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic266.jpg)
+
+# Amazon Neptune
+
+![pic267](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic267.jpg)
+
+# Amazon QLDB
+
+![pic268](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic268.jpg)
+
+Difference between QLDB and Amazon Managed Blockchain that with QLDB there is no concept of decentralization, that means there is just central database owned by Amazon that allows you to write this journal. And this is inline with many financial regulation rules.
+
+Difference between QLDB and Managed Blockchain that QLDB has s central authority components and it is a Ledger where as Managed Blockchain is going to have decentralization component.
+
+# Amazon Managed Blockchain
+
+![pic269](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic269.jpg)
+
+# DMS - Database Migration Service
+
+We have so many different Database technologies and the question is how do you migrate data from one Databse to another one? For this purpose we can use DMS.
+
+So we have a source DB and we want to extract the data, so we will run EC2 instance that will be running DMS software. It will extract the data from source Database and DMS will insert the data into target Database that will be somewhere else (see diagram on the pic below)
+
+![pic270](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic270.jpg)
+
+# AWS Glue
+
+ETL is very helpful when you have some data sets but they are not exactly in the right form or correct format to do analytics on them. So in this case you will use ETL service to prepare and transform the data.
+
+How it works? (see diagram on the pic below) For example: we have Glue ETL and we want to extract the data from both - S3 Bucket and Amazon RDS databse. For this we use Glue ETL to extract the data from both resources and then once the data is extracted there is a Glue service and we will write a script to do a Transform part. Here Glue will help to transform the data and once it is transformed we need to analyse it - so we can load that data into for example into Amazon Redshift database where we can do analytics the right way. The Glue is very powerful tool - it can do any kind of data extraction, transformation and then can load it into many different places.
+
+There is another service which is called - Glue data Catalog. This Glue data Catalog will have reference of everything - column name, field name, filed type, etc.
+
+![pic271](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic271.jpg)
+
+# Databases & Analytics Summary in AWS
+
+![pic272](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic272.jpg)
