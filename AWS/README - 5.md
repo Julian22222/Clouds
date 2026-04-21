@@ -170,7 +170,7 @@ Also, you can find all your AMIs from left side menu bar - from EC2 Console or f
 
 ![pic135](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic135.jpg)
 
-AMI allow to start yuor Instance much quicker because sowtware we needed was already installed to our EC2 Instance.
+AMI allow to start your Instance much quicker because sowtware we needed was already installed to our EC2 Instance.
 
 # EC2 Image Builder
 

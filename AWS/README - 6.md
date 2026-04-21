@@ -34,7 +34,7 @@ The role of Load Balancer -> the more user we have the more it will balance the 
 
 # How to use Load Balancer
 
-First we need to create 2 running servers and then we can add a Load Balancer in front of them.
+First we need to create at least 2 running servers (or more) and then we can add a Load Balancer in front of them.
 
 - Create 2 new EC2 Instances with different availability zones in each one. Go to -> EC2 -> Launch Instance. And fill the Instance form. (see pic below)
 - but in Network settigs -> press Edit -> and add different avaialbility zone for your first EC2 Instance and then create second EC2 Instance and choose different availability zone for your second Instance.
@@ -93,9 +93,8 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 ![pic175](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic175.jpg)
 
 - When you create a target group:
-
   - Target type = Instances
-  - put the name of target grouo
+  - put the name of target group
   - leave Protocol - HTTP :80 as it is by default
   - Protocol version = HTTP1
   - then press -> NEXT -> and select all you targets/ servers for your Load balancer
@@ -118,13 +117,16 @@ Now if any of the servers/ targets will stop working (server failure, etc.) -> L
 
 ![pic178](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic178.jpg)
 
+during Auto Scaling Group (ASG) creating - you indicate in the form - minimum number of Instances, Desired/Actual - normal number of Instances and Max number of Instances. (see pic above)
+
 ![pic179](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic179.jpg)
 
 - If we have Auto Scaling Group for example with one EC2 Instance - web traffic will go through "Load Balancer" which will redirecting the traffic directly into your EC2 Insatance. As our Auto Scaling Group scales out by adding EC2 Instances. The "Load Balancer" will register new EC2 Instances and will send the traffic into new added Instances as well. As we add more and more EC2 Instances - the "Load Balancer" distributes more and more traffic between those EC2 Instances. All the way until the maximum size of your Auto Scaling Group if it reaches that point. (see pic above)
 
 # How to use AutoScaling Group
 
-- Go to Auto Scaling Groups (on the left side menu bar)
+- you don't need to create any EC2 Instances before hand/ you don't need to have any EC2 Instances.
+- Just Go to Auto Scaling Groups (on the left side menu bar - from EC2 Console)
 - press Create Auto Scaling Group and fill the form
 
 ![pic180](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic180.jpg)
@@ -156,20 +158,22 @@ Now Auto Scaling Group will know how to create Instances for us.
 - Load balancing section -> select it
 - choose a target group -> targets / servers that you want to use for your Auto Scaling Group
 - Health check section -> select EC2 and ELB (it means if your Load Balancer detects that any of your Instances is unhealth/ failure of the server then your Auto Scaling Group(ASG) will understand thtat one of your Instances is unhealthy and will replace with the new working Instance)
-- Group size option -> here you define how your Auto Scaling Group will scale -> there is 2 options
-  1.  Manual Scaling -> specify how many Insatnce do you want to run -> on usual/ by default load, max load and minimum load (depending from the workload)
-  2.  Auto Scaling (then you fill the metrics - when do you want to add new Insatnce, after specific load on the servers, CPU load, number or requests at the time or etc.)
+- Scaling policies -> here you define how your Auto Scaling Group will scale -> there is 2 options
+  1. "Target tracking scaling policy" - Auto Scaling (then you fill the metrics - when do you want to add new Insatnce, after specific load on the servers, CPU load, number or requests at the time or etc.)
+  2. "None" - Manual Scaling -> specify how many Insatnce do you want to run -> on usual/ by default load, max load and minimum load (depending from the workload)
 - then click to -> Create Auto Scaling group
 
 Now you can see all the Auto Scaling Groups in Auto Scaling Groups Console (which is on the left side menu bar)
 
 - In Auto Scaling Groups Console you can track how many Instance you have at the moment, types of instances, availablity zones where the Instances were launched, Health Status of Instances
 
-Auto Scaling Groups works with Load Balancer and uses Target Groups. Therefore in your -> Target Groups (on the left side menu bar) -> you will see new Insatcnes. In Load Balancer you can get get the DNS for user/ URL to your servers
+Auto Scaling Groups works with Load Balancer and uses Target Groups and Instances. Therefore in your -> Target Groups (on the left side menu bar) -> you will see new Insatcnes appearing and disappearing depending from the traffic load. Also, in "Instances" section you can see different number of EC2 running Instances depending (depending from the traffic load) of how many Instances - ASG has created. (we defined during ASG creation - Min number of Instances, max number of Instances and usual/ by default number of Instances)
+
+In Load Balancer you can get get the DNS for user/ URL to your servers
 
 With Auto Scaling Group - Instances will be created automatically and they will be registred under Application Load Balancer
 
-Now if you manually terminate/stop one of the Instances -> Load Balancer detects that one of your Instances stopped or failed and will launch another new Instance automatically, because we put put this settings in Auto Scaling Group form.
+Now if you manually terminate/stop one of the Instances -> Auto Scaling Group (ASG) will detect that. That one of your Instances stopped or failed and will launch another new Instance automatically - to match Instance capasity that was defined in ASG, because we put put this settings in Auto Scaling Group form.
 
 How delete Instances while you are using Auto Scaling Group -> go to Auto Scaling Groups (on the left side menu bar). Select your Scaling group and delete it.
 

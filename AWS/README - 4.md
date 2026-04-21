@@ -251,9 +251,9 @@ Security Group Details has:
 
 - Then click on the Inbound rules section (step 2 from pic above). And you will see those 3 Inbound rules for this Security Group. Here we can adjust the rules. (pic above)
 
-Source --> 0.0.0.0/0 <-- menas from anywhere (format for IPv4).
+Source --> 0.0.0.0/0 <-- means from anywhere (format for IPv4).
 
-Source --> ::/0 <-- menas from anywhere (format for IPv6).
+Source --> ::/0 <-- means from anywhere (format for IPv6).
 
 ![pic90](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic90.jpg)
 
@@ -263,7 +263,7 @@ Source --> ::/0 <-- menas from anywhere (format for IPv6).
 
 - You can see that everything is allowed, All Ports, to anywhere (see pic above). Which allows our EC2 Instance for example - to get software updates, or to send an email or anything, it allows to send the data anywhere using all ports. (This is default settings for Outbound rules)
 
-- If you will clik on Inbound Rules section --> and click edit Inbound rules. (see pic below).
+- If you will click on Inbound Rules section --> and click edit Inbound rules. (see pic below).
 
 ![pic90](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic90.jpg)
 
@@ -271,13 +271,13 @@ Source --> ::/0 <-- menas from anywhere (format for IPv6).
 
 Type <--means how do you want to connect to your instance(there is many options from the drop down menu - RDP, HTTP, HTTPS, SSH, TCP, and many more)
 
-Souce can be adjusted - from anywhere, or from specific IP, orr just from your IP only, or custom to specific Security Group.
+Souce can be adjusted - from anywhere, or from specific IP, or just from your IP only, or custom to specific Security Group.
 
 For example, from pic above : Type HTTP and HTTPS allow users by using internet to connect to our EC2 Instance from anywhere. If we will delete these 2 Inbound rules, User will not be able to connect to our EC2 Instance through the browser. If there is no Inbound rule to connect to EC2 Instance --> then users can't connect to it.
 
 If we have no Inbound rules for HTTP and HTTPS but users trying to connect to your instance then server will show --> a "time out" , because there is no response after 30 seconds from the server.
 
-As a general rule --> If you get a "time out" in AWS when you connect to your Instance, this has to be a Security Group issue. So if you can't connect to your Instance and there is endless loading circle and a "time out" error messege then you shoul have a look at your Security Group rules. And ensure that it was a setup correctly.Make sure that Inbound rule (Firewall) allowing the traffic going in to your instance.
+As a general rule --> If you get a "time out" in AWS when you connect to your Instance, this has to be a Security Group issue. So if you can't connect to your Instance and there is endless loading circle and a "time out" error messege then you should have a look at your Security Group rules. And ensure that it was a setup correctly.Make sure that Inbound rule (Firewall) allowing the traffic going in to your instance.
 
 # How do you connect inside your servers to perfome some maintenance or action
 
@@ -307,7 +307,7 @@ Based on operating system you have on your computer you have different ways to a
 
 ![pic90](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic90.jpg)
 
-- So now we know that SSH Inbound rule exists and SSH has open Port 22 and it is open, protocol TCP ans Source - 0.0.0.0/0
+- So now we know that SSH Inbound rule exists and SSH has open Port 22 and it is open, protocol TCP and Source - 0.0.0.0/0
 
 - then we open a terminal and put -->
 
@@ -365,7 +365,7 @@ EC2 Instance Connect - is the easiest and best way to connect to your Instance. 
 
 ![pic94](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic94.jpg)
 
-- Go to EC2 -> Instances (one the left side menu bra) --> select your Instance (put a tick) (see step a ,on the pic above)
+- Go to EC2 -> Instances (one the left side menu bar) --> select your Instance (put a tick) (see step a ,on the pic above)
 - Then click --> Connect (see step b, on the pic above)
 
 ![pic96](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic96.jpg)
@@ -440,7 +440,7 @@ aws iam list-users  //<-- AWS CLI will show - Unable to locate credentials. You 
 
 ![pic101](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic101.jpg)
 
-- then we need to choose IAM Role for this Instance (see pic below). Then click -> Update IAM role. To attache this - DemoRoleForEC2 role to our Instance.
+- then we need to choose IAM Role for this Instance (see pic below). Then click -> Update IAM role. To attach this - DemoRoleForEC2 role to our Instance.
 
 ![pic102](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic102.jpg)
 
@@ -448,7 +448,7 @@ aws iam list-users  //<-- AWS CLI will show - Unable to locate credentials. You 
 
 ![pic103](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic103.jpg)
 
-- now iw we will go to our EC2 Instance AWS terminal, that we connected through "EC2 Instance Connect". And type again -->
+- now we will go to our EC2 Instance AWS terminal, that we connected through "EC2 Instance Connect". And type again -->
 
 ```JS
 aws iam list-users  //<-- it will work, we configure Credentials using IAM Roles
@@ -458,7 +458,7 @@ aws iam list-users  //<-- it will work, we configure Credentials using IAM Roles
 
 ![pic104](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic104.jpg)
 
-This is how we provide AWS credentials to our EC2 Instances, only throug IAM Roles. Use IAM Roles for Instances
+This is how we provide AWS credentials to our EC2 Instances, only through IAM Roles. Use IAM Roles for Instances
 
 # EC2 Instances Purchasing Options
 

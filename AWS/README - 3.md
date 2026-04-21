@@ -12,7 +12,7 @@ On the left hand menu bar you have section to create Users, Groups, Roles, Polic
 
 ![pic23](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic23.jpg)
 
-You use Root User for now (I have all permissions in my Account, I can do anything I want, therefore it is very dangerous account to use, by mistake you can delete soem DB, etc.). The better way to create new -> Admin User (new user Account), giving almost all the permissions. And we use Route Account only if we really need it. This is from security perspective best setup. And mostly work from Admin User Account.
+You use Root User for now (I have all permissions in my Account, I can do anything I want, therefore it is very dangerous account to use, by mistake you can delete soem DB, etc.). The better way to create new -> Admin User (new user Account), giving almost all the permissions. And we use Root Account only if we really need it. This is from security perspective best setup. And mostly work from Admin User Account.
 
 fol 4 - ep15
 
@@ -69,7 +69,7 @@ We need to protect our Users and Groups, so we can do it by 2 defence mechanisms
 
 it is very important to protect because it has full power of your account. That gives you higher security on your account. But you need to be carful to don't loose your MFA tokken or the phone or other device, otherwise you won't be able to login to your account!!!
 
-1. From AWS any page - Click in the left top corner, to your Account button (step 1). And then click on the Security Credentials (step 2)
+1. From AWS any page - Click in the right top corner, to your Account button (step 1). And then click on the Security Credentials (step 2)
 
 ![pic33](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic33.jpg)
 
