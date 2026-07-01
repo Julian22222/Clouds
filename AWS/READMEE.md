@@ -2,6 +2,101 @@
 
 S3, RDS, ECS, EC2, SQS/SNS, Elastic Beansta, SQ3, ElastiCache, API Gateway, Cloudfront, Cloudwatch, IAM, (KMS, KINESIS,EMR) , SSM, DynamoDB
 
+# AWS Certified Cloud Practitioner services
+
+```JS
+  Service                     Purpose                          Why it's important
+
+Amazon EC2                Virtual servers                     Core compute service
+Amazon S3                 Object storage                      One of the most tested services
+Amazon RDS                Managed SQL databases               Database fundamentals
+AWS Lambda                Run code without servers            Serverless computing
+Amazon VPC                Private networking                  Networking basics
+IAM                       Users, roles, permissions           Security is heavily emphasized
+Amazon CloudWatch         Monitoring and alerts               Operations and troubleshooting
+Amazon CloudFront         Global content delivery             Performance and caching
+Amazon Route 53           DNS and domain routing              High availability and routing
+Elastic Load Balancing    Distribute traffic                  Scalability and reliability
+Auto Scaling              Automatically adjust capacity       Elasticity concepts
+API Gateway               Traffic Routing               "front door" for applications to access backend services, data, or business logic, Traffic Routing: Directs incoming API calls to the correct backend, such as AWS Lambda, Amazon EC2, or external HTTP endpoints.
+```
+
+# Storage services
+
+- Amazon S3 – Object storage
+- Amazon EBS – Block storage for EC2
+- Amazon EFS – Shared file storage
+- Amazon S3 Glacier – Low-cost archival storage
+
+# Compute services
+
+- Amazon EC2
+- AWS Lambda
+- Elastic Beanstalk
+- Amazon ECS (basic understanding)
+- Amazon EKS (know what it is)
+
+# Database services
+
+- Amazon RDS
+- Amazon DynamoDB
+- Amazon Aurora
+
+# Networking
+
+- Amazon VPC
+- Amazon Route 53
+- Elastic Load Balancing
+- Amazon CloudFront
+
+# Security
+
+- IAM
+- AWS Organizations
+- AWS Key Management Service
+- AWS Shield
+- AWS WAF
+
+# Monitoring and management
+
+- Amazon CloudWatch
+- AWS CloudTrail
+- AWS CloudFormation
+- AWS Trusted Advisor
+
+# Billing and pricing
+
+- AWS Cost Explorer
+- AWS Budgets
+- AWS Pricing Calculator
+
+# The "Top 15" to memorize
+
+If you're short on time, focus on these:
+
+- Amazon EC2
+  -Amazon S3
+- IAM
+- Amazon VPC
+- Amazon RDS
+- AWS Lambda
+- Amazon CloudWatch
+- Amazon Route 53
+- Elastic Load Balancing
+- Auto Scaling
+- Amazon CloudFront
+- Amazon DynamoDB
+- AWS CloudTrail
+- AWS Key Management Service
+- AWS Organizations
+
+For the Cloud Practitioner exam, you generally don't need to know detailed configuration steps. Focus on:
+
+- What each service does.
+- When you would use it.
+- How it differs from similar services (for example, EC2 vs. Lambda, S3 vs. EBS vs. EFS, RDS vs. DynamoDB, CloudWatch vs. CloudTrail).
+- AWS's core concepts such as the shared responsibility model, pricing models, high availability, scalability, elasticity, and the benefits of the cloud.
+
 # S3 or Amazon bucket
 
 - It is a place where you can store files. It is Scalable Storage in the Cloud.

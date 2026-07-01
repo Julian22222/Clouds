@@ -25,7 +25,7 @@ In EBS Volumes - you keep the data for your Instance - data to setup the server 
 
 One EBS volume can't be attached to two Instance at the same time. Therefore, other EC2 Instance needs to have its own EBS Volume attached to it. Also, you can attach two EBS volumes to one Instance (see step 2 on the pic above).
 
-- EBS Volumes are linked to an availability zones (AZ) as you can see on example above we are useing US-EAST-1A. But if you want other EBS Volumes in other availability zones (AZ) then you need to create separate EBS Volume in other availability zone (AZ) (see step 3 on the pic above).
+- EBS Volumes are linked to an availability zones (AZ) as you can see on example above we are using US-EAST-1A. But if you want other EBS Volumes in other availability zones (AZ) then you need to create separate EBS Volume in other availability zone (AZ) (see step 3 on the pic above).
 - You can create EBS Volumes and leave it unattached, they don't need to be attached to EC2 Instance. They can be attached on demand (see step 4 on the pic above).
 
 ![pic120](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic120.jpg)
@@ -96,13 +96,13 @@ It allows to backup the data from EBS and copy EBS volume to use it in different
 
 ![pic128](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic128.jpg)
 
-- then right click on the selected Snapshot (see step 1), to copy that snapshot to another region. Or you can clik on Actions (step 1) --> then copy snapshot (step 2). (see pic below).
+- then right click on the selected Snapshot (see step 1), to copy that snapshot to another region. Or you can click on Actions (step 1) --> then copy snapshot (step 2). (see pic below).
 
 ![pic129](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic129.jpg)
 
 - then you can choose what Region to copy your Snapshot. It is very helpful in disaster recovery or starategy to make sure your data is backed up to another Region within AWS.
 
-Also you can recreate a Volume from the selected Snupshot (step a from pic below)
+Also you can recreate a Volume from the selected Snapshot (step a from pic below)
 
 ![pic129](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic129.jpg)
 
@@ -116,8 +116,8 @@ With the Snapshot you can copy EBS Volumes across different availability zones (
 
 ![pic124](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic124.jpg)
 
-- It the way to protect your EBS Snapshots and Amazon Machine Images (AMIs) from accidendt deletion
-- after pressing Recycle Bin --> you fill the form -> "Resource type" = EBS Snapshots or AMIs, depending what do you need. And add "Retention period" -> how many days it will keep deleted file in memery for recovery if needed. This new Rycle Bin rule will show up in --> Recycle Bin List. By clicking -> Recycle Bin to see the list of all Rycycle Bin files (see pic above). Deleted Snapshot will appear in -> Recycle Bin -> Resources section. Where you can recover it.
+- It the way to protect your EBS Snapshots and Amazon Machine Images (AMIs) from accidental deletion
+- after pressing Recycle Bin --> you fill the form -> "Resource type" = EBS Snapshots or AMIs, depending what do you need. And add "Retention period" -> how many days it will keep deleted file in memery for recovery if needed. This new Recycle Bin rule will show up in --> Recycle Bin List. By clicking -> Recycle Bin to see the list of all Rycycle Bin files (see pic above). Deleted Snapshot will appear in -> Recycle Bin -> Resources section. Where you can recover it.
 
 Also, you can Archive the Snapshot --> (see pic below). Go to Snapshots -> select a Snapshot -> press Actions -> Archive snapshot. To restore the snapshot it may take 24 - 72 hours.
 

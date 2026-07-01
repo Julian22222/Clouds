@@ -109,7 +109,7 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 Now if any of the servers/ targets will stop working (server failure, etc.) -> Load Balancer will know that and won't send the traffic to that not working server any more.
 
-# What is An Auto Scaling Group?
+# What is an Auto Scaling Group?
 
 ![pic177](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/pic177.jpg)
 
