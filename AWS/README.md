@@ -74,20 +74,23 @@ API Gateway               Traffic Routing               "front door" for applica
 
 If you're short on time, focus on these:
 
-- Amazon EC2
-  -Amazon S3
 - IAM
-- Amazon VPC
+- Amazon EC2 -> AMI, Volumes, Snapshots, Security Groups, Load Balancers, Auto Scaling Groups, Target Groups, Key pairs
+- Amazon S3
+- Amazon VPC, Subnets
 - Amazon RDS
-- AWS Lambda
-- Amazon CloudWatch
-- Amazon Route 53
-- Elastic Load Balancing
-- Auto Scaling
-- Amazon CloudFront
 - Amazon DynamoDB
+- AWS Lambda
+- Amazon CloudWatch (Monitoring)
+- Amazon CloudFront
+- CloudFormation
+- Amazon Route 53
 - AWS CloudTrail
 - AWS Key Management Service
+- Systems Manager -> Parameter Store (Secrets and configuration data management)
+- EC2 Image Builder
+- Fargate or ECS (Launch Dcker containers on AWS), ECR (store Docker images on AWS)
+- Beanstalk (easy way to deploy your app)
 - AWS Organizations
 
 For the Cloud Practitioner exam, you generally don't need to know detailed configuration steps. Focus on:
