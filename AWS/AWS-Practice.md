@@ -34,15 +34,52 @@ sudo apt install git -y   //Install git on EC2 Instance
 
 git clone https://github.com/your-username/your-repo.git  //clone your Repo
 
-cd your-repo  //Go into project
+cd your-repo  //Go into project, correct folder
 
 npm install  //Install dependencies
 
-npm start  //Run your app
-//or node app.js
+npm run build //create dist folder
+
+//NestJS cannot run TypeScript directly in production
+cd dist/src //go to dist/src folder where is main.js file
+
+npx pm2 start main.ts (start server) //or sudo npm install -g pm2 -> pm2 start main.js
+
+pm2 save
+
+
+//then:
+- add secrets from .env to -> Systems Manager (left side menu you will find) -> Parameter Store
+- create IAM Role in EC2 for Parameter Store (to get access to secrets)
+//IAM Role + Parameter Store does NOT automatically inject values into process.env. It only gives your EC2 permission to read secrets. Your NestJS app still must fetch or load them explicitly.
+
+//Then:
+1. Use AWS SDK only in ConfigModule:
+- Install the AWS SDK (in bank-api)
+npm install @aws-sdk/client-ssm
+
+2. create a file -> bank-api/src/config/aws-parametr-store.ts
+
+3. in main.ts file call function from file ->  bank-api/src/config/aws-parametr-store.ts
+
+4. in app.module.ts file
+ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+
+5. change all -> process.env.JWT_SECRET (in bank-api)
+to->
+
+constructor(private configService: ConfigService) {}
+
+const secret = this.configService.get<string>('JWT_SECRET');
+For development environment - keep process.env.JWT_SECRET
+
 ```
 
-If your node application expects to connect to a Database (PSQL, MySQL), - if you have database connection string and you use it in your app. And your code is set up to connect to a PSQL or MySQL Database but you don't have that database set up in the cloud in your EC2 instance.
+# If you need Database in the the EC2
+
+If your node application expects to connect to a Database in the sane EC2 (PSQL, MySQL), - if you have database connection string and you use it in your app. And your code is set up to connect to a PSQL or MySQL Database but you don't have that database set up in the cloud in your EC2 instance.
 
 4. stop your application from running and install PSQL or MySQL on your EC2 Instance, so that my application can actually connect to a database.
 
