@@ -34,18 +34,84 @@ sudo apt install git -y   //Install git on EC2 Instance
 
 git clone https://github.com/your-username/your-repo.git  //clone your Repo
 
-cd your-repo  //Go into project, correct folder
+cd your-repo  //Go into project, correct folder - bank-api
 
 npm install  //Install dependencies
 
 npm run build //create dist folder
 
-//NestJS cannot run TypeScript directly in production
-cd dist/src //go to dist/src folder where is main.js file
+//use this one to run the server from - Bank folder, This is the Best option
+pm2 start ecosystem.config.js
+//ecosystem file contains:
+// env: {
+//   NODE_ENV: "production",
+//   USE_AWS_PARAMETER_STORE: "true",
+//   PORT: 3005,
+// }
 
-npx pm2 start main.ts (start server) //or sudo npm install -g pm2 -> pm2 start main.js
+//Then when pm2 start the server it sees -> process.env.USE_AWS_PARAMETER_STORE === "true"
+
+//Imagine your app needs 15 variables, with ecosystem.config.js file you can easily define them, and make them available from server start running
+
+----------------------------------------
+    //this option also works to start your server ->
+    // but it runs your app without environment injection rules (defined environment variables)
+    // -> AWS Parameter Store never loads, DB_HOST = undefined, JWT_SECRET = undefined
+
+    //NestJS cannot run TypeScript directly in production
+    // cd dist/src //go to dist/src folder where is main.js file
+
+    // npx pm2 start main.js --name bank-api (start server)
+    // //or sudo npm install -g pm2 -> pm2 start main.js --name bank-api
+
+    //this option does not automatically know that you want:
+    // NODE_ENV=production
+    // USE_AWS_PARAMETER_STORE=true
+    // PORT=3005
+
+    //Therefore- Bank/bank-api/src/main.ts
+    // const useAWS = false; //<-always false
+    //await loadParameters(); //<--never runs in Production
+
+    //or another option is to add environment variables in Bash (but it is NOT Good PRACTICE, in refresh will delete all variables from memory)-> add these to Bash->
+    //USE_AWS_PARAMETER_STORE=true \
+    // NODE_ENV=production \
+    // PORT=3005 \
+    // pm2 start dist/src/main.js --name bank-api
+------------------------------------------
 
 pm2 save
+
+pm2 list
+
+pm2 logs bank-api
+
+
+---------------------------------
+//Everytime you change something in your code in VSCode
+- push to GitHub
+- cd your-repo
+- git pull origin main
+- npm install
+- pm2 delete all //stop all pm2 from previous processes
+- npm run build //build new dist folder with files
+- pm2 start ecosystem.config.js  //From main Bank folder. use this to run the server with defined environment variables inside the ecosystem.config.js
+---------------------------------
+❗ //can use this option as well to run the server, but in my case my application depends on environment variables that were only defined in ecosystem.config.js
+// - pm2 start dist/src/main.js --name bank-api //start main.js file using pm2 -> give name bank-api
+
+//this option does not automatically know that you want:
+// NODE_ENV=production
+// USE_AWS_PARAMETER_STORE=true
+// PORT=3005
+
+//Therefore- Bank/bank-api/src/main.ts
+// const useAWS = false; //<-always false
+//await loadParameters(); //<--never runs in Production
+----------------------------------
+- pm2 logs //see logs, that server is working
+
+
 
 
 //then:
@@ -74,6 +140,11 @@ constructor(private configService: ConfigService) {}
 
 const secret = this.configService.get<string>('JWT_SECRET');
 For development environment - keep process.env.JWT_SECRET
+
+-----------------------------
+//Also:
+- change your main folder -> ecosystem.config.js file for Production
+- add in .env -> USE_AWS_PARAMETER_STORE=false
 
 ```
 
