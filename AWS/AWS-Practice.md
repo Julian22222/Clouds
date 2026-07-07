@@ -41,8 +41,9 @@ npm install  //Install dependencies
 npm run build //create dist folder
 
 //use this one to run the server from - Bank folder, This is the Best option
+//This command allow to pass any environment variables when you start running your server,
 pm2 start ecosystem.config.js
-//ecosystem file contains:
+//ecosystem.config.js file contains and can have other variables that application needs:
 // env: {
 //   NODE_ENV: "production",
 //   USE_AWS_PARAMETER_STORE: "true",
@@ -54,7 +55,9 @@ pm2 start ecosystem.config.js
 //Imagine your app needs 15 variables, with ecosystem.config.js file you can easily define them, and make them available from server start running
 
 ----------------------------------------
-    //this option also works to start your server ->
+
+    //Here is another option that also works to start your server ->
+    //you can use it if you don't need to pass any environment variables to your App
     // but it runs your app without environment injection rules (defined environment variables)
     // -> AWS Parameter Store never loads, DB_HOST = undefined, JWT_SECRET = undefined
 
@@ -72,6 +75,14 @@ pm2 start ecosystem.config.js
     //Therefore- Bank/bank-api/src/main.ts
     // const useAWS = false; //<-always false
     //await loadParameters(); //<--never runs in Production
+
+
+    ✔️//you can run command -> run pm2 start main.js --name bank-api
+    //If you don't need to pass any environment variables-> In ecosystem.config.js file
+    //if you have only Production environment version and no Development environment logic in your app -> you can start your server by pm2 start dist/src/main.js --name bank-api
+    //then you don't need to use if statement in -> main.ts file:
+    //if (useAWS) {await loadParameters()} --> just use await loadParameters() //<-- in this case secrets will be loaded only from AWS Parameter Store and will not be loaded from local .env in Development environment
+
 
     //or another option is to add environment variables in Bash (but it is NOT Good PRACTICE, in refresh will delete all variables from memory)-> add these to Bash->
     //USE_AWS_PARAMETER_STORE=true \
