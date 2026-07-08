@@ -9,6 +9,9 @@ Nginx sits between the internet and your application.
 - Reverse Proxy. It means removing the port from the URL (add Nginx so you don’t need use PORT in URL) / For example -> https://yourdomain.com:3005
   will run -> https://yourdomain.com (With No PORT )
 - Handle HTTPS. HTTPS / SSL Termination. HTTPS (SSL/TLS) -add HTTPS (Install a free SSL certificate with Certbot so your site uses HTTPS.)
+
+❗ YOU CAN'T MAKE HTTPS WITHOUT YOUR OWN DOMAIN. If you only have the AWS EC2 Public DNS, you cannot get a normal trusted HTTPS certificate from Let's Encrypt (Certbot).
+
 - Route traffic. Reverse proxying to the local application
 - Improve performance. Compression & Performance. Optionally serving compression, caching, and security headers, improve speed, reduce bandwidth
 - Domain Routing
