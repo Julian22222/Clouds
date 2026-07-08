@@ -38,7 +38,7 @@ cd your-repo  //Go into project, correct folder - bank-api
 
 npm install  //Install dependencies
 
-npm run build //create dist folder
+npm run build //create dist folder(TypeScript convert to JavaScript)
 
 //use this one to run the server from - Bank folder, This is the Best option
 //This command allow to pass any environment variables when you start running your server,
@@ -91,7 +91,7 @@ pm2 start ecosystem.config.js
     // pm2 start dist/src/main.js --name bank-api
 ------------------------------------------
 
-pm2 save
+pm2 save  //Save PM2 process
 
 pm2 list
 
@@ -99,8 +99,8 @@ pm2 logs bank-api
 
 
 ---------------------------------
-//Everytime you change something in your code in VSCode
-- push to GitHub
+⚙️ //Everytime you change something in your code in VSCode
+- push to GitHub //new code
 - cd your-repo
 - git pull origin main
 - npm install
@@ -125,7 +125,7 @@ pm2 logs bank-api
 
 
 
-//then:
+✨ //then manage your Secrets:
 - add secrets from .env to -> Systems Manager (left side menu you will find) -> Parameter Store
 - create IAM Role in EC2 for Parameter Store (to get access to secrets)
 //IAM Role + Parameter Store does NOT automatically inject values into process.env. It only gives your EC2 permission to read secrets. Your NestJS app still must fetch or load them explicitly.

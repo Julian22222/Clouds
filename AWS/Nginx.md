@@ -32,7 +32,7 @@ Because it is:
 - lightweight
 - battle-tested
 
-# How to work with NGINX
+# 👀 How to work with NGINX
 
 1. install NGINX in your EC2 server
 
@@ -73,12 +73,12 @@ sudo nano /etc/nginx/sites-available/default
 //Replace its contents with:
 
 server {
-    listen 80;  //Internet access HTTP, from PORT 80
-    server_name ec2-108-129-233-222.eu-west-1.compute.amazonaws.com;  //<--Public DNS of your server in AWS, name can be anything
+    listen 80;  //Nginx listen for incoming HTTP requests on PORT 80
+    server_name ec2-108-129-233-222.eu-west-1.compute.amazonaws.com;  //<--Public DNS of your server in AWS, This file can have any name; using your application name is common.
 //Good Practice to keep /api/ prefix
     location /api/ {       //the new route will start with http://your-ec2-dns/api/...
     // /OR location / {
-        proxy_pass http://127.0.0.1:3005/;   //<-- 3005 is PORT of my Back-End
+        proxy_pass http://127.0.0.1:3005/;   //<-- 3005 is PORT of my Back-End, THis line means ->Forward the request to the NestJS application running on port 3005
     }
         proxy_http_version 1.1;
         proxy_set_header Host $host;
@@ -106,14 +106,16 @@ Press Ctrl + X
 sudo nginx -t
 
 //It should say:
-// syntax is ok
-// test is successful
+//nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+//nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
 5. Reload Nginx
 
 ```JS
 sudo systemctl reload nginx
+//or
+sudo systemctl restart nginx
 ```
 
 6. Test
@@ -271,3 +273,184 @@ Nginx can:
 - prevent direct access to app servers
 
 So your actual application is less exposed.
+
+# adding HTTPS with Let's Encrypt + Certbot.
+
+Before installing Certbot, one important requirement:
+
+- ❗ You need a domain name (not only EC2 Public DNS)
+
+```JS
+// Encrypt does not issue certificates for AWS EC2 public DNS names like:
+ec2-108-129-233-222.eu-west-1.compute.amazonaws.com
+```
+
+- You need your own domain, for example: bankapp.com
+- Then point DNS to your EC2 instance
+
+bankapp.com ---> EC2 Public IPv4 address
+
+Then:
+
+1. Install Certbot
+
+```JS
+//On your EC2 Ubuntu server:
+sudo apt update
+
+//Install Certbot and the Nginx plugin:
+sudo apt install certbot python3-certbot-nginx -y
+
+//Check installation:
+certbot --version
+```
+
+2. Make sure Nginx allows HTTP
+
+```JS
+//Your security group should have:
+
+Port	  Source
+80	     0.0.0.0/0
+443	     0.0.0.0/0
+
+//You already have 80. Add 443 if you haven't.
+
+
+//AWS EC2:
+Security Groups
+   ↓
+Inbound rules
+   ↓
+Add rule
+   ↓
+HTTPS
+   Port 443
+   Source 0.0.0.0/0
+```
+
+3. Update Nginx server_name
+
+```JS
+//Edit:
+sudo nano /etc/nginx/sites-available/default
+
+//Change:
+server_name _;
+//or your EC2 DNS
+//to your real domain:
+server_name bankapp.com www.bankapp.com;
+```
+
+```JS
+//Example
+
+server {
+    listen 80;
+
+    server_name bankapp.com www.bankapp.com;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:3005/;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+    }
+}
+
+----------------------------------
+
+//Save:
+CTRL + O
+ENTER
+CTRL + X
+
+//Test:
+sudo nginx -t
+
+//Reload:
+sudo systemctl reload nginx
+```
+
+4. Run Certbot
+
+```JS
+sudo certbot --nginx
+
+//Certbot will ask:
+Enter email address:
+
+//Enter your email.
+//Accept:
+Terms of Service? (Y)
+
+//Then select your domain:
+1: bankapp.com
+2: www.bankapp.com
+
+
+//Certbot will automatically:
+// ✅ Create SSL certificate
+// ✅ Modify Nginx config
+// ✅ Enable HTTPS
+// ✅ Redirect HTTP → HTTPS
+```
+
+5. Test HTTPS
+
+```JS
+//Open:
+https://bankapp.com
+
+//You should see the lock icon 🔒.
+```
+
+6. Verify automatic renewal
+
+Let's Encrypt certificates expire every 90 days.
+
+```JS
+//Check
+sudo certbot renew --dry-run
+
+//Expected:
+Congratulations, all simulated renewals succeeded
+```
+
+```JS
+//Your final production architecture will be:
+
+                 HTTPS :443
+                    |
+                    |
+                Nginx
+                    |
+        ------------------------
+        |                      |
+     /api/*                   /*
+        |                      |
+        v                      v
+ NestJS :3005              Next.js :3000
+        |
+        |
+      RDS PostgreSQL
+
+```
+
+One more recommendation for your banking app: after HTTPS works, change your NestJS CORS from:
+
+```JS
+origin: [
+ 'http://localhost:3000',
+ 'http://localhost:3001'
+]
+
+//to your real HTTPS frontend:
+
+origin: [
+ 'https://bankapp.com'
+]
+
+//Otherwise your browser security settings may block production requests.
+```

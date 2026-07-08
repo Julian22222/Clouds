@@ -80,16 +80,16 @@ If you're short on time, focus on these:
 - Amazon VPC, Subnets
 - Amazon RDS
 - Amazon DynamoDB
+- Systems Manager -> Parameter Store (Secrets and configuration data management)
 - AWS Lambda
+- Fargate or ECS (Launch Dcker containers on AWS), ECR (store Docker images on AWS)
 - Amazon CloudWatch (Monitoring)
 - Amazon CloudFront
 - CloudFormation
 - Amazon Route 53
 - AWS CloudTrail
 - AWS Key Management Service
-- Systems Manager -> Parameter Store (Secrets and configuration data management)
 - EC2 Image Builder
-- Fargate or ECS (Launch Dcker containers on AWS), ECR (store Docker images on AWS)
 - Beanstalk (easy way to deploy your app)
 - AWS Organizations
 
