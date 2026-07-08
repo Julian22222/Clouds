@@ -4,7 +4,7 @@ Nginx is an open-source web server and reverse proxy.
 
 Nginx sits between the internet and your application.
 
-#### Nginx is responsible for:
+#### 🛜 Nginx is responsible for:
 
 - Reverse Proxy. It means removing the port from the URL (add Nginx so you don’t need use PORT in URL) / For example -> https://yourdomain.com:3005
   will run -> https://yourdomain.com (With No PORT )
@@ -277,7 +277,7 @@ Nginx can:
 
 So your actual application is less exposed.
 
-# adding HTTPS with Let's Encrypt + Certbot.
+# 🌐 Adding HTTPS with Let's Encrypt + Certbot.
 
 Before installing Certbot, one important requirement:
 
