@@ -36,6 +36,8 @@ git clone https://github.com/your-username/your-repo.git  //clone your Repo
 
 cd your-repo  //Go into project, correct folder - bank-api
 
+sudo apt install npm -y //install npm package
+
 npm install  //Install dependencies
 
 npm run build //create dist folder(TypeScript convert to JavaScript)
@@ -123,6 +125,8 @@ pm2 logs bank-api
 - pm2 logs //see logs, that server is working
 
 
+//⚠️ When you create EC2 for Next.js choose t3.small (2GB RAM) or t3.medium (4GB RAM)
+//A small EC2 instance (for example t2.micro / t3.micro with 1GB RAM) often cannot build Next.js projects.
 
 
 ✨ //then manage your Secrets:
