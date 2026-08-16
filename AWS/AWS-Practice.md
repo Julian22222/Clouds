@@ -42,6 +42,9 @@ npm install  //Install dependencies
 
 npm run build //create dist folder(TypeScript convert to JavaScript)
 
+
+sudo npm install -g pm2 //install PM2 globally
+
 //use this one to run the server from - Bank folder, This is the Best option
 //This command allow to pass any environment variables when you start running your server,
 pm2 start ecosystem.config.js
@@ -128,6 +131,8 @@ pm2 logs bank-api
 //⚠️ When you create EC2 for Next.js choose t3.small (2GB RAM) or t3.medium (4GB RAM)
 //A small EC2 instance (for example t2.micro / t3.micro with 1GB RAM) often cannot build Next.js projects.
 
+
+//If your app uses PORT=3005, don't forget to add this PORT into -> Security Group in AWS for this EC2 -> (PORT 3005, and TCP)
 
 ✨ //then manage your Secrets:
 - add secrets from .env to -> Systems Manager (left side menu you will find) -> Parameter Store
