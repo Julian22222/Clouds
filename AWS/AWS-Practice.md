@@ -41,14 +41,15 @@ sudo apt install npm -y //install npm package
 npm install  //Install dependencies
 
 npm run build //create dist folder(TypeScript convert to JavaScript)
-
+//before "build" -> for F-End add in EC2 terminal-> export NEXT_PUBLIC_BACK_END_URL=..... or/and any other process.env values that you use in your app
+//my B-End uses AWS Systems Manager/Parameter Store (store my secrets there)
 
 sudo npm install -g pm2 //install PM2 globally
 
-//use this one to run the server from - Bank folder, This is the Best option
+//in Production use this one
 //This command allow to pass any environment variables when you start running your server,
 pm2 start ecosystem.config.js
-//ecosystem.config.js file contains and can have other variables that application needs:
+//ecosystem.config.js file contains and can have other variables that application needs for running:
 // env: {
 //   NODE_ENV: "production",
 //   USE_AWS_PARAMETER_STORE: "true",
@@ -58,6 +59,15 @@ pm2 start ecosystem.config.js
 //Then when pm2 start the server it sees -> process.env.USE_AWS_PARAMETER_STORE === "true"
 
 //Imagine your app needs 15 variables, with ecosystem.config.js file you can easily define them, and make them available from server start running
+
+-----------------------------------------
+
+//localy run app-> Development environment
+cd bank-api
+npm run start:dev
+
+cd bankapp
+npm run dev
 
 ----------------------------------------
 
@@ -126,11 +136,11 @@ pm2 logs bank-api
 //await loadParameters(); //<--never runs in Production
 ----------------------------------
 - pm2 logs //see logs, that server is working
-
+- pm2 logs bank-api --lines 100  //give last 100 logs of bank-api/ fresh logs
 
 //⚠️ When you create EC2 for Next.js choose t3.small (2GB RAM) or t3.medium (4GB RAM)
 //A small EC2 instance (for example t2.micro / t3.micro with 1GB RAM) often cannot build Next.js projects.
-
+//Also, F-End EC2 EBS Volumes need to take at least 20GB, standard - 8GB is not enough
 
 //If your app uses PORT=3005, don't forget to add this PORT into -> Security Group in AWS for this EC2 -> (PORT 3005, and TCP)
 
