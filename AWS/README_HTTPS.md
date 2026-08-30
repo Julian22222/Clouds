@@ -10,7 +10,7 @@
 
 Go to ->
 
-[duckdns.org](duckdns.org)
+[https://duckdns.org](https://duckdns.org)
 
 ```JS
 //free subdomain
