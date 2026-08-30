@@ -2,6 +2,13 @@
 
 API Gateway is one of those AWS services that seems complicated at first, but the basic idea is actually simple.
 
+- DON'T USE API GATEWAY For Front-End (Next.js) - to get HTTPS URL!!! It will make many bugs, issues and fails (Binary Data & Asset Streaming issues and Cookie & header Parsing Problems, Payload Limits & Cost)
+
+- API GW are build exclusively for B-End. They sit between client app (F-end Web apps, mobile apps, third-party software) and backend services (APIs, Lambda functions, database microservices)
+
+- API GW direct incoming request to (e.g., /api/v1/users or /api/v1/orders) to the correct backend microservice
+- API GW provide security, rate limiting & Trottling, Translate Data & Protocols
+
 ```JS
 Imagine you own a restaurant 🍽️
 
