@@ -20,7 +20,7 @@ duckdns.org
 - Set up DuckDNS
 - duckdns.org, sign in with Google
 - Create a subdomain, e.g. bigbankapp → gives you mybankapp.duckdns.org
-- Set the IP field to your EC2 instance's public IPv4 address (from the EC2 console) -> add your EC2 F-END IP Address here, to redirect to your F-end url page
+- Set the IP field to your EC2 instance's public IPv4 address (from the EC2 console) -> add your EC2 F-END IP Address here, to redirect this domain to your F-end url page. EC2 IP address can be found in AWS EC2 Dashboard
 - Save
 
 ////////////////////////////////////
