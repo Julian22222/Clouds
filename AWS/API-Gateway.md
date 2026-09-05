@@ -143,3 +143,56 @@ Often:
 It allows to make HTTPS secure method to connect to your Web service
 
 allow to make from HTTP -> HTTPS
+
+# How to work with API Gateway proxy
+
+1. Go to API Gateway
+2. CLick -> create API
+3. Click -> HTTP API -> Build
+
+![pic2b](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw1.jpg)
+
+4. Give a name to your API GW -> click Next
+
+![pic2c](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw2.jpg)
+
+5. click Next again
+
+![pic2d](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw3.jpg)
+
+6. Stage name - can leave as it is, Auto-deploy leave it as it is -> click Next
+
+![pic2e](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw4.jpg)
+
+7. Review page, of your new API Gateway -> click Create
+
+![pic2f](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw5.jpg)
+
+8. Then - Click on Routes -> and Create
+
+![pic2g](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw6.jpg)
+
+9. Then -> add route -> /{proxy+} -> and click Create
+
+![pic2h](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw7.jpg)
+
+10. Then Click on -> ANY -> and then Attach integration
+
+![pic2i](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw8.jpg)
+
+![pic2j](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw9.jpg)
+
+11. the configure your api routing, and it will automatically deploy
+
+![pic2k](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw10.jpg)
+
+12. Then click on this link to get new HTTPS URL link
+
+![pic2l](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw11.jpg)
+
+![pic2m](https://github.com/Julian22222/Clouds/blob/main/AWS/IMG/apigw12.jpg)
+
+### Also, you can adjust the API GW cors
+
+- in API Gateway service, on the left side menu click ->CORS -> press configure
+- then you can add domain addresses that can call this API GW
