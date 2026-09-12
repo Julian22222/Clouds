@@ -178,6 +178,22 @@ For development environment - keep process.env.JWT_SECRET
 
 ```
 
+/////////////////////////////////////////////////////////////////////////
+
+# Other settings for AWS
+
+- Create a Security Group for the current app:
+- Port: 3000 (for example if you B-End uses Port = 3000 use the same Port here)
+
+```JS
+//Your NestJS application should have:
+
+@Get('health')
+health() {
+  return { status: 'ok' };
+}
+```
+
 # If you need Database in the the EC2
 
 If your node application expects to connect to a Database in the sane EC2 (PSQL, MySQL), - if you have database connection string and you use it in your app. And your code is set up to connect to a PSQL or MySQL Database but you don't have that database set up in the cloud in your EC2 instance.

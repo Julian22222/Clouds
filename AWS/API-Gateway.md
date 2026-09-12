@@ -9,6 +9,94 @@ API Gateway is one of those AWS services that seems complicated at first, but th
 - API GW direct incoming request to (e.g., /api/v1/users or /api/v1/orders) to the correct backend microservice
 - API GW provide security, rate limiting & Trottling, Translate Data & Protocols
 
+AWS API Gateway Proxy = a middleman that receives HTTP requests from clients and forwards them to your backend, then returns the backend's response to the client.
+
+## API Gateway Without proxy
+
+API Gateway can be more specific.
+
+You can tell it:
+
+- "When you receive /users, send it to Lambda A."
+- "When you receive /orders, send it to Lambda B."
+
+```JS
+                 API Gateway
+                /           \
+               /             \
+          /users           /orders
+             ↓                ↓
+         Lambda A          Lambda B
+
+//API Gateway is actively deciding how to handle each route.
+//API Gateway = the middleman
+```
+
+## API Gateway With proxy
+
+You basically say:
+
+- "Whatever comes in, just pass it to my backend."
+- With a proxy, API Gateway basically says:"Okay, I'll send exactly this request to the backend."
+
+```JS
+                   API Gateway
+                      │
+                      │
+                 "Pass it on"
+                      │
+                      ▼
+                   Backend
+
+//Proxy = "middleman, just pass the request through."
+```
+
+```JS
+                                  API Gateway           API Gateway Proxy
+
+What is it?                       AWS service           Configuration/integration approach
+
+Main job                    Manage API traffic          Forward requests
+
+Can route requests?                     ✅                     ✅
+
+Can connect to Lambda?                  ✅                     ✅
+
+Is it a separate AWS service?           ✅                     ❌
+```
+
+# Diagram of the project
+
+```JS
+       HTTPS (to get HTTPS in F-End use Domain, CloudFront, Load Balancer, etc. but not API Gateway!)
+
+┌───────────────┐
+
+│  Frontend EC2 │
+
+└───────┬───────┘
+        │
+        │ HTTPS
+        ↓
+┌─────────────────────┐
+
+│    API Gateway      │
+
+│ *.execute-api...    │
+
+└──────────┬──────────┘
+           │
+           │ HTTP
+           ↓
+┌─────────────────────┐
+
+│    Backend EC2      │
+
+│      NestJS         │
+
+└─────────────────────┘
+```
+
 ```JS
 Imagine you own a restaurant 🍽️
 
