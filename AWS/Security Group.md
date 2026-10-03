@@ -1,8 +1,8 @@
 - Each AWS resource that supports network traffic should have appropriate network access controls, but not every AWS resource uses a Security Group.
 
 ```JS
-| AWS resource              | Security Group? | Typical access control              |
-| ------------------------- | --------------- | ----------------------------------- |
+| AWS resource              | Security Group?  | Typical access control              |
+| ------------------------- | ---------------  | ----------------------------------- |
 | EC2                       | ✅ Yes           | Security Group                      |
 | RDS                       | ✅ Yes           | Security Group                      |
 | Application Load Balancer | ✅ Yes           | Security Group                      |
