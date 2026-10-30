@@ -1,8 +1,64 @@
-# AWS
+# 🔥 AWS
 
-S3, RDS, ECS, EC2, SQS/SNS, Elastic Beansta, SQ3, ElastiCache, API Gateway, Cloudfront, Cloudwatch, IAM, (KMS, KINESIS,EMR) , SSM, DynamoDB
+S3, RDS, ECS, EC2, SQS/SNS, Elastic Beansta, SQ3, ElastiCache (Cache for DB), API Gateway, Cloudfront, Cloudwatch, IAM, (KMS, KINESIS,EMR) , SSM, DynamoDB
 
-# AWS Certified Cloud Practitioner services
+# 🧿 Common architecture patterns of connection of AWS services
+
+- Only EC2, containers, Lambda can talk to RDS only.
+- ❌ API Gateway can’t reach RDS directly. 🔥 It can integrate directly with some services (SQS, DynamoDB, Step Functions, S3), but not with RDS.
+- ALB speaks HTTP/HTTPS only. ❌ It can’t sit in front of a database.
+- Private EC2, containers and RDS usually live in private subnets, and Lambda needs to be attached to the VPC to reach them.
+
+```JS
+//Backend APIs patterns:
+
+API Gateway -> Lambda -> RDS (via RDS Proxy)
+API Gateway -> Lambda -> DynamoDB
+API Gateway ->-> VPC Link(private tunnel) -> ALB -> EC2 (back end)  -> RDS
+API Gateway -> VPC Link(private tunnel) -> ALB -> ECS (Fargate) -> RDS
+
+Load Balncer -> API Gateway -> EC2 -> RDS // ❌ this flow is wrong because:
+// An ALB has a short list of places it can forward requests to: EC2 servers, IP addresses and Lambda functions. API Gateway isn’t on that list, so you can’t just pick it as the destination.
+// The ALB would be the public entry point, so it can’t enforce API Gateway’s controls like API keys, usage plans or authorizers. Anyone could call your ALB directly and never touch the API Gateway part.
+
+//A VPC (Virtual Private Cloud) is your own private network inside AWS. Your EC2, ALB and RDS live in VPC, usually in private subnets with no direct access from the internet.
+//API Gateway is a managed AWS service that sits outside your VPC. By default it can only reach things that have a public address. A VPC Link is a private tunnel that lets API Gateway reach resources inside your VPC without exposing them to the internet.
+//Analogy: your VPC is an office building with locked doors. API Gateway is the reception desk outside. The VPC Link is a private corridor from the desk to one specific room (the ALB). Visitors can’t walk in anywhere else.
+//Without a VPC Link, you’d need a public ALB or EC2, which anyone could hit directly unless you add extra restrictions.
+
+ALB -> EC2 (back end) -> RDS
+ALB -> ECS (Fargate) -> RDS
+ALB -> ECS (EC2) -> RDS
+ALB -> Lambda -> RDS (via RDS Proxy)
+```
+
+```JS
+//Next.js / front end patterns:
+
+CloudFront -> ALB -> ECS (Fargate) running Next.js
+CloudFront -> ALB -> EC2 running Next.js
+CloudFront -> Lambda function URL (Next.js via OpenNext/SST)
+Vercel or Amplify Hosting (managed, no AWS plumbing)
+```
+
+```JS
+//Event-driven patterns  (no HTTP front):
+
+S3 -> Lambda -> external API (your OCR function)
+S3 -> Lambda -> SES (email)
+SQS -> Lambda -> RDS
+EventBridge schedule -> Lambda -> RDS
+```
+
+```JS
+//Mixed patterns:
+
+Next.js (Fargate) -> ALB -> API (Fargate) -> RDS
+Next.js (Fargate) -> API Gateway -> Lambda -> RDS
+Lambda -> ECS RunTask (Fargate) for heavy jobs over 15 minutes
+```
+
+# ✅ AWS Certified Cloud Practitioner services
 
 ```JS
   Service                     Purpose                          Why it's important
@@ -358,3 +414,7 @@ It provides high availability and continuous block storage volume for Amazon EC2
 AWS database domain provides cost efficient and reliable database (relational and non- relational) instances
 
 - RDS
+
+## General Info about ECS and Fargate
+
+ECS and Fargate aren’t alternatives. ECS is the orchestrator that runs your containers. Fargate is one place it can run them (serverless), and EC2 is the other. So “ECS + Fargate” means containers without servers to manage, and “ECS + EC2” means containers on instances you manage.

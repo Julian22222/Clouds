@@ -70,3 +70,31 @@ server {
     }
 }
 ```
+
+# 👀 Use API Gateway or/and ALB (Application Load Balancer) services depending on what you need to get
+
+- ALB is a traffic distributor. It takes incoming requests and spreads them across your servers.
+- API Gateway is a front desk for an API. It checks who’s calling, how often, and whether the request looks valid, then passes it on.
+
+### ⭐ API Gateway provides HTTPS for EC2 ()
+
+- API Gateway is a serverless service and charges per use (usually cheaper at low or unpredictable load)
+- Block bad requests before they reach your backend.
+- You want one entry point that routes to several backends (Lambda, EC2, containers).
+- You want built-in throttling, caching or Cognito login without writing code.
+- Do you have a valid key? Are you sending too many requests (throttling)? Is this request valid?”
+
+### ⭐ Load balancer provides HTTPS for EC2
+
+- ALB itself costs roughly $16+ per month plus usage
+- ALB also gives you health checks and the ability to spread traffic across several EC2 instances
+- caching
+- Traffic between the ALB and EC2 is plain HTTP by default, but it stays inside your VPC. You can use HTTPS there too if you need end-to-end encryption.
+
+API Gateway is worth adding in front of your API when you need its extras: API keys and usage plans, throttling, JWT or Cognito authorizers, and request validation.
+
+#### 👍 Rule of thumb
+
+- Needs HTTPS in front of containers or EC2: ALB. (No API keys(rules who can use the api rotes) and usage plans, No Throttling / rate limiting, No Request body or schema validation)
+- Needs API features in front of Lambda: API Gateway.
+- Needs a database: put compute (Lambda, EC2 or a container) between the entry point and RDS.
