@@ -6,7 +6,7 @@ This code needs to be in Lambda function code, so it has to live in a Lambda fun
 //General info: lambda and parameter store example
 
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";   //<- S3Client – to connect to the service in correct region, GetObjectCommand – to receive a data from AWS service
-import { SSMClient, GetParametersCommand } from '@aws-sdk/client-ssm';   //<- SSMClient – to connect to Parameter store in correct region, GetParametersCommand – to receive parameters from AWS
+import { SSMClient, GetParametersCommand } from '@aws-sdk/client-ssm';   //<- SSMClient – to connect to Parameter store in correct region, use GetParametersCommand – to get all parameters from AWS Parameter Store with one api call
 
 //lambda example
 const s3 = new S3Client({   //<- creates a connection to AWS S3 in EU-west-2 region
@@ -34,13 +34,67 @@ const response = await s3.send(command);  //<-when use “send” method you get
 
 
 //parameter store example
+//This is faster (one round trip, up to 10 names per call) and fails loudly if a parameter is missing, whereas your separate calls to get parameters from Parameter Store silently skips any parameter with an empty value and the app would only break later with a confusing DB or JWT error.
   const response = await client.send( //<--get parameters from AWS Parameter Store
     new GetParametersCommand({
       Names: parameterNames,
       WithDecryption: true,
     }),
-...
+
+
+//continue logic with the AWS resource response
 }
+```
+
+```JS
+//BAD EXAMPLE ❌
+//SDK allow to get each parameters separately from Parameter Store, ❌ But it is NOT Good Practice, because you make 6 separately API calls to AWS Parameter Store with - GetParameterCommand, but instead you can fetch them all in one request with GetParametersCommand:
+//Example of getting each parameters separately from Parameter Store
+
+import { SSMClient, GetParameterCommand } from '@aws-sdk/client-ssm'; //<- we use GetParameterCommand - to get individual parameter from AWS Parameter Store
+
+//Parameter Store is a regional service
+//The region must match where you created the parameters (Parameter store service).
+//If you leave region out, the SDK falls back to the AWS_REGION environment variable, then your shared AWS config (~/.aws/config), and throws “Region is missing” if it finds nothing.
+
+//Parameter Store is a regional service. A parameter named DB_HOST in eu-west-1 is a completely separate thing from a DB_HOST in us-east-1. They don’t replicate between regions.
+// So the client needs to know which regional endpoint to call (ssm.eu-west-1.amazonaws.com).
+const client = new SSMClient({
+  region: 'eu-west-1',
+});
+
+const parameterNames = [
+  'DB_HOST',
+  'DB_PORT',
+  'DB_DATABASE',
+  'DB_USER',
+  'DB_PASSWORD',
+  'JWT_SECRET',
+];
+
+//AWS SDK - to get secret values from Parameter store
+export async function loadParameters() {
+  try {
+    for (const name of parameterNames) {
+      const response = await client.send(
+        // client.send(command) for each operation
+        new GetParameterCommand({
+          // GetParameterCommand just describes what you want; the client handles how to send it (HTTP, request signing with your credentials, retries, etc.)
+          Name: name,  //<- indicate what parameter you are getting
+          WithDecryption: true,
+        }),
+      );
+
+      if (response.Parameter?.Value) {
+        process.env[name] = response.Parameter.Value;
+      }
+    }
+  } catch (err) {
+    console.error('AWS Parameter Store failed:', err.message);
+    throw err;
+  }
+}
+
 ```
 
 # Improved code for lambda file
