@@ -194,6 +194,40 @@ health() {
 }
 ```
 
+A security group is a set of rules that you attach to an EC2 instance, and each rule says "allow this traffic on this port from this source". So the goal is one security group per server, with the right inbound rules.
+
+```JS
+//Back-end EC2 (NestJS, port 3005)
+
+// Create a security group, e.g. backend-sg, with these inbound rules:
+
+Type        |     Port       |        Source                           |            Why
+            |                |                                         |
+Custom TCP  |     3005       |  frontend-sg (the security group ID)    |     Only the Next.js server can reach the API
+SSH         |      22        |  Your IP only (My IP)                   |     Admin access
+
+//Referencing the front-end's security group as the source (rather than an IP address) means the rule keeps working even if the front-end's IP changes, and nothing else on the internet can hit port 3005.
+```
+
+```JS
+//Front-end EC2 (Next.js, port 3000)
+//Create frontend-sg with:
+
+Type          |    Port     |  Source       |   Why
+              |             |               |
+Custom TCP    |    3000     | 0.0.0.0/0     |  Public access to your site
+SSH           |      22     | Your IP only  |  Admin access
+
+//Outbound rules can stay at the default (allow all), so the front-end can call the back-end.
+```
+
+**Important caveats**
+
+1. **Who makes the request matters.** If Next.js only calls NestJS from server-side code (getServerSideProps, Server Components, Route Handlers), the calls come from the front-end EC2, and the setup above works. If your React code calls the API from the **browser** (client-side fetch/axios), the request comes from the user's machine, so port 3005 would need to be open to 0.0.0.0/0. That's usually undesirable, so proxy those calls through Next.js (route handlers or rewrites in next.config.js) instead.
+2. **Use the back-end's private IP.** If both instances are in the same VPC, point Next.js at the back-end's private IP (e.g. http://10.0.1.25:3005) rather than the public IP. It's faster, free of data-transfer charges, and doesn't require exposing the API publicly.
+3. **Ports 80/443 in production.** Users shouldn't have to visit yourdomain.com:3000. Typically you'd put an Application Load Balancer (or Nginx on the instance) in front, listening on 80/443 and forwarding to port 3000, and then open 3000 only to the load balancer's security group. You'd get HTTPS via ACM certificates at the ALB.
+4. **Same instance vs. separate.** You mentioned they're on different EC2 servers, so the above applies. If they were ever on the same instance, no security group rule is needed between them, since traffic over localhost never leaves the machine
+
 # If you need Database in the the EC2
 
 If your node application expects to connect to a Database in the sane EC2 (PSQL, MySQL), - if you have database connection string and you use it in your app. And your code is set up to connect to a PSQL or MySQL Database but you don't have that database set up in the cloud in your EC2 instance.
