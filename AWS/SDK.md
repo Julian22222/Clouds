@@ -1,3 +1,113 @@
+# What is SDK?
+
+To work with different AWS resources from your code use -> AWS SDK
+
+Each AWS service has its own SDK package under the
+
+```JS
+@aws-sdk/client-* namespace
+```
+
+, and you install/import whichever ones correspond to the services you're actually calling. You need npm install only the ones you need
+
+- If your EC2 is used @aws-sdk/client-ssm – then your EC2 needs IAM permissions for AWS Parameter Store
+- My NestJS EC2 instance has an IAM instance role attached for AWS Parameter Store (EC2 → your instance → Security → IAM Role).
+
+```JS
+@aws-sdk/client-ssm  //<- gives your code the ability to get secrets from AWS Systems Manager (Parameter Store)
+```
+
+```JS
+//Often used SDKs
+
+
+Service                           |          Package                   |     Typical use in your stack
+                                  |                                    |
+Systems Manager (Parameter Store) |  @aws-sdk/client-ssm               |   JWT secrets, config values (what you're already using)
+S3                                |  @aws-sdk/client-s3                |   File uploads, static assets, document storage
+Secrets Manager                   |  @aws-sdk/client-secrets-manager   |   DB credentials, API keys (alternative to SSM for secrets specifically)
+RDS                               |  @aws-sdk/client-rds               |   Managing/describing RDS instances (not for querying — that's still pg/typeorm etc.)
+SES                               |  @aws-sdk/client-ses               |   Sending transactional emails
+SQS                               |  @aws-sdk/client-sqs               |   Queues, background jobs
+SNS                               |  @aws-sdk/client-sns               |   Notifications, pub/sub
+CloudWatch Logs                   |  @aws-sdk/client-cloudwatch-logs   |   Custom logging/metrics
+STS                               |  @aws-sdk/client-sts               |   Assuming roles, temporary credentials
+```
+
+# What stays the same across all of them
+
+The pattern is consistent regardless of which service you're calling:
+
+```JS
+//Example1 – with @aws-sdk/client-s3
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+
+const client = new S3Client({ region: "eu-west-2" });
+await client.send(new PutObjectCommand({ Bucket: "my-bucket", Key: "file.pdf", Body: buffer }));
+
+////Example 2 -with @aws-sdk/client-ssm
+import { SSMClient, GetParameterCommand } from "@aws-sdk/client-ssm";
+
+const client = new SSMClient({ region: "eu-west-2" });
+const res = await client.send(
+  new GetParameterCommand({ Name: "/myapp/db-password", WithDecryption: true }),
+);
+```
+
+- Each package exports a *Client class and a set of *Command classes.
+- Credentials resolve the same way for all of them — automatically from your EC2 instance's IAM role, no explicit keys needed, exactly as with SSMClient.
+- IAM permissions are still the real gate, per the last message — installing @aws-sdk/client-s3 doesn't grant S3 access any more than installing @aws-sdk/client-ssm granted SSM access. Your instance role needs s3:PutObject on the specific bucket/prefix, ses:SendEmail, etc., added explicitly for each service you start using.
+
+### Practical implication for your setup
+
+Each time you add a new AWS service to your NestJS app, that's two changes:
+
+1.
+
+```bash
+npm install @aws-sdk/client-whatever
+```
+
+2. and a policy update on your EC2 instance role (or a new role, if you want to scope permissions per-service rather than accumulating everything onto one broad role). It's worth deciding early whether you want one instance role with an ever-growing policy, or separate, narrowly-scoped roles if different parts of your app genuinely need different access — the latter is more setup but keeps a compromised process from automatically having reach into every AWS service your account touches.
+
+# Where to use SDK?
+
+Best practice: call the AWS SDK from your backend (NestJS) only. Not because the SDK is technically blocked from running in a browser — it isn't — but because of what it would require to work there.
+
+### Why not use SDK from the F-End?
+
+The SDK's SSMClient, S3Client, etc. all need to sign requests with AWS credentials. On your NestJS EC2 instance, that happens invisibly because the SDK picks up the instance's IAM role automatically — no keys anywhere in your code. In a browser, there's no IAM role to inherit. The only way to make an AWS SDK call succeed from a Client Component would be to embed an AWS access key and secret directly in your frontend JavaScript, which means anyone who opens devtools can read them straight out of the bundle and use them to call AWS directly, under whatever permissions that key has, without going through your app at all.
+
+### The one legitimate frontend exception (not your case)
+
+AWS does offer a browser-usable SDK path, via Cognito Identity Pools, which hands out short-lived, tightly-scoped temporary credentials to unauthenticated or authenticated browser sessions — used for things like letting a logged-in user upload directly to a specific S3 prefix. This is a deliberate, narrow mechanism with its own permission boundaries, not "install the SDK in your Next.js app and call it like on the backend."
+
+### What the correct pattern looks like for something like file uploads + AWS S3 SDK
+
+Since S3 came up as a likely use case, the standard flow is: Client Component asks your Next.js Route Handler (or directly your NestJS backend) for permission to upload → NestJS uses the SDK server-side to generate a presigned URL (a time-limited, single-purpose URL that grants upload rights to one specific S3 key, without exposing any credentials) → the browser uploads the file straight to S3 using that URL. The AWS SDK call itself — PutObjectCommand wrapped in getSignedUrl — still happens only in NestJS; the browser just gets a token-like URL back, never credentials.
+
+```JS
+// NestJS
+
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+
+const url = await getSignedUrl(
+  s3Client,
+  new PutObjectCommand({ Bucket: "my-bucket", Key: `uploads/${userId}/${filename}` }),
+  { expiresIn: 300 }, // 5 minutes
+);
+// return { url } to the client — no credentials involved
+```
+
+### Summary
+
+- NestJS: all direct AWS SDK calls, using the EC2 instance role, exactly as you're doing now.
+- Next.js: no AWS SDK calls at all — it's a pass-through layer, same as it is for your backend API calls generally.
+- Browser: never touches AWS SDK or credentials directly; at most it uses a presigned URL your backend generated on its behalf.
+
+This keeps the same shape you've built for auth throughout this conversation: credentials and trusted operations live server-side, the browser only ever receives narrowly-scoped, short-lived permission to do one specific thing.
+
 # SDK allow to use AWS services in your code
 
 This code needs to be in Lambda function code, so it has to live in a Lambda function on AWS. The simplest way is to paste it into the code editor on the Lambda console (the file is usually called index.mjs) and click Deploy. You can also deploy it as a zip, or with CDK, SAM or Terraform, but it’s the same code either way.
